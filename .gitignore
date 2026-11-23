@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# macOS & ExFAT AppleDouble files
+.DS_Store
+._*
+**/._*
+
+# Legacy backup
+docs/legacy-src/
+
+# Misc
+*.log
+.vercel

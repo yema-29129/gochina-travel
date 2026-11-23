@@ -1,0 +1,16 @@
+{
+  "name": "GoChina — Practical China Travel Guide",
+  "short_name": "GoChina",
+  "description": "Visa-free route checker, Alipay fee calculator, eSIM guide, offline Chinese show-cards, and China city guides.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
