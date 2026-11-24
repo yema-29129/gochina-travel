@@ -22,18 +22,18 @@ export function HelpContactCard({
 
   const title =
     context === "payment"
-      ? t2("Payment card declined or stuck setting up Alipay / WeChat?", "支付宝 / 微信绑卡或现场付款遇到问题？")
-      : t2("Need real-time help with your China trip?", "赴华旅行需要实时人工协助？");
+      ? t2("Stuck on Alipay / WeChat Setup or Card Verification?", "支付宝 / 微信绑卡或现场付款遇到卡壳？")
+      : t2("GoChina Trip Rescue Desk (09:00–22:00 GMT+8)", "GoChina 赴华旅行协助台（北京时间 09:00–22:00）");
 
   const desc =
     context === "payment"
       ? t2(
-          "Send us a screenshot of the error on WhatsApp (works with a travel eSIM) or WeChat (works on any Chinese hotel Wi-Fi). We reply in English & Chinese.",
-          "直接把报错截图发到我们的 WhatsApp（漫游 eSIM 可用）或微信（中国酒店 Wi-Fi 100% 可用），支持中英文解答。"
+          "Free quick help for urgent payment snags — send us the error screenshot on WhatsApp (works with roaming eSIM) or WeChat (works on any hotel Wi-Fi).",
+          "免费解答紧急支付与绑卡报错问题——直接把报错截图发到 WhatsApp（漫游 eSIM 可用）或微信（酒店 Wi-Fi 100% 可用）。"
         )
       : t2(
-          "Reach us directly on WhatsApp or WeChat for quick help with visas, payments, train bookings, or local tips.",
-          "直接通过 WhatsApp 或微信联系我们，快速咨询免签、支付、高铁订票或本地避坑问题。"
+          "Free quick help for urgent payment or transport snags in China, or reach out for tailored itinerary assistance. Replies in English & Chinese.",
+          "免费解答在华紧急支付/交通卡壳问题，或获取定制行程协助。支持中英文回复。"
         );
 
   const copyWechat = async () => {
@@ -45,12 +45,12 @@ export function HelpContactCard({
   };
 
   return (
-    <div className="no-print rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-teal-50/60 p-5 sm:p-6">
+    <div className="no-print rounded-2xl border border-slate-200 border-l-4 border-l-emerald-600 bg-white p-5 shadow-xs sm:p-6">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <div>
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-800">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-800">
             <MessageCircle className="h-3.5 w-3.5" />
-            {tx(t2("Live Human Support", "本地人工协助"), lang)}
+            {tx(t2("GoChina Trip Rescue Desk", "GoChina 旅行协助台"), lang)}
           </div>
           <h3 className="mt-2 text-lg font-bold text-slate-900">{tx(title, lang)}</h3>
           <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-600">{tx(desc, lang)}</p>

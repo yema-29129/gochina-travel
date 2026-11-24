@@ -39,7 +39,23 @@ export type Block =
   /** Link card to an interactive tool. */
   | { type: "tool"; tool: ToolId }
   /** Embedded interactive widget inside a guide. */
-  | { type: "widget"; widget: "railway12306" | "trainSearch" }
+  | {
+      type: "widget";
+      widget:
+        | "railway12306"
+        | "trainSearch"
+        | "cityTransportHub"
+        | "mapDeviceSwitcher"
+        | "metroSplitCard"
+        | "didiTimelineMockup"
+        | "liveTaxiCard"
+        | "cccVisualSpotter"
+        | "inlinePowerBankChecker"
+        | "budgetVsFullServiceCards"
+        | "airportBentoHub"
+        | "arrivalTransferCard"
+        | "dualAirportTimeBars";
+    }
   /** Affiliate recommendation box (configured in src/lib/affiliates.ts). */
   | { type: "affiliate"; id: AffiliateId }
   /** AdSense in-article ad slot. */

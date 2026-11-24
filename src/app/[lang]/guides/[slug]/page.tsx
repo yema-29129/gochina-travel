@@ -37,7 +37,44 @@ export default async function GuidePage({ params }: P) {
   const t = UI[lang];
   const title = tx(guide.title, lang);
   const related = (guide.related ?? []).map(getGuide).filter((g): g is NonNullable<typeof g> => !!g);
-  const sameCat = GUIDES.filter((g) => g.category === guide.category);
+
+  // One contextual mini action card for the right rail (replaces the cluttered category list)
+  const railAction =
+    slug === "airports"
+      ? {
+          badge: { en: "Late Arrival?", zh: "深夜落地？" },
+          title: { en: "Pre-Book English Airport Pickup", zh: "预订英文举牌接机" },
+          desc: { en: "Fixed price from ~$28 USD · Free flight-delay wait.", zh: "一口价约 $28 美元起 · 航班延误免费等。" },
+          cta: { en: "Check Pickup Prices", zh: "查看接机一口价" },
+          href: "#arrival-pickup",
+          external: false,
+        }
+      : slug === "domestic-flights"
+        ? {
+            badge: { en: "3-Second Check", zh: "3 秒自检" },
+            title: { en: "Will Security Confiscate Your Power Bank?", zh: "你的充电宝会被没收吗？" },
+            desc: { en: "Calculate Wh & check the CCC domestic flight rule instantly.", zh: "立刻换算 Wh 并核对国内航班 CCC 规定。" },
+            cta: { en: "Run Instant Check", zh: "立即自检" },
+            href: "#power-bank-ccc",
+            external: false,
+          }
+        : slug === "metro-didi-maps"
+          ? {
+              badge: { en: "In the Taxi?", zh: "正在打车？" },
+              title: { en: "Live Taxi Address Show-Card", zh: "实时出租车全屏地址卡" },
+              desc: { en: "Type your hotel address & show it full-screen to the driver.", zh: "输入酒店中文地址，一键全屏给司机看。" },
+              cta: { en: "Jump to Taxi Card", zh: "打开地址卡" },
+              href: "#taxis",
+              external: false,
+            }
+          : {
+              badge: { en: "Interactive Tool", zh: "实用工具" },
+              title: { en: "China eSIM & Data Calculator", zh: "中国上网与 eSIM 流量计算器" },
+              desc: { en: "Match the exact GB tier for your phone & trip length.", zh: "按机型与天数精准匹配流量档位。" },
+              cta: { en: "Open Calculator", zh: "打开计算器" },
+              href: href(lang, "/tools/esim-calculator"),
+              external: false,
+            };
 
   return (
     <>
@@ -66,13 +103,13 @@ export default async function GuidePage({ params }: P) {
 
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_300px]">
         <article className="min-w-0">
-          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5">
-            <h2 className="mb-3 font-bold text-emerald-900">{t.keyPoints}</h2>
-            <ul className="space-y-2">
+          <div className="rounded-xl border border-slate-200 border-l-4 border-l-emerald-600 bg-white p-5 shadow-xs">
+            <h2 className="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-800">{t.keyPoints}</h2>
+            <ul className="space-y-2.5 text-sm">
               {guide.keyPoints.map((k, i) => (
-                <li key={i} className="flex gap-2 text-emerald-900">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
-                  {tx(k, lang)}
+                <li key={i} className="flex gap-2.5 leading-relaxed text-slate-700">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                  <span>{tx(k, lang)}</span>
                 </li>
               ))}
             </ul>
@@ -112,35 +149,43 @@ export default async function GuidePage({ params }: P) {
           </div>
         </article>
 
-        <aside className="space-y-4 lg:sticky lg:top-32 lg:self-start">
+        <aside className="space-y-4 lg:self-start">
           <nav className="rounded-xl border border-slate-200 bg-white p-4">
-            <h3 className="mb-2 px-2 text-sm font-semibold uppercase text-slate-500">{t.onThisPage}</h3>
+            <h3 className="mb-2 px-2 text-xs font-bold uppercase tracking-wider text-slate-500">{t.onThisPage}</h3>
             <ul className="space-y-0.5 text-sm">
               {guide.sections.map((s) => (
                 <li key={s.id}>
-                  <a href={`#${s.id}`} className="block rounded-md px-2 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-red-600">{tx(s.heading, lang)}</a>
+                  <a href={`#${s.id}`} className="block rounded-md px-2 py-1.5 text-slate-700 transition hover:bg-slate-50 hover:text-slate-950">
+                    {tx(s.heading, lang)}
+                  </a>
                 </li>
               ))}
               {guide.faq?.length ? (
-                <li><a href="#faq" className="block rounded-md px-2 py-1.5 text-slate-700 hover:bg-slate-50 hover:text-red-600">{t.faq}</a></li>
+                <li>
+                  <a href="#faq" className="block rounded-md px-2 py-1.5 text-slate-700 transition hover:bg-slate-50 hover:text-slate-950">
+                    {t.faq}
+                  </a>
+                </li>
               ) : null}
             </ul>
           </nav>
-          <nav className="hidden rounded-xl border border-slate-200 bg-white p-4 lg:block">
-            <h3 className="mb-2 px-2 text-sm font-semibold uppercase text-slate-500">{t.categories[guide.category]}</h3>
-            <ul className="space-y-0.5 text-sm">
-              {sameCat.map((g) => (
-                <li key={g.slug}>
-                  <Link
-                    href={href(lang, `/guides/${g.slug}`)}
-                    className={`block rounded-md px-2 py-1.5 ${g.slug === guide.slug ? "bg-red-50 font-semibold text-red-700" : "text-slate-700 hover:bg-slate-50"}`}
-                  >
-                    {tx(g.title, lang)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+
+          {/* Single contextual mini action card */}
+          <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
+            <span className="inline-block rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] font-semibold text-slate-700">
+              {tx(railAction.badge, lang)}
+            </span>
+            <h3 className="mt-2 text-sm font-bold text-slate-900">{tx(railAction.title, lang)}</h3>
+            <p className="mt-1 text-xs leading-relaxed text-slate-600">{tx(railAction.desc, lang)}</p>
+            <a
+              href={railAction.href}
+              className="mt-3 inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-slate-900 px-3 py-2 text-xs font-semibold text-white transition hover:bg-red-600"
+            >
+              {tx(railAction.cta, lang)}
+              <ArrowRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
           <AdSlot lang={lang} slot="sidebar" />
         </aside>
       </div>
