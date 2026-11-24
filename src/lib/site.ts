@@ -8,7 +8,7 @@ export const SITE = {
   /** Google Search Console HTML-tag verification code (content="..."). */
   gscVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || "",
   /** Bing Webmaster verification code (optional). */
-  bingVerification: process.env.NEXT_PUBLIC_BING_VERIFICATION || "",
+  bingVerification: process.env.NEXT_PUBLIC_BING_VERIFICATION || "C09F13C155CD1821058CACBCDCA96FDE",
   /** Google Analytics 4 measurement ID, e.g. G-XXXXXXXXXX */
   gaId: process.env.NEXT_PUBLIC_GA_ID || "",
   /** Google AdSense publisher ID, e.g. ca-pub-1234567890123456 */
