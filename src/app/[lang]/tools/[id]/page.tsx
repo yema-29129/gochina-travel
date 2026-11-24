@@ -66,7 +66,7 @@ export default async function ToolPage({ params }: P) {
           </div>
           <AdSlot lang={lang} slot="inArticle" />
         </div>
-        <aside className="space-y-4 lg:sticky lg:top-32 lg:self-start">
+        <aside className="space-y-4 lg:self-start">
           {related.length > 0 && (
             <div className="rounded-xl border border-slate-200 bg-white p-4">
               <h2 className="mb-2 px-1 text-sm font-semibold uppercase text-slate-500">{t.related}</h2>
