@@ -37,7 +37,11 @@ interface ProvinceEntry {
   province: L;
   tagline: L;
   hook: L;
-  image: string;
+  /** Strictly verified exact-landmark photo ONLY — omit if not visually verified */
+  image?: string;
+  /** Bespoke editorial Chinese watermark + gradient when no verified landmark photo is set */
+  emblem?: string;
+  gradient?: string;
   transit240?: boolean;
   specialNote?: L;
   bestTime: L;
@@ -82,7 +86,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Shanxi", "山西省"),
     tagline: t2("Black Myth: Wukong & Ancient Grottoes", "黑神话取景地 · 千年古建"),
     hook: t2("Cliff-hanging wooden monasteries, 51,000 carved Buddhas, and China's best-preserved walled ancient town.", "悬崖千年悬空寺、五万尊云冈石窟大佛与平遥古城。"),
-    image: "https://images.unsplash.com/photo-1599571234909-29ed5d1321d6?auto=format&fit=crop&w=900&q=75",
+    emblem: "晋",
+    gradient: "from-amber-950 via-stone-900 to-slate-950",
     transit240: true,
     bestTime: t2("May–Oct", "5–10 月"),
     klookDestQuery: "Datong Pingyao Shanxi tour",
@@ -104,7 +109,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Tianjin", "天津市"),
     tagline: t2("30-Min Bullet Train Day Trip from Beijing", "京津 30 分钟欧风海河城"),
     hook: t2("European-style villas, neon Haihe river bridges, and a giant Ferris wheel built right over a river.", "五大道欧式洋楼、海河夜景与跨河摩天轮天津之眼。"),
-    image: "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=900&q=75",
+    emblem: "津",
+    gradient: "from-sky-950 via-slate-900 to-indigo-950",
     transit240: true,
     bestTime: t2("Apr–Jun, Sep–Oct", "4–6 月、9–10 月"),
     klookDestQuery: "Tianjin day tour from Beijing",
@@ -153,7 +159,7 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Zhejiang", "浙江省"),
     tagline: t2("West Lake, Water Towns & Yiwu Trade", "诗画西湖 · 乌镇水乡 · 义乌采购"),
     hook: t2("Misty willow-lined West Lake, lantern-lit canal boats in Wuzhen — plus the world's largest wholesale market in Yiwu.", "烟雨西湖泛舟、乌镇摇橹船夜景，外加全球最大义乌商贸城。"),
-    image: "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?auto=format&fit=crop&w=900&q=75",
+    image: "https://images.unsplash.com/photo-1731152603302-60bf370dd1f9?auto=format&fit=crop&w=900&q=75",
     transit240: true,
     bestTime: t2("Mar–May, Sep–Nov", "3–5 月、9–11 月"),
     klookDestQuery: "Hangzhou Wuzhen tour tickets",
@@ -176,7 +182,7 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Jiangsu", "江苏省"),
     tagline: t2("Venice of the East & Ming Capitals", "苏州古典园林 · 六朝古都南京"),
     hook: t2("Only 25 minutes by bullet train from Shanghai: UNESCO scholar gardens, silk canals and Ming Dynasty tombs.", "上海高铁 25 分钟直达：东方威尼斯苏州园林与南京明孝陵。"),
-    image: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=900&q=75",
+    image: "https://images.unsplash.com/photo-1694918398482-a0b6778cda01?auto=format&fit=crop&w=900&q=75",
     transit240: true,
     bestTime: t2("Mar–May, Sep–Nov", "3–5 月、9–11 月"),
     klookDestQuery: "Suzhou Nanjing day tour tickets",
@@ -198,7 +204,7 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Anhui", "安徽省"),
     tagline: t2("Sea of Clouds on Yellow Mountain", "水墨黄山云海 · 徽派宏村"),
     hook: t2("Granite peaks piercing seas of clouds that inspired 1,000 years of Chinese ink paintings, paired with white-walled villages.", "千年水墨画原型黄山奇松云海，配粉墙黛瓦宏村水墨倒影。"),
-    image: "https://images.unsplash.com/photo-1677922069736-288fd584c916?auto=format&fit=crop&w=900&q=75",
+    image: "https://images.unsplash.com/photo-1751891312036-14ec49afbf6b?auto=format&fit=crop&w=900&q=75",
     transit240: true,
     bestTime: t2("Apr–Jun, Sep–Nov", "4–6 月、9–11 月"),
     klookDestQuery: "Mount Huangshan Yellow Mountain ticket",
@@ -219,7 +225,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Fujian", "福建省"),
     tagline: t2("Round Tulou Fortresses & Car-Free Island", "世遗福建土楼 · 鼓浪屿海岛"),
     hook: t2("Giant circular earthen clan fortresses straight out of Mulan, plus Xiamen's car-free piano island.", "《花木兰》同款圆形世遗土楼群，与厦门无车钢琴小岛鼓浪屿。"),
-    image: "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?auto=format&fit=crop&w=900&q=75",
+    emblem: "闽",
+    gradient: "from-teal-950 via-emerald-950 to-slate-950",
     transit240: true,
     bestTime: t2("Mar–May, Oct–Dec", "3–5 月、10–12 月"),
     klookDestQuery: "Xiamen Gulangyu Fujian Tulou tour",
@@ -240,7 +247,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Jiangxi", "江西省"),
     tagline: t2("1,000-Year Porcelain Capital & Cliff Village", "千年瓷都景德镇 · 悬崖望仙谷"),
     hook: t2("Watch master artisans throw blue-and-white porcelain in Jingdezhen and stay at a glowing fairy-tale cliff village.", "在千年瓷都体验青花瓷手作，夜游悬崖瀑布仙侠村望仙谷。"),
-    image: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=900&q=75",
+    emblem: "赣",
+    gradient: "from-blue-950 via-slate-900 to-cyan-950",
     transit240: true,
     bestTime: t2("Mar–May, Sep–Nov", "3–5 月、9–11 月"),
     klookDestQuery: "Jingdezhen Wangxian Valley tour",
@@ -359,7 +367,7 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Guangdong", "广东省"),
     tagline: t2("Canton Fair, Dim Sum & Drone-Delivery Tech", "广交会 · 粤式早茶 · 深圳硬核科技"),
     hook: t2("Order lunch delivered by autonomous drones in Shenzhen, feast on Cantonese dim sum, and attend the global Canton Fair.", "在深圳体验无人机空投外卖、打卡华强北硬核科技，在广州逛广交会叹早茶。"),
-    image: "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=900&q=75",
+    image: "https://images.unsplash.com/photo-1568904536453-763a39512530?auto=format&fit=crop&w=900&q=75",
     transit240: true,
     bestTime: t2("Oct–Mar", "10 月–次年 3 月"),
     klookDestQuery: "Guangzhou Shenzhen attractions tickets",
@@ -405,7 +413,7 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Hunan", "湖南省"),
     tagline: t2("Avatar Floating Mountains & Waterfall Town", "阿凡达悬浮山 · 凤凰古城 · 芙蓉镇"),
     hook: t2("Ride the world's tallest outdoor glass elevator up Avatar's sandstone pillars, then sleep beside a glowing waterfall town.", "乘世界最高百龙天梯直冲阿凡达仙境，夜宿挂在瀑布上的千年芙蓉镇。"),
-    image: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=900&q=75",
+    image: "https://images.unsplash.com/photo-1561031454-4f1331bd2a34?auto=format&fit=crop&w=900&q=75",
     transit240: true,
     bestTime: t2("Apr–Jun, Sep–Nov", "4–6 月、9–11 月"),
     klookDestQuery: "Zhangjiajie Tianmen Mountain tickets",
@@ -429,7 +437,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Henan", "河南省"),
     tagline: t2("Shaolin Kung Fu & 100,000 Cliffside Buddhas", "嵩山少林功夫 · 龙门石窟"),
     hook: t2("Watch real Shaolin monks perform martial arts at their birthplace and gaze at giant Tang Dynasty stone Buddhas.", "探访功夫发源地嵩山少林寺，仰望盛唐皇家雕刻艺术巅峰龙门石窟。"),
-    image: "https://images.unsplash.com/photo-1523946963389-207478f6cb2e?auto=format&fit=crop&w=900&q=75",
+    emblem: "豫",
+    gradient: "from-red-950 via-stone-900 to-slate-950",
     transit240: true,
     bestTime: t2("Apr–May, Sep–Oct", "4–5 月、9–10 月"),
     klookDestQuery: "Luoyang Longmen Grottoes Shaolin Temple",
@@ -475,7 +484,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Gansu", "甘肃省"),
     tagline: t2("Silk Road Desert Caves & Rainbow Mountains", "敦煌莫高窟 · 张掖七彩丹霞"),
     hook: t2("Ride camels to a crescent oasis in the Gobi Desert, step inside 1,600-year-old painted Buddhist caves, and see rainbow hills.", "大漠骑骆驼看月牙泉日落、探秘千年敦煌莫高窟壁画与张掖七彩丹霞。"),
-    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=900&q=75",
+    emblem: "陇",
+    gradient: "from-orange-950 via-amber-900 to-stone-950",
     bestTime: t2("May–Oct", "5–10 月"),
     klookDestQuery: "Dunhuang Mogao Caves Zhangye tour",
     cities: [
@@ -496,7 +506,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Heilongjiang", "黑龙江省"),
     tagline: t2("World's Largest Ice & Snow Castle Kingdom", "哈尔滨冰雪大世界 · 俄式风情"),
     hook: t2("Full-size glowing ice palaces sculpted from frozen river blocks in -20°C winter magic — China's #1 winter bucket list.", "零下 20 度的巨型发光冰雪城堡王国，全球最震撼的冬季奇观！"),
-    image: "https://images.unsplash.com/photo-1677922069736-288fd584c916?auto=format&fit=crop&w=900&q=75",
+    emblem: "黑",
+    gradient: "from-sky-900 via-blue-950 to-slate-950",
     transit240: true,
     bestTime: t2("Dec–Feb (Ice Festival)", "12 月–次年 2 月（冰雪季）"),
     klookDestQuery: "Harbin Ice and Snow World tickets",
@@ -517,7 +528,8 @@ const PROVINCES: ProvinceEntry[] = [
     province: t2("Hainan", "海南省"),
     tagline: t2("30-Day Visa-Free Tropical Beach Escape", "59 国 30 天免签热带海岛"),
     hook: t2("China's Hawaii: palm-lined resorts in Sanya, turquoise diving islands, and duty-free luxury shopping.", "东方夏威夷：三亚椰林沙滩、蜈支洲岛潜水与免税购物天堂。"),
-    image: "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?auto=format&fit=crop&w=900&q=75",
+    emblem: "琼",
+    gradient: "from-cyan-900 via-teal-950 to-slate-950",
     transit240: true,
     specialNote: t2("59-Country 30-Day Hainan Visa-Free", "59 国 30 天海南免签"),
     bestTime: t2("Nov–Apr", "11 月–次年 4 月"),
@@ -664,14 +676,26 @@ export function ProvinceDestinationsHub({ lang }: { lang: Lang }) {
             key={p.id}
             className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs transition hover:shadow-md"
           >
-            {/* Visual Cover Header */}
-            <div className="relative h-40 overflow-hidden bg-slate-900">
-              <img
-                src={p.image}
-                alt={tx(p.province, lang)}
-                className="h-full w-full object-cover opacity-85 transition duration-500 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent" />
+            {/* Visual Cover Header (100% verified landmark photo OR bespoke Chinese-emblem editorial cover) */}
+            <div
+              className={`relative h-40 overflow-hidden ${
+                p.image ? "bg-slate-900" : `bg-gradient-to-br ${p.gradient || "from-slate-900 to-slate-800"}`
+              }`}
+            >
+              {p.image ? (
+                <>
+                  <img
+                    src={p.image}
+                    alt={tx(p.province, lang)}
+                    className="h-full w-full object-cover opacity-85 transition duration-500 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent" />
+                </>
+              ) : (
+                <div className="pointer-events-none absolute -right-3 -top-5 select-none font-serif text-[130px] font-black leading-none text-white/10">
+                  {p.emblem}
+                </div>
+              )}
               {p.transit240 && (
                 <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-emerald-600/95 px-2.5 py-0.5 text-[10px] font-bold text-white shadow-xs">
                   <ShieldCheck className="h-3 w-3" />

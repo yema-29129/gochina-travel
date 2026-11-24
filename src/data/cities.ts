@@ -605,7 +605,7 @@ export const CITIES: City[] = [
     name: t2("Zhangjiajie", "张家界"),
     zh: "张家界",
     province: t2("Hunan", "湖南"),
-    image: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1561031454-4f1331bd2a34?auto=format&fit=crop&w=1400&q=80",
     summary: t2(
       "The “Avatar” sandstone pillars of Wulingyuan and Tianmen Mountain's cliff cableway. Cable-car time slots sell out 3 days ahead; the whole of Hunan is allowed on 240h transit.",
       "武陵源的“阿凡达”砂岩峰林和天门山的悬崖索道。索道时段票提前 3 天售罄；240 小时过境免签湖南全省可去。"
