@@ -367,12 +367,125 @@ export default async function CitiesPage({ params }: P) {
           </div>
         </section>
 
-        {/* 6. WHERE YOU CAN GO — COMPLETE 27-PROVINCE DIRECTORY */}
+        {/* 6. WHERE YOU CAN GO — VISUAL PROVINCE & TICKET HUB */}
         <div id="where-to-go" className="scroll-mt-24">
           <ProvinceDestinationsHub lang={lang} />
         </div>
 
-        {/* 7. CHINA TRAVEL FAQs */}
+        {/* 7. BUSINESS, CANTON FAIR & SOURCING HUB (High-Ticket B2B Travelers) */}
+        <section className="mt-16 rounded-2xl border border-slate-200 bg-slate-900 p-6 text-white sm:p-8">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <span className="inline-block rounded-full bg-amber-400/20 px-3 py-0.5 text-xs font-bold text-amber-300">
+                💼 {tx(t2("Business, Trade Fairs & Sourcing Trips", "商务考察 · 广交会 · 义乌采购专区"), lang)}
+              </span>
+              <h2 className="mt-2.5 text-2xl font-extrabold text-white sm:text-3xl">
+                {tx(
+                  t2("Visiting China for Canton Fair, Yiwu Market or Shenzhen Tech?", "来参加广交会、义乌采购或深圳华强北看厂？"),
+                  lang
+                )}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                {tx(
+                  t2(
+                    "Skip the friction of business travel in China: book foreigner-friendly exhibition hotels near Pazhou / Yiwu, grab a 50 GB no-throttle business eSIM (Zoom & ChatGPT ready), and arrange fixed-price airport transfers.",
+                    "商务客一站式搞定：预订琶洲/义乌外宾友好型酒店、配 50GB 不限速商务 eSIM（Zoom / ChatGPT 畅用）、预约英文举牌接机。"
+                  ),
+                  lang
+                )}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-200">
+                {[
+                  t2("Canton Fair (Guangzhou)", "广州广交会"),
+                  t2("Yiwu Wholesale Market", "义乌国际商贸城"),
+                  t2("Shenzhen Huaqiangbei", "深圳华强北"),
+                  t2("Shanghai CIIE / Tech Expos", "上海国际展会"),
+                ].map((tag, i) => (
+                  <span key={i} className="rounded-lg bg-white/10 px-2.5 py-1 font-semibold">
+                    {tx(tag, lang)}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex shrink-0 flex-col gap-2.5 sm:w-64">
+              <a
+                href={AFFILIATES.tripHotels.url}
+                target="_blank"
+                rel="sponsored nofollow noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-red-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700"
+              >
+                {tx(t2("Foreigner-Friendly Hotels ↗", "查外宾商务酒店 ↗"), lang)}
+              </a>
+              <Link
+                href={href(lang, "/tools/esim-calculator")}
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-slate-900 transition hover:bg-slate-100"
+              >
+                {tx(t2("50 GB Business eSIM Finder →", "配 50GB 商务办公 eSIM →"), lang)}
+              </Link>
+              <a
+                href="https://www.klook.com/search/result/?query=China%20Airport%20Transfer"
+                target="_blank"
+                rel="sponsored nofollow noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/25 bg-white/10 px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-white/20"
+              >
+                {tx(t2("Book Airport Pickup on Klook ↗", "预订机场专车接机 ↗"), lang)}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. FREE OFFLINE SURVIVAL RESOURCES (JNTO Resources Hub Style) */}
+        <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-xs sm:p-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <span className="inline-block rounded-full bg-emerald-50 px-3 py-0.5 text-xs font-bold text-emerald-800">
+                📥 {tx(t2("Free Offline Resources", "免费离线随身工具包"), lang)}
+              </span>
+              <h2 className="mt-2 text-xl font-extrabold text-slate-900 sm:text-2xl">
+                {tx(t2("Download & Bookmark Before You Board", "登机前必存的 4 件离线急救工具"), lang)}
+              </h2>
+            </div>
+            <Link href={href(lang, "/tools")} className="text-sm font-bold text-red-600 hover:underline">
+              {tx(t2("View all 13 tools →", "查看全部 13 个工具 →"), lang)}
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                to: "/tools/esim-calculator",
+                title: t2("Offline eSIM Cabin Card (PNG)", "机舱 eSIM 落地激活急救图"),
+                desc: t2("1-click PNG wallpaper showing which SIM turns Data Roaming ON vs OFF.", "一键存手机相册，落地不慌不断网。"),
+              },
+              {
+                to: "/tools/china-metro-maps",
+                title: t2("All China Metro Maps (49 Cities)", "全国 49 城高清中英文地铁图"),
+                desc: t2("Zoomable English & Chinese subway maps + Visa/MC tap list.", "可缩放双语线网图与拍外卡城市全表。"),
+              },
+              {
+                to: "/tools/allergy-card",
+                title: t2("Chef-Proof Allergy & Diet Card", "中文食物过敏与忌口闪卡"),
+                desc: t2("Fullscreen Mandarin card naming exact oils & allergens to avoid.", "全屏给厨师看，写明花生/麸质/素食要求。"),
+              },
+              {
+                to: "/tools/rescue-cards",
+                title: t2("Pharmacy & Emergency Show-Cards", "药店买药与紧急求助全屏卡"),
+                desc: t2("Symptom-to-Chinese-medicine lookup + 5 fullscreen rescue cards.", "症状对照中文药名 + 5 张全屏救急卡。"),
+              },
+            ].map((res, i) => (
+              <Link
+                key={i}
+                href={href(lang, res.to)}
+                className="group rounded-xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-slate-400 hover:bg-white"
+              >
+                <div className="text-sm font-bold text-slate-900 group-hover:text-red-600">{tx(res.title, lang)}</div>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">{tx(res.desc, lang)}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* 9. CHINA TRAVEL FAQs */}
         <section id="faq" className="mt-16 scroll-mt-24">
           <h2 className="mb-4 text-2xl font-extrabold text-slate-900 sm:text-3xl">
             {tx(t2("China travel FAQs", "中国目的地常见问题"), lang)}
