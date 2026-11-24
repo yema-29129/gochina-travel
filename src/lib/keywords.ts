@@ -1,7 +1,7 @@
 import type { Lang } from "./i18n";
 
 /**
- * Targeted long-tail SEO keyword matrix for every route on china.tmhzz.com.
+ * Targeted long-tail SEO keyword matrix for every route on gochinadesk.com.
  * Covers all 25 high-intent international search queries + bilingual 1:1 Chinese equivalents.
  */
 const DEFAULT_KEYWORDS: Record<Lang, string[]> = {

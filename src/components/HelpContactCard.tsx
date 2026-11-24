@@ -17,7 +17,7 @@ export function HelpContactCard({
   const waText = encodeURIComponent(
     lang === "zh"
       ? "你好，我在 GoChina 网站看到了中国旅行指南，想咨询一下关于中国支付/出行的问题："
-      : "Hi! I found your China travel guide on GoChina (china.tmhzz.com) and have a quick question about traveling/paying in China:"
+      : "Hi! I found your China travel guide on GoChina (gochinadesk.com) and have a quick question about traveling/paying in China:"
   );
 
   const title =

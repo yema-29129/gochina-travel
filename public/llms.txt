@@ -1,44 +1,44 @@
-# GoChina (https://china.tmhzz.com)
+# GoChina (https://gochinadesk.com)
 
 > Practical, up-to-date 2026 China travel guide and interactive tools hub for international visitors. Available in English (`/en`), Japanese (`/ja`), Korean (`/ko`), and Chinese (`/zh`).
-> Full fact-dense reference for AI assistants & coding agents: https://china.tmhzz.com/llms-full.txt
-> XML Sitemap (224 URLs across 4 languages): https://china.tmhzz.com/sitemap.xml
+> Full fact-dense reference for AI assistants & coding agents: https://gochinadesk.com/llms-full.txt
+> XML Sitemap (224 URLs across 4 languages): https://gochinadesk.com/sitemap.xml
 
 ## Core Interactive Tools
-- [Visa-Free & 240-Hour Transit Route Checker](https://china.tmhzz.com/en/tools/visa-checker): Check 50-country 30-day visa-free eligibility and 55-country 240-hour (10-day) transit rules across 24 provinces and 65 ports.
-- [China Payments Setup & ¥200 Fee Calculator](https://china.tmhzz.com/en/tools/payment-fee-calculator): Visual binding tutorials for Alipay, WeChat Pay, Tencent TenPayGo, and UnionPay Nihao China, 3 QR scan scenarios (incl. personal QR cash trap), and ¥200 3% fee & DCC calculator.
-- [Internet Plan & eSIM Data Calculator](https://china.tmhzz.com/en/tools/esim-calculator): Match 3GB–100GB fixed data tiers by phone hardware (US eSIM-only iPhone 14–17, unlocked eSIM, physical-SIM-only, carrier-locked), Singapore routing for TikTok/ChatGPT, and 1-click offline cabin activation PNG card.
-- [All China Metro Maps (49 Cities HD)](https://china.tmhzz.com/en/tools/china-metro-maps): Zoomable English & Chinese subway maps for 49 Chinese cities, foreign Visa/Mastercard/Amex/JCB tap-to-ride city list (Beijing, Shanghai, Guangzhou, Shenzhen, Hong Kong), fares, and key tourist lines.
-- [Attraction Ticket Release Alarm](https://china.tmhzz.com/en/tools/ticket-alarm): Convert Forbidden City (7 days ahead, 20:00 Beijing time) and museum ticket release times into local time zones.
-- [Power Bank CCC Checker & Airport Transfer Time](https://china.tmhzz.com/en/tools/powerbank-airport): Instant Wh calculator, domestic flight CCC oval mark check, and dual-airport minimum layover calculator (PVG↔SHA, TFU↔CTU, PKX↔PEK).
-- [Chinese Food Allergy & Diet Card + Bubble Tea Card](https://china.tmhzz.com/en/tools/allergy-card): Fullscreen chef-proof Mandarin cards for peanut, gluten, shellfish, vegan, halal, and bubble tea orders.
-- [Pharmacy Lookup & Emergency Show-Cards](https://china.tmhzz.com/en/tools/rescue-cards): Symptom-to-Chinese-medicine lookup (Ibuprofen, Tylenol, Smecta, etc.) plus 5 fullscreen emergency show-cards.
-- [72-Hour Pre-Flight Personalized Checklist](https://china.tmhzz.com/en/tools/packing-checklist): Tailored pre-departure checklist by OS, travel month, and companions.
-- [Tax Refund Calculator (Instant Refund)](https://china.tmhzz.com/en/tools/tax-refund-calculator): Calculate net ~9% tourist VAT instant refund (¥200 minimum spend).
-- [Currency Converter (CNY)](https://china.tmhzz.com/en/tools/currency-converter): Quick CNY to USD/EUR/GBP/AUD/JPY/KRW converter.
-- [Live Taxi Address Card](https://china.tmhzz.com/en/tools/taxi-card): Type any Chinese hotel address and display fullscreen for taxi drivers.
-- [Phrasebook — Tap to Show](https://china.tmhzz.com/en/tools/phrasebook): Tap-to-enlarge Mandarin survival cards.
+- [Visa-Free & 240-Hour Transit Route Checker](https://gochinadesk.com/en/tools/visa-checker): Check 50-country 30-day visa-free eligibility and 55-country 240-hour (10-day) transit rules across 24 provinces and 65 ports.
+- [China Payments Setup & ¥200 Fee Calculator](https://gochinadesk.com/en/tools/payment-fee-calculator): Visual binding tutorials for Alipay, WeChat Pay, Tencent TenPayGo, and UnionPay Nihao China, 3 QR scan scenarios (incl. personal QR cash trap), and ¥200 3% fee & DCC calculator.
+- [Internet Plan & eSIM Data Calculator](https://gochinadesk.com/en/tools/esim-calculator): Match 3GB–100GB fixed data tiers by phone hardware (US eSIM-only iPhone 14–17, unlocked eSIM, physical-SIM-only, carrier-locked), Singapore routing for TikTok/ChatGPT, and 1-click offline cabin activation PNG card.
+- [All China Metro Maps (49 Cities HD)](https://gochinadesk.com/en/tools/china-metro-maps): Zoomable English & Chinese subway maps for 49 Chinese cities, foreign Visa/Mastercard/Amex/JCB tap-to-ride city list (Beijing, Shanghai, Guangzhou, Shenzhen, Hong Kong), fares, and key tourist lines.
+- [Attraction Ticket Release Alarm](https://gochinadesk.com/en/tools/ticket-alarm): Convert Forbidden City (7 days ahead, 20:00 Beijing time) and museum ticket release times into local time zones.
+- [Power Bank CCC Checker & Airport Transfer Time](https://gochinadesk.com/en/tools/powerbank-airport): Instant Wh calculator, domestic flight CCC oval mark check, and dual-airport minimum layover calculator (PVG↔SHA, TFU↔CTU, PKX↔PEK).
+- [Chinese Food Allergy & Diet Card + Bubble Tea Card](https://gochinadesk.com/en/tools/allergy-card): Fullscreen chef-proof Mandarin cards for peanut, gluten, shellfish, vegan, halal, and bubble tea orders.
+- [Pharmacy Lookup & Emergency Show-Cards](https://gochinadesk.com/en/tools/rescue-cards): Symptom-to-Chinese-medicine lookup (Ibuprofen, Tylenol, Smecta, etc.) plus 5 fullscreen emergency show-cards.
+- [72-Hour Pre-Flight Personalized Checklist](https://gochinadesk.com/en/tools/packing-checklist): Tailored pre-departure checklist by OS, travel month, and companions.
+- [Tax Refund Calculator (Instant Refund)](https://gochinadesk.com/en/tools/tax-refund-calculator): Calculate net ~9% tourist VAT instant refund (¥200 minimum spend).
+- [Currency Converter (CNY)](https://gochinadesk.com/en/tools/currency-converter): Quick CNY to USD/EUR/GBP/AUD/JPY/KRW converter.
+- [Live Taxi Address Card](https://gochinadesk.com/en/tools/taxi-card): Type any Chinese hotel address and display fullscreen for taxi drivers.
+- [Phrasebook — Tap to Show](https://gochinadesk.com/en/tools/phrasebook): Tap-to-enlarge Mandarin survival cards.
 
 ## High-Priority Travel Guides
-- [China 30-Day Visa-Free Countries (2026)](https://china.tmhzz.com/en/guides/visa-free-countries)
-- [China 240-Hour Visa-Free Transit (65 Ports & 24 Provinces)](https://china.tmhzz.com/en/guides/240-hour-transit)
-- [China Online Arrival Card (NIA 12367)](https://china.tmhzz.com/en/guides/online-arrival-card)
-- [Alipay & WeChat Pay for Foreigners](https://china.tmhzz.com/en/guides/alipay-wechat-pay)
-- [China Internet & Roaming eSIM Guide](https://china.tmhzz.com/en/guides/internet-esim)
-- [China High-Speed Trains: 12306 Tutorial, All Letter Codes (G/C/D/S/Z/T/K/Y/L) & Search](https://china.tmhzz.com/en/guides/high-speed-trains)
-- [Getting Around Chinese Cities: Apple Maps, AMap Global, Metro & DiDi](https://china.tmhzz.com/en/guides/metro-didi-maps)
-- [China Domestic Flights: Power Bank CCC Ban & Budget Airline Traps](https://china.tmhzz.com/en/guides/domestic-flights)
-- [China Top 12 International Airports & Dual-Airport Layover Traps](https://china.tmhzz.com/en/guides/airports)
-- [Attraction Tickets & Booking Rules](https://china.tmhzz.com/en/guides/attraction-tickets)
-- [Shopping & 200 RMB Instant Tax Refund](https://china.tmhzz.com/en/guides/shopping-tax-refund)
+- [China 30-Day Visa-Free Countries (2026)](https://gochinadesk.com/en/guides/visa-free-countries)
+- [China 240-Hour Visa-Free Transit (65 Ports & 24 Provinces)](https://gochinadesk.com/en/guides/240-hour-transit)
+- [China Online Arrival Card (NIA 12367)](https://gochinadesk.com/en/guides/online-arrival-card)
+- [Alipay & WeChat Pay for Foreigners](https://gochinadesk.com/en/guides/alipay-wechat-pay)
+- [China Internet & Roaming eSIM Guide](https://gochinadesk.com/en/guides/internet-esim)
+- [China High-Speed Trains: 12306 Tutorial, All Letter Codes (G/C/D/S/Z/T/K/Y/L) & Search](https://gochinadesk.com/en/guides/high-speed-trains)
+- [Getting Around Chinese Cities: Apple Maps, AMap Global, Metro & DiDi](https://gochinadesk.com/en/guides/metro-didi-maps)
+- [China Domestic Flights: Power Bank CCC Ban & Budget Airline Traps](https://gochinadesk.com/en/guides/domestic-flights)
+- [China Top 12 International Airports & Dual-Airport Layover Traps](https://gochinadesk.com/en/guides/airports)
+- [Attraction Tickets & Booking Rules](https://gochinadesk.com/en/guides/attraction-tickets)
+- [Shopping & 200 RMB Instant Tax Refund](https://gochinadesk.com/en/guides/shopping-tax-refund)
 
 ## Destinations & Itineraries
-- [China Destinations Hub: Classic Routes, 27 Provinces & Bookable Sights](https://china.tmhzz.com/en/cities)
-- [City Guides](https://china.tmhzz.com/en/cities): [Beijing](https://china.tmhzz.com/en/cities/beijing), [Shanghai](https://china.tmhzz.com/en/cities/shanghai), [Xi'an](https://china.tmhzz.com/en/cities/xian), [Chengdu](https://china.tmhzz.com/en/cities/chengdu), [Chongqing](https://china.tmhzz.com/en/cities/chongqing), [Guilin](https://china.tmhzz.com/en/cities/guilin), [Zhangjiajie](https://china.tmhzz.com/en/cities/zhangjiajie), [Yunnan](https://china.tmhzz.com/en/cities/yunnan)
-- [Trip Planner](https://china.tmhzz.com/en/planner)
+- [China Destinations Hub: Classic Routes, 27 Provinces & Bookable Sights](https://gochinadesk.com/en/cities)
+- [City Guides](https://gochinadesk.com/en/cities): [Beijing](https://gochinadesk.com/en/cities/beijing), [Shanghai](https://gochinadesk.com/en/cities/shanghai), [Xi'an](https://gochinadesk.com/en/cities/xian), [Chengdu](https://gochinadesk.com/en/cities/chengdu), [Chongqing](https://gochinadesk.com/en/cities/chongqing), [Guilin](https://gochinadesk.com/en/cities/guilin), [Zhangjiajie](https://gochinadesk.com/en/cities/zhangjiajie), [Yunnan](https://gochinadesk.com/en/cities/yunnan)
+- [Trip Planner](https://gochinadesk.com/en/planner)
 
 ## Language Editions
-- English: https://china.tmhzz.com/en
-- Japanese (日本語): https://china.tmhzz.com/ja
-- Korean (한국어): https://china.tmhzz.com/ko
-- Chinese (中文): https://china.tmhzz.com/zh
+- English: https://gochinadesk.com/en
+- Japanese (日本語): https://gochinadesk.com/ja
+- Korean (한국어): https://gochinadesk.com/ko
+- Chinese (中文): https://gochinadesk.com/zh

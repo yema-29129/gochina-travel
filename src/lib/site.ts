@@ -3,8 +3,8 @@
  */
 export const SITE = {
   name: "GoChina",
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://china.tmhzz.com").replace(/\/$/, ""),
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@tmhzz.com",
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://gochinadesk.com").replace(/\/$/, ""),
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@gochinadesk.com",
   whatsapp: "+852 6075 6760",
   whatsappUrl: "https://wa.me/85260756760",
   wechat: "LMQQQM",

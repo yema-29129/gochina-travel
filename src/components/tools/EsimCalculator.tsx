@@ -325,7 +325,7 @@ export default function EsimCalculator({ lang }: { lang: Lang }) {
 
     ctx.fillStyle = "#64748b";
     ctx.font = "500 26px -apple-system, BlinkMacSystemFont, Inter, sans-serif";
-    ctx.fillText("china.tmhzz.com  ·  Emergency in China: 110 Police · 120 Ambulance · 12367 English", 72, 1835);
+    ctx.fillText("gochinadesk.com  ·  Emergency in China: 110 Police · 120 Ambulance · 12367 English", 72, 1835);
 
     const a = document.createElement("a");
     a.href = canvas.toDataURL("image/png");
