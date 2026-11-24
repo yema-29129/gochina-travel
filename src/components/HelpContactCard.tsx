@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { MessageCircle, Check, Copy, ExternalLink } from "lucide-react";
-import { Lang, t2, tx } from "@/lib/i18n";
+import { Lang, t2, t4, tx } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 
 export function HelpContactCard({
@@ -22,18 +22,32 @@ export function HelpContactCard({
 
   const title =
     context === "payment"
-      ? t2("Stuck on Alipay / WeChat Setup or Card Verification?", "支付宝 / 微信绑卡或现场付款遇到卡壳？")
-      : t2("GoChina Trip Rescue Desk (09:00–22:00 GMT+8)", "GoChina 赴华旅行协助台（北京时间 09:00–22:00）");
+      ? t4(
+          "Stuck on Alipay / WeChat Setup or Card Verification?",
+          "支付宝 / 微信绑卡或现场付款遇到卡壳？",
+          "アリペイ・WeChatPayの登録や決済でお困りですか？",
+          "알리페이·위챗페이 카드 등록이나 결제가 막히셨나요?"
+        )
+      : t4(
+          "GoChina Trip Rescue Desk (09:00–22:00 GMT+8)",
+          "GoChina 赴华旅行协助台（北京时间 09:00–22:00）",
+          "GoChina 中国旅行サポートデスク（中国時間 09:00–22:00）",
+          "GoChina 중국 여행 헬프 데스크 (중국시간 09:00–22:00)"
+        );
 
   const desc =
     context === "payment"
-      ? t2(
+      ? t4(
           "Free quick help for urgent payment snags — send us the error screenshot on WhatsApp (works with roaming eSIM) or WeChat (works on any hotel Wi-Fi).",
-          "免费解答紧急支付与绑卡报错问题——直接把报错截图发到 WhatsApp（漫游 eSIM 可用）或微信（酒店 Wi-Fi 100% 可用）。"
+          "免费解答紧急支付与绑卡报错问题——直接把报错截图发到 WhatsApp（漫游 eSIM 可用）或微信（酒店 Wi-Fi 100% 可用）。",
+          "エラー画面のスクショをWhatsAppまたはWeChatでお送りください。決済・登録トラブルを無料でお手伝いします。",
+          "결제 오류 스크린샷을 WhatsApp 또는 WeChat으로 보내주시면 무료로 빠르게 해결을 도와드립니다."
         )
-      : t2(
+      : t4(
           "Free quick help for urgent payment or transport snags in China, or reach out for tailored itinerary assistance. Replies in English & Chinese.",
-          "免费解答在华紧急支付/交通卡壳问题，或获取定制行程协助。支持中英文回复。"
+          "免费解答在华紧急支付/交通卡壳问题，或获取定制行程协助。支持中英文回复。",
+          "中国滞在中の決済・移動トラブルの無料相談やカスタム旅程のご相談はWhatsApp・WeChatへどうぞ。",
+          "중국 여행 중 긴급 결제·교통 문제 무료 상담 및 맞춤 일정 문의는 WhatsApp 또는 WeChat으로 연락하세요."
         );
 
   const copyWechat = async () => {

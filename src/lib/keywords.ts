@@ -23,9 +23,27 @@ const DEFAULT_KEYWORDS: Record<Lang, string[]> = {
     "中国国际漫游 eSIM 推荐",
     "外国人坐中国高铁攻略",
   ],
+  ja: [
+    "中国旅行 ガイド 2026",
+    "中国 ビザ免除 30日 日本人",
+    "アリペイ クレジットカード 登録",
+    "中国 eSIM おすすめ",
+    "中国 新幹線 12306 予約",
+    "上海 北京 地下鉄 路線図",
+    "中国 国内線 モバイルバッテリー CCC",
+  ],
+  ko: [
+    "중국 여행 가이드 2026",
+    "중국 무비자 30일 한국인",
+    "알리페이 위챗페이 해외카드 등록",
+    "중국 eSIM 추천",
+    "중국 고속철도 12306 예매",
+    "상하이 베이징 장가계 지하철 노선도",
+    "중국 국내선 보조배터리 CCC 규정",
+  ],
 };
 
-const ROUTE_KEYWORDS: Record<string, Record<Lang, string[]>> = {
+const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   "/": {
     en: [
       "China travel guide 2026",

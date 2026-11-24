@@ -21,7 +21,7 @@ export function Header({ lang }: { lang: Lang }) {
     { path: "/planner", label: t.nav.planner },
   ];
 
-  const rest = pathname.replace(/^\/(en|zh)(?=\/|$)/, "");
+  const rest = pathname.replace(/^\/(en|zh|ja|ko)(?=\/|$)/, "");
   const switchTo = (l: Lang) => `/${l}${rest}`;
   const isActive = (p: string) => rest === p || rest.startsWith(p + "/");
 
@@ -63,13 +63,13 @@ export function Header({ lang }: { lang: Lang }) {
 
           <div className="flex items-center gap-2">
             <div className="flex items-center rounded-lg border border-slate-200 p-0.5">
-              <Globe className="ml-2 mr-1 h-4 w-4 text-slate-500" />
+              <Globe className="ml-1.5 mr-0.5 hidden h-4 w-4 text-slate-500 sm:block" />
               {LANGS.map((l) => (
                 <Link
                   key={l}
                   href={switchTo(l)}
                   hrefLang={l === "zh" ? "zh-CN" : l}
-                  className={`rounded-md px-2.5 py-1.5 text-sm font-medium ${l === lang ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-100"}`}
+                  className={`rounded-md px-2 py-1 text-xs font-semibold sm:text-sm ${l === lang ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-100"}`}
                 >
                   {LANG_LABEL[l]}
                 </Link>

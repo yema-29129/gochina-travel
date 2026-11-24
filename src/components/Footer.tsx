@@ -39,7 +39,11 @@ export function Footer({ lang }: { lang: Lang }) {
           <p className="mt-3 text-xs leading-relaxed text-slate-400">
             {lang === "zh"
               ? "提示：纯流量 eSIM 无法直接拨打普通电话，紧急呼叫请保持原手机卡开启（关闭数据漫游）或借用酒店前台座机（12367 提供 24 小时英文移民咨询服务）。"
-              : "Note: Data-only eSIMs cannot make regular voice calls. Keep your home SIM switched ON (with Data Roaming OFF) or use your hotel front-desk phone for emergency calls. 12367 provides 24/7 English immigration support."}
+              : lang === "ja"
+                ? "注意：データ専用eSIMでは通常の音声通話ができません。緊急時は元のSIMをオン（データローミングOFF）のままにするか、ホテルのフロント電話をご利用ください（12367は24時間英語対応）。"
+                : lang === "ko"
+                  ? "참고: 데이터 전용 eSIM으로는 일반 음성 통화가 불가합니다. 긴급 시 기존 유심을 켜두거나(데이터 로밍 OFF) 호텔 프런트 전화를 이용하세요(12367은 24시간 영어 지원)."
+                  : "Note: Data-only eSIMs cannot make regular voice calls. Keep your home SIM switched ON (with Data Roaming OFF) or use your hotel front-desk phone for emergency calls. 12367 provides 24/7 English immigration support."}
           </p>
         </div>
 

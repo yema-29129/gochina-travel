@@ -49,10 +49,10 @@ interface ProvinceEntry {
   cities: CitySpot[];
 }
 
-const klookUrl = (q: string, lang: Lang) =>
-  lang === "en"
-    ? `https://www.klook.com/en-US/search/result/?query=${encodeURIComponent(q)}`
-    : `https://www.klook.com/search/result/?query=${encodeURIComponent(q)}`;
+const klookUrl = (q: string, lang: Lang) => {
+  const prefix = lang === "en" ? "/en-US" : lang === "ja" ? "/ja" : lang === "ko" ? "/ko" : "";
+  return `https://www.klook.com${prefix}/search/result/?query=${encodeURIComponent(q)}`;
+};
 
 const tripToursUrl = (q: string) =>
   `https://www.trip.com/things-to-do/list?keyword=${encodeURIComponent(q)}`;

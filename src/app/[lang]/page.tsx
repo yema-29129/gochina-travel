@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AlertTriangle, ArrowRight, CheckSquare, CreditCard, ShieldCheck, TrainFront } from "lucide-react";
-import { href, isLang, LANGS, t2, tx } from "@/lib/i18n";
+import { href, isLang, LANGS, t2, t4, tx } from "@/lib/i18n";
 import { absUrl, buildMetadata, faqLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { TOOLS } from "@/data/tools";
@@ -21,41 +21,66 @@ type P = { params: Promise<{ lang: string }> };
 
 const HERO_IMG = "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1600&q=80";
 
-const META_TITLE = t2(
+const META_TITLE = t4(
   "GoChina — Practical China Travel Guide, Visa Checker & Tools (2026)",
-  "GoChina — 2026 外国人赴华实用旅行指南、免签查询与计算工具"
+  "GoChina — 2026 外国人赴华实用旅行指南、免签查询与计算工具",
+  "GoChina — 2026年 中国旅行実用ガイド・ビザ免除チェッカー・便利ツール",
+  "GoChina — 2026 중국 자유여행 실전 가이드 · 무비자 확인 · 여행 도구"
 );
-const META_DESC = t2(
-  "Everything foreign travelers need for China: 30-day visa-free & 240-hour transit checker, Alipay/WeChat Pay fees, eSIMs, high-speed rail, city guides and Chinese show-cards.",
-  "外国游客赴华所需的一切：30 天免签与 240 小时过境检查器、支付宝/微信手续费、eSIM、高铁、城市指南与全屏中文求助卡。"
+const META_DESC = t4(
+  "Everything international travelers need for China: 30-day visa-free & 240-hour transit checker, Alipay/WeChat Pay fees, roaming eSIMs, bullet trains, 49-city metro maps and show-cards.",
+  "外国游客赴华所需的一切：30 天免签与 240 小时过境检查器、支付宝/微信手续费、漫游 eSIM、高铁、全国 49 城地铁图与全屏中文求助卡。",
+  "中国旅行に必要なすべてを網羅：30日間ビザ免除チェッカー、アリペイ決済、国際ローミングeSIM、中国新幹線、全国49都市地下鉄路線図、中国語提示カード。",
+  "중국 여행 필수 올인원: 30일 무비자·240시간 경유 확인기, 알리페이/위챗페이 카드 등록, 로밍 eSIM, 고속철도, 중국 49개 도시 지하철 노선도 및 중국어 카드."
 );
 
 const U = {
-  heroBadge: t2("Updated for 2026 · 50 Visa-Free Countries & 240-Hour Transit", "2026 最新更新 · 50 国免签与 240 小时过境免签"),
-  heroH1: t2("Travel China Without the Friction", "轻松游中国，扫清所有行前与落地障碍"),
-  heroSub: t2(
-    "Plain-English guides and interactive tools for visas, Alipay & WeChat Pay, eSIMs, bullet trains, attraction tickets and offline Chinese show-cards.",
-    "面向国际游客的实用攻略与互动工具：签证与免签、支付宝与微信支付、eSIM 上网、高铁、景点抢票及离线中文展示卡。"
+  heroBadge: t4(
+    "Updated for 2026 · 50 Visa-Free Countries & 240-Hour Transit",
+    "2026 最新更新 · 50 国免签与 240 小时过境免签",
+    "2026年最新 · 日本含む50カ国30日ビザ免除＆240時間トランジット対応",
+    "2026 최신 · 한국 포함 50개국 30일 무비자 & 240시간 경유 대응"
   ),
-  toolsTitle: t2("12 Interactive China Travel Tools", "12 个中国旅行实用工具"),
-  toolsSub: t2("Instant calculators and full-screen Chinese cards built for your phone.", "专为手机打造的即时计算器与全屏中文展示卡。"),
-  checklistBadge: t2("Start 72 hours before you fly", "出发前 72 小时必做"),
-  checklistTitle: t2("72-Hour Pre-Flight Personalized Checklist", "出发前 72 小时个性化行前清单"),
-  checklistDesc: t2(
+  heroH1: t4(
+    "Travel China Without the Friction",
+    "轻松游中国，扫清所有行前与落地障碍",
+    "中国旅行の「不安」をすべて解消する実用ガイド",
+    "막힘없는 중국 자유여행을 위한 실전 가이드"
+  ),
+  heroSub: t4(
+    "Plain-English guides and interactive tools for visas, Alipay & WeChat Pay, roaming eSIMs, bullet trains, 49-city metro maps, tickets and offline Chinese show-cards.",
+    "面向国际游客的实用攻略与互动工具：签证免签、支付宝与微信支付、漫游 eSIM、高铁、全国地铁图、景点购票及离线中文展示卡。",
+    "ビザ免除確認、アリペイ・ウィーチャットペイ設定、eSIM容量計算、新幹線予約、全国地下鉄マップ、チケット手配までこれ1つで完結。",
+    "무비자 확인, 알리페이·위챗페이 결제, 로밍 eSIM 계산기, 고속철도, 전국 지하철 노선도, 관광지 티켓 및 오프라인 중국어 카드까지 한 번에."
+  ),
+  toolsTitle: t4("13 Interactive China Travel Tools", "13 个中国旅行实用工具", "中国旅行に役立つ13の無料ツール", "중국 여행 필수 13가지 무료 도구"),
+  toolsSub: t4(
+    "Instant calculators, 49-city metro maps and full-screen Chinese cards built for your phone.",
+    "专为手机打造的即时计算器、全国地铁图与全屏中文展示卡。",
+    "スマホですぐ使える計算ツール・地下鉄路線図・現地提示用中国語カード。",
+    "스마트폰에 최적화된 계산기, 전국 지하철 노선도 및 전체화면 중국어 카드."
+  ),
+  checklistBadge: t4("Start 72 hours before you fly", "出发前 72 小时必做", "出発72時間前チェック", "출국 72시간 전 필수 준비"),
+  checklistTitle: t4("72-Hour Pre-Flight Personalized Checklist", "出发前 72 小时个性化行前清单", "出発72時間前パーソナル持ち物＆設定リスト", "출국 72시간 전 맞춤형 체크리스트"),
+  checklistDesc: t4(
     "Pick your phone (iOS/Android), travel month and companions to generate a tailored China prep checklist — Alipay, eSIM, online arrival card, AMap and packing warnings.",
-    "选择你的手机系统、出行月份和同行人，一键生成专属中国行前清单——支付宝、eSIM、网上入境卡、高德地图与避坑提醒。"
+    "选择你的手机系统、出行月份和同行人，一键生成专属中国行前清单——支付宝、eSIM、网上入境卡、高德地图与避坑提醒。",
+    "スマホ機種・渡航月・同行者を選ぶだけで、アリペイ、eSIM、オンライン入国カード、高徳地図などの準備リストを自動生成。",
+    "스마트폰 기종, 여행 월, 동행자를 선택하면 알리페이, eSIM, 온라인 입국카드, 고덕지도 등 맞춤 준비 체크리스트를 만들어 드립니다."
   ),
-  checklistCta: t2("Build my checklist", "生成我的清单"),
-  blackoutTitle: t2("Blackout Dates Warning — Avoid China's Peak Holidays", "避坑预警——避开中国三大出行高峰期"),
-  blackoutDesc: t2(
+  checklistCta: t4("Build my checklist", "生成我的清单", "リストを作成", "체크리스트 만들기"),
+  blackoutTitle: t4("Blackout Dates Warning — Avoid China's Peak Holidays", "避坑预警——避开中国三大出行高峰期", "混雑注意：中国の大型連休を避けよう", "혼잡 주의 — 중국 3대 연휴 피하기"),
+  blackoutDesc: t4(
     "Spring Festival (Jan/Feb), Labor Day Golden Week (May 1–5) and National Day Golden Week (Oct 1–7) bring extreme crowds, sold-out trains and 2×–3× hotel prices.",
-    "春节（1–2 月）、五一假期（5 月 1–5 日）和国庆黄金周（10 月 1–7 日）期间景区极度拥挤、高铁一票难求且酒店涨价 2–3 倍。"
+    "春节（1–2 月）、五一假期（5 月 1–5 日）和国庆黄金周（10 月 1–7 日）期间景区极度拥挤、高铁一票难求且酒店涨价 2–3 倍。",
+    "春節（1〜2月）、労働節（5/1〜5）、国慶節（10/1〜7）は観光地が大混雑し、新幹線チケット完売・ホテル価格が2〜3倍になります。",
+    "춘절(1~2월), 노동절(5/1~5), 국경절(10/1~7) 연휴에는 기차표 매진과 호텔 가격 2~3배 급등이 발생합니다."
   ),
-  blackoutCta: t2("See best months & blackout dates", "查看最佳月份与避坑日历"),
-  hubsTitle: t2("Core Survival Guides", "核心生存指南"),
-  citiesTitle: t2("Top 8 Destinations for First-Timers", "首次赴华 8 大热门目的地"),
-  guidesTitle: t2("Essential Guides to Read First", "必读核心攻略"),
-  plannerCta: t2("Need a day-by-day route? Try the Trip Planner", "需要逐日行程？试试行程规划器"),
+  blackoutCta: t4("See best months & blackout dates", "查看最佳月份与避坑日历", "ベストシーズン＆混雑カレンダーを見る", "추천 시즌 및 연휴 달력 보기"),
+  hubsTitle: t4("Core Survival Guides", "核心生存指南", "中国旅行の3大必須ガイド", "중국 여행 3대 핵심 가이드"),
+  citiesTitle: t4("Top 8 Destinations for First-Timers", "首次赴华 8 大热门目的地", "初めての中国旅行・人気8都市ガイド", "중국 첫 여행 인기 8대 도시 가이드"),
+  guidesTitle: t4("Essential Guides to Read First", "必读核心攻略", "まず読むべき重要ガイド", "필독 핵심 가이드"),
+  plannerCta: t4("Need a day-by-day route? Try the Trip Planner", "需要逐日行程？试试行程规划器", "日程別のルート作成は旅程プランナーへ", "일차별 루트가 필요하신가요? 일정 플래너 쓰기"),
 };
 
 const HUBS = [
@@ -63,30 +88,36 @@ const HUBS = [
     path: "/visa",
     Icon: ShieldCheck,
     cls: "bg-red-50 text-red-600",
-    title: t2("Visa & Entry", "签证与入境"),
-    desc: t2(
+    title: t4("Visa & Entry", "签证与入境", "ビザ免除・入国手続き", "비자·입국 절차"),
+    desc: t4(
       "50-country 30-day visa-free list, 240-hour transit rules (24 provinces / 65 ports), online arrival card and airport immigration.",
-      "50 国 30 天免签名单、240 小时过境免签（24 省 65 口岸）、网上入境卡与机场边检攻略。"
+      "50 国 30 天免签名单、240 小时过境免签（24 省 65 口岸）、网上入境卡与机场边检攻略。",
+      "日本含む50カ国の30日ビザ免除、240時間トランジット免除（24省65港）、オンライン入国カード解説。",
+      "한국 포함 50개국 30일 무비자, 240시간 경유 무비자(24개 성·65개 항구), 온라인 입국카드 안내."
     ),
   },
   {
     path: "/money",
     Icon: CreditCard,
     cls: "bg-blue-50 text-blue-600",
-    title: t2("Money, Payments & Internet", "支付、现金与网络"),
-    desc: t2(
-      "Link foreign cards to Alipay & WeChat Pay, avoid the 3% fee over ¥200 and ATM DCC traps, plus eSIMs that bypass the firewall.",
-      "支付宝与微信绑外卡、规避 200 元以上 3% 手续费和 ATM DCC 陷阱，以及免翻墙 eSIM 上网方案。"
+    title: t4("Money, Payments & Internet", "支付、现金与网络", "決済・アリペイ・eSIM通信", "결제·알리페이·로밍 eSIM"),
+    desc: t4(
+      "Link foreign cards to Alipay, WeChat Pay, TenPayGo & UnionPay, avoid 3% fees over ¥200, plus Singapore-routed roaming eSIMs.",
+      "支付宝/微信/TenPayGo/银联绑卡图解、规避 200 元以上 3% 手续费和 ATM 陷阱，以及新加坡路由漫游 eSIM。",
+      "アリペイ・ウィーチャットペイへのクレカ登録、200元超の3%手数料回避、国際ローミングeSIM完全ガイド。",
+      "알리페이·위챗페이 해외카드 등록, 200위안 초과 3% 수수료 절약, 싱가포르 라우팅 로밍 eSIM 가이드."
     ),
   },
   {
     path: "/transport",
     Icon: TrainFront,
     cls: "bg-emerald-50 text-emerald-600",
-    title: t2("Trains, Flights & Getting Around", "高铁、国内航班与市内交通"),
-    desc: t2(
-      "High-speed rail booking, domestic flight CCC power bank rules, 12 major airports, tap-card metros, Didi and AMap.",
-      "高铁购票与人工通道、国内航班充电宝 CCC 规定、12 大机场交通、地铁拍外卡、滴滴与高德地图。"
+    title: t4("Trains, Flights & Getting Around", "高铁、国内航班与市内交通", "新幹線・国内線・地下鉄＆DiDi", "고속철도·국내선·지하철·디디"),
+    desc: t4(
+      "High-speed rail booking, domestic flight CCC power bank rules, 12 major airports, tap-card metros, DiDi and AMap.",
+      "高铁购票与 12306 教程、国内航班充电宝 CCC 规定、12 大机场交通、地铁拍外卡、滴滴与高德地图。",
+      "中国新幹線（12306・Trip.com）、国内線CCCバッテリー規定、12大空港アクセス、クレカタッチ地下鉄＆DiDi。",
+      "중국 고속철도 12306 예매, 국내선 보조배터리 CCC 규정, 12대 국제공항 교통, 해외카드 태그 지하철 & 디디."
     ),
   },
 ];
@@ -118,8 +149,8 @@ const HOME_FAQ: FaqItem[] = [
   {
     q: t2("Will Google, WhatsApp and Instagram work in China?", "在中国能用 Google、WhatsApp 和 Instagram 吗？"),
     a: t2(
-      "Not on local Chinese Wi-Fi or local SIM cards. The easiest solution is to install a Hong Kong / Singapore-routed travel eSIM before departure — roaming data bypasses the firewall automatically with no VPN app needed.",
-      "连接中国本地 Wi-Fi 或使用中国本地 SIM 卡时无法访问。最省心的办法是出发前安装经香港/新加坡路由的漫游旅游 eSIM——漫游流量自带穿墙效果，无需折腾 VPN。"
+      "Not on local Chinese Wi-Fi or local SIM cards. The easiest solution is to install a Singapore-routed international roaming eSIM before departure — international data roaming gives seamless access to Google, WhatsApp, Instagram, TikTok & ChatGPT with zero configuration.",
+      "连接中国本地 Wi-Fi 或使用中国本地 SIM 卡时无法直连。最省心的办法是出发前安装新加坡路由的国际漫游 eSIM——合规国际数据漫游零配置即可无缝使用 Google、WhatsApp、Instagram、TikTok 与 ChatGPT。"
     ),
   },
   {
