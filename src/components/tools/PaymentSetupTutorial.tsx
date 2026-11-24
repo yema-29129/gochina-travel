@@ -789,21 +789,24 @@ export default function PaymentSetupTutorial({ lang }: { lang: Lang }) {
 
             {/* Right: Clean Realistic Phone Frame */}
             <div className="flex flex-col items-center justify-center lg:col-span-5">
-              <div className="w-full max-w-[270px] overflow-hidden rounded-[2rem] border-[6px] border-slate-900 bg-white shadow-xl">
+              <div className="flex w-full max-w-[276px] flex-col overflow-hidden rounded-[2.25rem] border-[7px] border-slate-900 bg-white shadow-xl">
                 {/* Status Bar */}
-                <div className="flex items-center justify-between bg-slate-900 px-5 py-1.5 text-[10px] font-medium text-white">
+                <div className="flex items-center justify-between bg-slate-900 px-5 py-2 text-[10px] font-medium text-white">
                   <span>9:41</span>
-                  <span className="h-3 w-14 rounded-full bg-slate-800" />
+                  <span className="h-3.5 w-16 rounded-full bg-slate-800" />
                   <span>5G</span>
                 </div>
-                {/* Realistic Screen Content */}
-                <div className="min-h-[255px]">
+                {/* Realistic Screen Content — tall smartphone aspect ratio with generous spacing */}
+                <div className="flex min-h-[390px] flex-1 flex-col bg-white [&>*]:flex-1 [&>*]:py-5">
                   <RealisticAppScreen appId={app.id} stepIdx={stepIdx} lang={lang} />
                 </div>
-                {/* Bottom Tip Strip */}
-                <div className="border-t border-slate-100 bg-slate-900 px-3.5 py-2.5 text-[11px] leading-snug text-slate-100">
-                  <span className="font-bold text-amber-300">TIP: </span>
-                  {tx(step.callout, lang)}
+                {/* Bottom Tip Strip + iOS Home Indicator */}
+                <div className="border-t border-slate-800 bg-slate-900 px-4 pb-3 pt-3 text-[11px] leading-relaxed text-slate-100">
+                  <div>
+                    <span className="font-bold text-amber-300">TIP: </span>
+                    {tx(step.callout, lang)}
+                  </div>
+                  <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-white/30" />
                 </div>
               </div>
 
