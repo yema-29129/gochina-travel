@@ -15,7 +15,7 @@ export const SITE = {
   /** Google Analytics 4 measurement ID, e.g. G-XXXXXXXXXX */
   gaId: process.env.NEXT_PUBLIC_GA_ID || "",
   /** Google AdSense publisher ID, e.g. ca-pub-1234567890123456 */
-  adsenseClient: process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "",
+  adsenseClient: process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-3412124316994451",
   /** AdSense ad unit slot IDs (optional; Auto ads work without them). */
   adSlots: {
     inArticle: process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_ARTICLE || "",
