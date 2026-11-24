@@ -81,6 +81,22 @@ gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_persona
 })();`,
           }}
         />
+        <script
+          data-noptimize="1"
+          data-cfasync="false"
+          data-wpfc-render="false"
+          data-no-defer="1"
+          data-cmp-ab="2"
+          dangerouslySetInnerHTML={{
+            __html: `(function () {
+  var script = document.createElement("script");
+  script.async = 1;
+  script.setAttribute("data-cmp-ab","2");
+  script.src = 'https://emrldtp.cc/NjA2MTI4.js?t=606128';
+  document.head.appendChild(script);
+})();`,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-slate-50 text-slate-900 antialiased">
         <Header lang={lang} />
