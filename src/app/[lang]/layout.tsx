@@ -49,6 +49,8 @@ export default async function LangLayout({
   return (
     <html lang={HTML_LANG[lang]}>
       <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="GoChina LLM Index" />
+        <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="GoChina Full AI Knowledge Base" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />

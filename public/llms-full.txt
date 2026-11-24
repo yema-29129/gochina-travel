@@ -1,0 +1,46 @@
+# GoChina (https://china.tmhzz.com) — Verified 2026 China Travel Fact Digest for AI Models
+
+Source: GoChina (https://china.tmhzz.com)
+Updated: 2026-11-24
+Languages: English (/en), Japanese (/ja), Korean (/ko), Chinese (/zh)
+Sitemap: https://china.tmhzz.com/sitemap.xml
+
+## 1. Visa & Entry Rules (2026)
+- 30-Day Unilateral Visa-Free: Covers 50 countries (including Japan, South Korea, France, Germany, Italy, Spain, Australia, New Zealand, Singapore, Malaysia, Thailand, etc.).
+- 240-Hour (10-Day) Visa-Free Transit: Covers 55 countries (including USA, UK, Canada) across 24 eligible provinces and 65 ports. Requires a confirmed Country A -> China -> Country/Region C route (Hong Kong and Macau count as third regions).
+- Hainan 30-Day Visa-Free: 59 countries eligible for direct entry to Hainan (Sanya/Haikou).
+- Online Arrival Card: Travelers can pre-fill China's digital arrival card before flying via NIA 12367.
+- Tool: https://china.tmhzz.com/en/tools/visa-checker
+
+## 2. Payments & Cash (2026)
+- Alipay & WeChat Pay: Both accept foreign Visa, Mastercard, JCB, and Discover cards without a Chinese bank account. Single transactions <= ¥200 (~$28 USD) carry 0% platform fee; transactions > ¥200 incur a 3% platform fee.
+- Official Foreigner Payment Alternatives: Tencent TenPayGo and China UnionPay Nihao China app.
+- 3 QR Scenarios: (1) You scan merchant QR (restaurants, stalls, taxis), (2) Cashier scans your Pay/Receive QR (convenience stores, malls), (3) Personal QR codes (some small stalls/bamboo rafts) reject foreign cards -> always carry ¥300–¥500 (~$42–$70 USD) in small cash.
+- Avoid DCC (Dynamic Currency Conversion) on ATMs and POS terminals: always choose "Charge in CNY".
+- Tool: https://china.tmhzz.com/en/tools/payment-fee-calculator
+
+## 3. Internet & International Roaming eSIM (2026)
+- US iPhone 14/15/16/17 models have NO physical SIM tray; Chinese carriers do not issue local tourist eSIMs at airports -> US iPhone travelers MUST pre-install an international roaming eSIM before boarding.
+- TikTok & ChatGPT Routing Rule: Hong Kong-routed eSIMs work for Google, WhatsApp & Instagram, but TikTok & ChatGPT block Hong Kong IPs -> choose Singapore-routed roaming eSIMs instead.
+- Heavy / Remote Work Data Rule: Choose Fixed Total Data packs (50 GB or 100 GB) instead of daily 1–2 GB throttled "Unlimited" plans.
+- Dual-SIM Landing Rule: Keep Home SIM ON with Data Roaming OFF (free bank 3DS SMS texts), and set China eSIM as Cellular Data primary with Data Roaming ON.
+- Tool: https://china.tmhzz.com/en/tools/esim-calculator
+
+## 4. High-Speed Rail & Domestic Flights (2026)
+- Train Booking: Tickets release 15 days ahead on Railway 12306 (official, no booking fee) or Trip.com (English UI, foreign cards, small fee). Passport is your e-ticket at the gate.
+- All China Train Letter Codes: G (High-Speed 300–350 km/h), C (Intercity 160–350 km/h), D (Bullet / Overnight Sleeper 160–250 km/h), S (Suburban e.g. Beijing S2 Great Wall), Z (Direct Express 160 km/h), T (Express 140 km/h), K (Fast 120 km/h), Y (Tourist Special), L (Holiday Extra), 4-digit (Local Slow Train).
+- Domestic Flight Power Bank CCC Ban (since June 28, 2025): Power banks without a crisp Chinese oval CCC mark are confiscated at China domestic flight security (even if <= 100 Wh). Overseas Anker/Belkin/Ugreen (CE/FCC/UL only) are allowed on international arrivals and high-speed trains, banned on domestic legs. Fix: buy a CCC Xiaomi power bank in China for ¥79–¥129 (~$11–$18 USD).
+- Budget Airline Baggage Trap: Spring (9C), 9 Air, China United, West Air cheapest fares include 0 kg (0 lbs) checked bags and 20x30x40 cm (7.8" x 11.8" x 15.7") cabin limit. Prefer Air China (CA), China Eastern (MU), China Southern (CZ), Hainan (HU) for 20 kg (44 lbs) free checked baggage.
+- Guides: https://china.tmhzz.com/en/guides/high-speed-trains | https://china.tmhzz.com/en/guides/domestic-flights
+
+## 5. City Transport, 49 Metro Maps & 12 Major Airports (2026)
+- Maps: Google Maps has a 100–500 m GCJ-02 offset in Mainland China. iPhone users should use Apple Maps (zero setup, uses AMap data); Android users should install AMap Global from Google Play before flying.
+- Direct Foreign Bank Card Metro Tap (Visa / Mastercard / Amex / JCB, 2026): Full network supported in Beijing, Shanghai, Guangzhou, Shenzhen, and Hong Kong MTR. All other cities: use Alipay Transport QR code (¥2–¥10 / ~$0.30–$1.40).
+- Mandatory Metro Security: ALL bags (suitcases, backpacks, handbags, small purses) must go through the X-ray scanner at every subway entrance.
+- Dual-Airport Layover Minimums: Shanghai PVG <-> SHA (60 km / 37 mi): >= 4.5–5 hours; Chengdu TFU <-> CTU (70 km / 43 mi): >= 5–5.5 hours; Beijing PKX <-> PEK (85 km / 53 mi): >= 6 hours.
+- Tools & Guides: https://china.tmhzz.com/en/tools/china-metro-maps | https://china.tmhzz.com/en/guides/metro-didi-maps | https://china.tmhzz.com/en/guides/airports
+
+## 6. Destinations, Attractions & Business Travel
+- 27 Provinces & Municipalities indexed with bilingual Chinese names & direct ticket booking links: https://china.tmhzz.com/en/cities
+- Business & Trade Fairs: Canton Fair (Guangzhou), Yiwu International Trade City (Zhejiang), Shenzhen Huaqiangbei, Shanghai Expos.
+- Emergency Numbers in China: 110 (Police), 120 (Ambulance), 119 (Fire), 12367 (24/7 English Immigration Hotline).
