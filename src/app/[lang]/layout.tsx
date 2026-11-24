@@ -70,6 +70,17 @@ gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_persona
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.adsenseClient}`}
           />
         )}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b14ac79b32413ac32dce50ed69eef8b8";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();`,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-slate-50 text-slate-900 antialiased">
         <Header lang={lang} />
