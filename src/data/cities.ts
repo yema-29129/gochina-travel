@@ -468,7 +468,7 @@ export const CITIES: City[] = [
     name: t2("Chongqing", "重庆"),
     zh: "重庆",
     province: t2("Chongqing Municipality", "重庆市"),
-    image: "https://images.unsplash.com/photo-1600716051809-e997e11a5d52?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1646715658442-4026aabeaeac?auto=format&fit=crop&w=1400&q=80",
     summary: t2(
       "The “8D” mountain city: a monorail through a building, neon cliffside Hongyadong, river cableway and fiery hotpot. Cheap airport taxi; the whole city is allowed on 240h transit.",
       "“8D”山城：穿楼而过的轻轨、霓虹悬崖上的洪崖洞、长江索道和火辣的火锅。机场打车便宜；240 小时过境免签全市可去。"

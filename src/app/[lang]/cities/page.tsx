@@ -6,6 +6,7 @@ import { CITIES } from "@/data/cities";
 import { UI } from "@/data/ui";
 import { PageHeader } from "@/components/PageHeader";
 import { CityCard } from "@/components/CityCard";
+import { ProvinceDestinationsHub } from "@/components/ProvinceDestinationsHub";
 import { JsonLd } from "@/components/JsonLd";
 
 type P = { params: Promise<{ lang: string }> };
@@ -41,6 +42,7 @@ export default async function CitiesPage({ params }: P) {
             <CityCard key={c.id} c={c} lang={lang} />
           ))}
         </div>
+        <ProvinceDestinationsHub lang={lang} />
       </div>
     </>
   );
