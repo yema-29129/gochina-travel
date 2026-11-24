@@ -270,21 +270,50 @@ export function MetroSplitCard({ lang }: { lang: Lang }) {
 export function DidiTimelineMockup({ lang }: { lang: Lang }) {
   return (
     <div className="my-5 grid gap-5 rounded-xl border border-slate-200 bg-white p-5 md:grid-cols-[1fr_240px] md:items-center">
-      <ol className="relative space-y-3.5 border-l-2 border-slate-200 pl-5 text-sm text-slate-700">
-        {[
-          t2("Open Alipay → tap [DiDi Travel] right on the home screen (no separate app or +86 number needed).", "打开支付宝首页 → 直接点 [DiDi Travel / 滴滴出行]（无需下载独立 App，也无需 +86 手机号）。"),
-          t2("Type your destination in English (or paste the Chinese hotel address for 100% accuracy).", "用英文输入目的地（粘贴酒店中文地址定位最精准）。"),
-          t2("Pick Express (~$3–$7 / ¥20–50) or Premier 6-Seater if you have 2+ large suitcases.", "选 Express 快车（市区约 $3–$7 / ¥20–50）；若带 2 件以上大行李箱请选 6 座车。"),
-          t2("Match the license plate, give the last 4 digits of your phone number, and pay automatically via Alipay.", "核对车牌上车，报手机号后 4 位（司机发中文消息会自动翻译成英文），下车支付宝自动扣款。"),
-        ].map((step, i) => (
-          <li key={i} className="relative">
-            <span className="absolute -left-[29px] top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-[11px] font-bold text-white">
-              {i + 1}
-            </span>
-            <span className="leading-relaxed">{tx(step, lang)}</span>
-          </li>
-        ))}
-      </ol>
+      <div>
+        <ol className="relative space-y-3.5 border-l-2 border-slate-200 pl-5 text-sm text-slate-700">
+          {[
+            t2("Download Alipay & link your Visa/Mastercard before flying, then tap [DiDi Travel] right on the home screen (no separate app or +86 number needed).", "先下载支付宝并绑定外卡，打开支付宝首页 → 直接点 [DiDi Travel / 滴滴出行]（无需下载独立 App，也无需 +86 手机号）。"),
+            t2("Type your destination in English (or paste the Chinese hotel address for 100% accuracy).", "用英文输入目的地（粘贴酒店中文地址定位最精准）。"),
+            t2("Pick Express (~$3–$7 / ¥20–50) or Premier 6-Seater if you have 2+ large suitcases.", "选 Express 快车（市区约 $3–$7 / ¥20–50）；若带 2 件以上大行李箱请选 6 座车。"),
+            t2("Match the license plate, give the last 4 digits of your phone number, and pay automatically via Alipay.", "核对车牌上车，报手机号后 4 位（司机发中文消息会自动翻译成英文），下车支付宝自动扣款。"),
+          ].map((step, i) => (
+            <li key={i} className="relative">
+              <span className="absolute -left-[29px] top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-[11px] font-bold text-white">
+                {i + 1}
+              </span>
+              <span className="leading-relaxed">{tx(step, lang)}</span>
+            </li>
+          ))}
+        </ol>
+
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <a
+            href="https://apps.apple.com/app/id333206289"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#1677FF] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-[#0958D9]"
+          >
+            {tx(t2("Download Alipay (iOS)", "App Store 下载支付宝"), lang)}
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-slate-800"
+          >
+            {tx(t2("Download Alipay (Google Play)", "Google Play 下载支付宝"), lang)}
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+          <a
+            href={`/${lang}/tools/payment-fee-calculator`}
+            className="inline-flex items-center gap-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-700 transition hover:bg-slate-50"
+          >
+            {tx(t2("Alipay Card Setup Tutorial →", "查看支付宝绑卡图解 →"), lang)}
+          </a>
+        </div>
+      </div>
 
       <div className="rounded-2xl border-4 border-slate-900 bg-slate-50 p-3 text-xs shadow-sm">
         <div className="flex items-center justify-between border-b border-slate-200 pb-2">
