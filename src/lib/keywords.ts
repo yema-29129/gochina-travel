@@ -11,7 +11,7 @@ const DEFAULT_KEYWORDS: Record<Lang, string[]> = {
     "China visa free countries 2026",
     "China 240 hour visa free transit",
     "Alipay foreign credit card China",
-    "best eSIM for China without VPN",
+    "China international roaming eSIM",
     "China high speed train foreigners",
   ],
   zh: [
@@ -20,7 +20,7 @@ const DEFAULT_KEYWORDS: Record<Lang, string[]> = {
     "中国免签国家名单 2026",
     "中国 240 小时过境免签",
     "支付宝绑定外国银行卡",
-    "中国免翻墙 eSIM 推荐",
+    "中国国际漫游 eSIM 推荐",
     "外国人坐中国高铁攻略",
   ],
 };
@@ -113,16 +113,18 @@ const ROUTE_KEYWORDS: Record<string, Record<Lang, string[]>> = {
   "/tools/payment-fee-calculator": {
     en: [
       "Alipay 200 RMB 3% fee calculator",
-      "WeChat Pay foreign card fee calculator",
-      "avoid foreign transaction fees in China",
-      "China DCC dynamic currency conversion calculator",
+      "WeChat Pay foreign card setup tutorial",
+      "Tencent TenPayGo foreigners China",
+      "UnionPay Nihao China app tourist",
+      "China personal QR code cash warning",
       "Wise card in China Alipay",
     ],
     zh: [
       "支付宝 200 元 3% 手续费计算器",
-      "微信外卡手续费计算",
-      "中国支付避免银行货转费",
-      "DCC 动态货币转换计算",
+      "微信支付绑外卡教程",
+      "腾讯 TenPayGo 外国人支付",
+      "中国银联你好中国 Nihao China",
+      "中国个人收款码备现金提醒",
       "Wise 卡绑定支付宝",
     ],
   },
@@ -144,17 +146,46 @@ const ROUTE_KEYWORDS: Record<string, Record<Lang, string[]>> = {
   },
   "/tools/esim-calculator": {
     en: [
-      "best eSIM for China that bypasses Great Firewall without VPN",
-      "how much eSIM data do I need for China",
-      "US iPhone 14 15 16 eSIM China",
+      "best China roaming eSIM 2026",
+      "Singapore routing China eSIM TikTok ChatGPT",
+      "how much eSIM data do I need for China 50GB",
+      "US iPhone 14 15 16 17 eSIM only China",
       "do I need a +86 Chinese phone number as a tourist",
     ],
     zh: [
-      "中国免翻墙 eSIM 推荐",
-      "去中国旅游需要多少 eSIM 流量",
+      "2026 中国国际漫游 eSIM 推荐",
+      "新加坡路由中国 eSIM 支持 TikTok ChatGPT",
+      "去中国旅游需要多少 eSIM 流量 50GB",
       "美版 iPhone 无卡槽中国上网",
       "外国游客需要中国 +86 手机号吗",
     ],
+  },
+  "/tools/china-metro-maps": {
+    en: [
+      "China metro maps English HD 2026",
+      "Beijing subway map English PDF",
+      "Shanghai metro map English",
+      "Chengdu Xi'an Chongqing Guangzhou Shenzhen metro map",
+      "China subway tap foreign Visa Mastercard cities list",
+    ],
+    zh: [
+      "2026 中国全部城市地铁线路图高清",
+      "北京上海广州深圳地铁英文图",
+      "成都西安重庆杭州地铁全图",
+      "中国支持地铁拍境外外卡城市全表",
+    ],
+  },
+  "/tools/currency-converter": {
+    en: ["CNY to USD converter China travel", "Chinese Yuan exchange rate calculator", "RMB to EUR GBP AUD"],
+    zh: ["人民币美元汇率换算器", "中国旅游人民币换算"],
+  },
+  "/tools/taxi-card": {
+    en: ["Chinese taxi address card generator", "show hotel address to taxi driver in China", "Beijing Shanghai taxi Mandarin card"],
+    zh: ["中文出租车地址卡生成器", "给中国出租车司机看的中文地址卡"],
+  },
+  "/tools/phrasebook": {
+    en: ["essential Chinese travel phrases show cards", "Mandarin survival phrases for tourists China", "point and show Chinese cards"],
+    zh: ["中国旅游必备中文短语闪卡", "外国人来华常用中文沟通卡"],
   },
   "/tools/packing-checklist": {
     en: [
@@ -343,6 +374,86 @@ const ROUTE_KEYWORDS: Record<string, Record<Lang, string[]>> = {
       "成都大熊猫基地上午场攻略",
       "陕西历史博物馆秦汉馆替代方案",
     ],
+  },
+  "/cities": {
+    en: [
+      "best places to visit in China 2026",
+      "China destinations by province",
+      "China 10 day 14 day itinerary bullet train",
+      "China attraction tickets Forbidden City Zhangjiajie Terracotta Warriors",
+      "Canton Fair Guangzhou Yiwu market business travel China",
+    ],
+    zh: [
+      "2026 中国必去旅游目的地与经典路线",
+      "中国各省份热门城市与景点大全",
+      "中国 10 天 14 天高铁经典行程",
+      "故宫张家界兵马俑英文购票",
+      "广交会义乌商务考察攻略",
+    ],
+  },
+  "/guides": {
+    en: ["China travel guides 2026", "China visa payment train airport guides for foreigners"],
+    zh: ["2026 中国旅游实用指南大全", "外国人赴华签证支付高铁机场攻略"],
+  },
+  "/tools": {
+    en: ["China travel tools calculators for foreigners", "240h visa checker eSIM calculator metro maps"],
+    zh: ["外国人来华实用工具箱", "240小时免签检查 eSIM计算器 全国地铁图"],
+  },
+  "/planner": {
+    en: ["China trip itinerary planner 2026", "7 day 10 day 14 day China bullet train itinerary generator"],
+    zh: ["2026 中国自由行行程规划器", "7天10天14天中国高铁路线生成器"],
+  },
+  "/guides/visa-free-countries": {
+    en: ["China 30 day visa free countries list 2026", "who can enter China visa free 2026", "China unilateral visa free policy"],
+    zh: ["2026 中国 30 天单方面免签国家名单", "哪些国家可以免签来中国"],
+  },
+  "/guides/special-visa-free": {
+    en: ["Hainan 30 day visa free 59 countries", "China cruise 15 day visa free", "Guangdong 144 hour Hong Kong tour visa free"],
+    zh: ["海南 59 国 30 天免签", "中国邮轮 15 天免签", "港澳团广东 144 小时免签"],
+  },
+  "/guides/arrival-immigration": {
+    en: ["China airport immigration fingerprint customs foreigners", "24 hour hotel police registration China"],
+    zh: ["外国人入境中国边检指纹海关流程", "外国人来华 24 小时住宿登记"],
+  },
+  "/guides/internet-esim": {
+    en: ["China internet guide roaming eSIM 2026", "how to use Google WhatsApp Instagram in China roaming eSIM", "China local SIM vs roaming eSIM"],
+    zh: ["2026 中国国际漫游 eSIM 上网指南", "外国人在中国怎么用 Google WhatsApp"],
+  },
+  "/guides/metro-didi-maps": {
+    en: ["getting around Chinese cities foreigners 2026", "Apple Maps AMap Global English China", "DiDi in Alipay without +86 number", "China subway tap foreign Visa Mastercard"],
+    zh: ["2026 中国城市出行攻略", "高德地图英文版设置", "支付宝内免+86叫滴滴", "中国地铁拍境外外卡城市"],
+  },
+  "/guides/airports": {
+    en: ["China top 12 international airports transfer guide 2026", "Shanghai PVG to SHA transfer time", "Beijing PEK PKX Chengdu TFU airport express tap Visa"],
+    zh: ["2026 中国 12 大国际机场进城交通", "浦东转虹桥最短时间", "首都大兴天府机场快轨拍外卡"],
+  },
+  "/guides/shared-bikes": {
+    en: ["how foreigners ride shared bikes in China Alipay HelloBike Meituan"],
+    zh: ["外国人在中国扫共享单车支付宝哈啰教程"],
+  },
+  "/guides/food-ordering-allergies": {
+    en: ["ordering food in China QR code menu foreigners", "Chinese food allergy dining guide"],
+    zh: ["外国人在中国扫码点餐与食物过敏指南"],
+  },
+  "/guides/bubble-tea-coffee": {
+    en: ["how to order bubble tea in China English HEYTEA Chagee Luckin Coffee"],
+    zh: ["中国奶茶咖啡点单英文攻略喜茶霸王茶姬瑞幸"],
+  },
+  "/guides/food-delivery-luggage": {
+    en: ["Meituan Ele.me food delivery China foreigners", "luggage storage China train stations"],
+    zh: ["外国人在中国点外卖与高铁站行李寄存"],
+  },
+  "/guides/essential-apps": {
+    en: ["essential apps for China travel 2026 foreigners", "best apps to download before going to China"],
+    zh: ["2026 来中国旅游必装 App 清单"],
+  },
+  "/guides/when-to-go": {
+    en: ["best time to visit China 2026", "China public holidays Golden Week Spring Festival avoid crowds"],
+    zh: ["2026 中国最佳旅游季节与避雷节假日日历"],
+  },
+  "/guides/safety-health": {
+    en: ["is China safe for tourists 2026", "China emergency numbers 110 120 12367 pharmacy guide"],
+    zh: ["2026 中国旅游安全与紧急电话药店就医指南"],
   },
   "/cities/beijing": {
     en: ["Beijing travel guide for foreigners 2026", "Forbidden City tickets foreigners", "PEK vs PKX airport to downtown", "Mutianyu Great Wall guide"],
