@@ -5,25 +5,25 @@ const guide: Guide = {
   slug: "internet-esim",
   category: "money",
   icon: "wifi",
-  title: t2("Internet in China: eSIM, SIM Cards & the Great Firewall", "中国上网：eSIM、电话卡与防火墙"),
+  title: t2("China Internet Guide: Roaming eSIMs, Local SIMs & App Access", "中国上网指南：国际漫游 eSIM、本地电话卡与海外 App 访问"),
   seoTitle: t2(
-    "Best eSIM for China That Works Without a VPN (2026) – Do You Need a +86 Number?",
-    "2026 中国最佳免 VPN eSIM——游客需要 +86 号码吗？"
+    "Best China Roaming eSIM (2026) – Seamless Google & WhatsApp Access + Do You Need +86?",
+    "2026 中国国际漫游 eSIM 指南——无缝使用 Google 与 WhatsApp + 游客需要 +86 号码吗？"
   ),
   summary: t2(
-    "Google, WhatsApp and Instagram are blocked in China. Compare roaming eSIM, local SIM and home roaming, check your phone for eSIM, and work out how much data you need.",
-    "Google、WhatsApp 和 Instagram 在中国被屏蔽。对比漫游 eSIM、本地电话卡和本国漫游，检查手机是否支持 eSIM，并算出你需要多少流量。"
+    "Compare international roaming eSIMs, local SIM cards and home carrier roaming for China, check your phone for eSIM support, and estimate how much data you need.",
+    "对比中国国际漫游 eSIM、本地电话卡和本国漫游，检查手机是否支持 eSIM，并算出你需要多少流量。"
   ),
   updated: "2026-11-24",
   readMin: 9,
   keyPoints: [
     t2(
-      "Google, Gmail, WhatsApp, Instagram, Facebook, YouTube and many Western sites are blocked on Chinese networks.",
-      "Google、Gmail、WhatsApp、Instagram、Facebook、YouTube 和许多西方网站在中国网络上被屏蔽。"
+      "Many international apps (Google, Gmail, WhatsApp, Instagram, YouTube) require international data roaming to work seamlessly in China.",
+      "许多国际常用 App（Google、Gmail、WhatsApp、Instagram、YouTube）在中国需通过国际数据漫游才能无缝访问。"
     ),
     t2(
-      "A roaming eSIM routed via Hong Kong or Singapore gives you these apps without installing a VPN — the best choice for most tourists.",
-      "经香港或新加坡路由的漫游 eSIM 不用装 VPN 就能用这些 App——是大多数游客的最佳选择。"
+      "An international roaming eSIM (especially Singapore-routed for TikTok & ChatGPT) gives seamless app access with zero configuration — the best choice for most tourists.",
+      "国际漫游 eSIM（如需使用 TikTok 与 ChatGPT 建议选新加坡路由）零配置即可无缝访问海外 App——是大多数游客的最佳选择。"
     ),
     t2(
       "US iPhone 14 and later have no SIM tray: you cannot use a Chinese physical SIM, so buy a roaming eSIM before you fly.",

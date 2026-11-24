@@ -42,8 +42,14 @@ export const AFFILIATES: Record<AffiliateId, { url: string; title: L; text: L; c
   },
   esim: {
     url: "https://www.airalo.com/china-esim",
-    title: { en: "China eSIM — Google, WhatsApp & Instagram work without a VPN", zh: "中国 eSIM——无需 VPN 即可使用 Google、WhatsApp 和 Instagram" },
-    text: { en: "Roaming eSIMs route through Hong Kong or Singapore. Install at home, switch on when you land.", zh: "漫游 eSIM 通过香港或新加坡路由。在家安装，落地即开。" },
+    title: {
+      en: "China International Roaming eSIM — Seamless Access to Google, WhatsApp & Maps",
+      zh: "中国国际漫游 eSIM——合规漫游通道无缝使用 Google、WhatsApp 与地图",
+    },
+    text: {
+      en: "Seamless access to Google, WhatsApp, Maps & Instagram via International Data Roaming (zero configuration needed). Install at home, switch on when you land.",
+      zh: "通过合规国际数据漫游路由，零配置即可无缝使用 Google、WhatsApp、地图与 Instagram。出发前在家装好，落地即开。",
+    },
     cta: { en: "Get a China eSIM", zh: "获取中国 eSIM" },
   },
   wise: {

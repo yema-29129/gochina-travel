@@ -24,7 +24,7 @@ export const TOOLS: ToolMeta[] = [
   {
     id: "payment-fee-calculator",
     icon: "pay",
-    title: { en: "China Payments Setup (Alipay, WeChat, TenPayGo, UnionPay) & Fee Calculator", zh: "中国支付绑卡图解（支付宝/微信/TenPayGo/银联你好中国）与手续费计算器" },
+    title: { en: "China Payments Setup & ¥200 Fee Calculator", zh: "支付绑卡图解与 200 元手续费计算器" },
     seoTitle: { en: "How to Pay in China (2026): Alipay, WeChat Pay, TenPayGo, UnionPay Nihao China Setup + ¥200 Fee Calculator", zh: "2026 外国人在中国支付教程：支付宝、微信支付、腾讯 TenPayGo、银联你好中国绑卡图解与 200 元手续费计算器" },
     desc: { en: "Visual step-by-step binding tutorials for 4 official payment apps, how to tell the 3 QR scan scenarios apart (incl. personal QR cash trap), plus the ¥200 3% fee & DCC calculator.", zh: "4 大官方支付 App 下载与逐屏绑卡图解、现场 3 种扫码场景一眼区分法（含个人码备现金提醒），外加 200 元 3% 手续费与 DCC 计算器。" },
     related: ["alipay-wechat-pay", "atm-cash-dcc"],

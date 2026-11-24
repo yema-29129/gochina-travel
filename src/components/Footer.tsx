@@ -36,6 +36,11 @@ export function Footer({ lang }: { lang: Lang }) {
               </a>
             ))}
           </div>
+          <p className="mt-3 text-xs leading-relaxed text-slate-400">
+            {lang === "zh"
+              ? "提示：纯流量 eSIM 无法直接拨打普通电话，紧急呼叫请保持原手机卡开启（关闭数据漫游）或借用酒店前台座机（12367 提供 24 小时英文移民咨询服务）。"
+              : "Note: Data-only eSIMs cannot make regular voice calls. Keep your home SIM switched ON (with Data Roaming OFF) or use your hotel front-desk phone for emergency calls. 12367 provides 24/7 English immigration support."}
+          </p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
