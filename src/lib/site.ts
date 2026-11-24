@@ -5,6 +5,9 @@ export const SITE = {
   name: "GoChina",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://china.tmhzz.com").replace(/\/$/, ""),
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@tmhzz.com",
+  whatsapp: "+852 6075 6760",
+  whatsappUrl: "https://wa.me/85260756760",
+  wechat: "LMQQQM",
   /** Google Search Console HTML-tag verification code (content="..."). */
   gscVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || "",
   /** Bing Webmaster verification code (optional). */

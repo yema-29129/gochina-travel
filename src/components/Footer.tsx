@@ -44,6 +44,17 @@ export function Footer({ lang }: { lang: Lang }) {
               Go<span className="text-red-500">China</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-slate-400">{t.footerAbout}</p>
+            <div className="mt-4 space-y-1.5 text-xs text-slate-400">
+              <div>
+                WhatsApp:{" "}
+                <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-emerald-400 hover:underline">
+                  {SITE.whatsapp}
+                </a>
+              </div>
+              <div>
+                WeChat: <span className="font-medium text-slate-200">{SITE.wechat}</span>
+              </div>
+            </div>
           </div>
           {cols.map((c) => (
             <div key={c.title}>

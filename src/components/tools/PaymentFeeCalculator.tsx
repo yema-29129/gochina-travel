@@ -5,6 +5,7 @@ import { AlertTriangle, CheckCircle2, CreditCard, Maximize2, ShieldAlert } from 
 import { Lang, t2, tx } from "@/lib/i18n";
 import { AffiliateBox } from "@/components/AffiliateBox";
 import { ShowCard, useShowCard } from "@/components/ShowCard";
+import { HelpContactCard } from "@/components/HelpContactCard";
 import PaymentSetupTutorial from "./PaymentSetupTutorial";
 
 interface Currency {
@@ -479,6 +480,8 @@ export default function PaymentFeeCalculator({ lang }: { lang: Lang }) {
       </div>
 
       <AffiliateBox id="wise" lang={lang} />
+
+      <HelpContactCard lang={lang} context="payment" />
     </div>
   );
 }
