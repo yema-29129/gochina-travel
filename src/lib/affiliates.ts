@@ -47,7 +47,7 @@ export const AFFILIATES: Record<AffiliateId, { url: string; title: L; text: L; c
     cta: { en: "Get a China eSIM", zh: "获取中国 eSIM" },
   },
   wise: {
-    url: "https://wise.com/",
+    url: "https://wise.com/invite/ilpc/fangl288",
     title: { en: "Avoid your bank's 3% foreign transaction fee", zh: "避免银行 3% 的境外交易手续费" },
     text: { en: "A zero-FX-fee card such as Wise or Revolut, linked to Alipay, saves 3% on every payment.", zh: "将 Wise 或 Revolut 等零货币转换费的卡绑定支付宝，每笔付款可省 3%。" },
     cta: { en: "Get a Wise card", zh: "申请 Wise 卡" },
