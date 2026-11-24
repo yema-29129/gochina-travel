@@ -6,6 +6,7 @@ import {
   Bike,
   Car,
   CheckCircle2,
+  ExternalLink,
   Maximize2,
   ShieldAlert,
   Smartphone,
@@ -124,21 +125,43 @@ export function MapDeviceSwitcher({ lang }: { lang: Lang }) {
         </div>
       ) : (
         <div className="mt-4 grid gap-4 md:grid-cols-[1fr_230px] md:items-center">
-          <ol className="relative space-y-3 border-l-2 border-slate-200 pl-5 text-sm text-slate-700">
-            {[
-              t2("Install AMap Global (高德地图) from Google Play BEFORE flying to China.", "出发前在 Google Play 提前装好 AMap Global（高德地图国际版）。"),
-              t2("Open Settings → Language → select English (100% English UI & voice).", "打开设置 → 语言 → 切换为 English（全英文界面与语音播报）。"),
-              t2("Download offline maps for Beijing, Shanghai, Xi'an, etc. on hotel Wi-Fi.", "在 Wi-Fi 下提前下载北京、上海、西安等目标城市的离线地图。"),
-              t2("Pro tip: paste the Chinese name from Trip.com for 100% pinpoint accuracy.", "进阶技巧：直接从 Trip.com 复制景点/酒店中文名粘贴搜索，最精准。"),
-            ].map((step, i) => (
-              <li key={i} className="relative">
-                <span className="absolute -left-[29px] top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-[11px] font-bold text-white">
-                  {i + 1}
-                </span>
-                <span>{tx(step, lang)}</span>
-              </li>
-            ))}
-          </ol>
+          <div>
+            <ol className="relative space-y-3 border-l-2 border-slate-200 pl-5 text-sm text-slate-700">
+              {[
+                t2("Install AMap Global (高德地图) from Google Play BEFORE flying to China.", "出发前在 Google Play 提前装好 AMap Global（高德地图国际版）。"),
+                t2("Open Settings → Language → select English (100% English UI & voice).", "打开设置 → 语言 → 切换为 English（全英文界面与语音播报）。"),
+                t2("Download offline maps for Beijing, Shanghai, Xi'an, etc. on hotel Wi-Fi.", "在 Wi-Fi 下提前下载北京、上海、西安等目标城市的离线地图。"),
+                t2("Pro tip: paste the Chinese name from Trip.com for 100% pinpoint accuracy.", "进阶技巧：直接从 Trip.com 复制景点/酒店中文名粘贴搜索，最精准。"),
+              ].map((step, i) => (
+                <li key={i} className="relative">
+                  <span className="absolute -left-[29px] top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-[11px] font-bold text-white">
+                    {i + 1}
+                  </span>
+                  <span>{tx(step, lang)}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.autonavi.minimap"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-red-600"
+              >
+                {tx(t2("Download AMap on Google Play", "去 Google Play 下载高德地图"), lang)}
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://apps.apple.com/app/id461703208"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 transition hover:bg-slate-50"
+              >
+                {tx(t2("App Store (iOS)", "App Store (iOS 版)"), lang)}
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
 
           <div className="rounded-xl border border-slate-200 bg-slate-900 p-3.5 text-xs text-white">
             <div className="flex items-center justify-between text-[10px] text-slate-400">
@@ -168,17 +191,43 @@ export function MetroSplitCard({ lang }: { lang: Lang }) {
       <div className="grid gap-4 md:grid-cols-2">
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
           <span className="rounded bg-slate-900 px-2 py-0.5 text-[11px] font-bold text-white">
-            {tx(t2("OPTION A · Easiest", "方式 A · 最省事"), lang)}
+            {tx(t2("OPTION A · Easiest (Tap & Go)", "方式 A · 最省事（直接拍卡）"), lang)}
           </span>
           <h3 className="mt-2 text-base font-bold text-slate-900">
-            {tx(t2("Tap Contactless Visa / Mastercard", "直接拍境外 Visa / Mastercard 实体卡"), lang)}
+            {tx(t2("Tap Contactless Visa / Mastercard / Amex / JCB", "直接拍境外 Visa / Mastercard / Amex / JCB"), lang)}
           </h3>
-          <p className="mt-1.5 text-xs leading-relaxed text-slate-600">
+          <p className="mt-1.5 text-xs font-semibold text-slate-800">
+            {tx(t2("Complete list of Chinese cities supporting direct foreign-card metro tap (2026):", "2026 年中国支持地铁闸机直接拍境外外卡的城市全清单："), lang)}
+          </p>
+          <ul className="mt-2 space-y-1.5 text-xs leading-relaxed text-slate-700">
+            <li>
+              <strong className="text-emerald-700">✅ {tx(t2("Beijing:", "北京："), lang)}</strong>{" "}
+              {tx(t2("Full network (all subway lines + Capital & Daxing Airport Express)", "全路网所有地铁线 + 首都/大兴机场线（Visa/MC/JCB/Amex）"), lang)}
+            </li>
+            <li>
+              <strong className="text-emerald-700">✅ {tx(t2("Shanghai:", "上海："), lang)}</strong>{" "}
+              {tx(t2("Full network (all metro lines + Maglev ¥40 / ~$5.50 w/ flight ticket)", "全路网所有地铁线 + 磁悬浮（凭机票 ¥40 / 约 $5.50）"), lang)}
+            </li>
+            <li>
+              <strong className="text-emerald-700">✅ {tx(t2("Guangzhou:", "广州："), lang)}</strong>{" "}
+              {tx(t2("Full network (all metro lines, Visa/MC/Amex/JCB)", "全路网所有地铁线（支持 Visa/MC/Amex/JCB）"), lang)}
+            </li>
+            <li>
+              <strong className="text-emerald-700">✅ {tx(t2("Shenzhen:", "深圳："), lang)}</strong>{" "}
+              {tx(t2("Full network (all metro lines, Visa/MC/Amex/JCB)", "全路网所有地铁线（支持 Visa/MC/Amex/JCB）"), lang)}
+            </li>
+            <li>
+              <strong className="text-emerald-700">✅ {tx(t2("Hong Kong (MTR):", "香港（港铁 MTR）："), lang)}</strong>{" "}
+              {tx(t2("Full network at light-blue contactless gates (Visa/MC/Amex)", "全路网浅蓝色感应闸机（支持 Visa/MC/Amex）"), lang)}
+            </li>
+            <li className="text-slate-500">
+              <strong>⚠️ {tx(t2("Other cities (Xi'an, Chengdu, Chongqing, Hangzhou, etc.):", "其他城市（西安、成都、重庆、杭州、苏州、昆明等）："), lang)}</strong>{" "}
+              {tx(t2("Not yet network-wide at turnstiles → use Option B (Alipay Transport QR)!", "尚未全线普及拍外卡 → 直接用右侧方式 B（支付宝乘车码）100% 通用！"), lang)}
+            </li>
+          </ul>
+          <p className="mt-2 rounded-md bg-slate-50 px-2.5 py-1.5 text-[11px] text-slate-600">
             {tx(
-              t2(
-                "Tap your physical contactless foreign card (or Apple Pay Visa/MC) right on the turnstile in Beijing (all lines + Capital/Daxing Airport Express), Shanghai Maglev (¥40 / ~$5.50 w/ flight ticket), and Chengdu Airport Express.",
-                "直接在地铁闸机拍境外实体卡（或 Apple Pay 绑定卡）：北京全线及首都/大兴机场线（¥25–35 / 约 $3.50–$5）、上海磁悬浮（凭机票 ¥40 / 约 $5.50）及成都机场快线均已支持。",
-              ),
+              t2("Rule: Always tap IN and tap OUT with the exact same physical card or Apple/Google Pay device.", "注意：进出站必须使用同一张实体卡或同一台手机 Apple Pay 拍闸，不可混用。"),
               lang,
             )}
           </p>
@@ -201,12 +250,12 @@ export function MetroSplitCard({ lang }: { lang: Lang }) {
 
       <div className="rounded-xl border border-slate-200 border-l-4 border-l-sky-500 bg-white px-4 py-3 text-xs leading-relaxed text-slate-700">
         <strong className="text-slate-900">
-          💡 {tx(t2("Quick Bag Check Note:", "地铁安检小贴士："), lang)}
+          💡 {tx(t2("Mandatory Metro Bag Check (All Bags Must Go Through X-Ray):", "地铁必过安检提醒（所有随身行李均须过机）："), lang)}
         </strong>{" "}
         {tx(
           t2(
-            "Every subway entrance has a 10-second X-ray bag scanner. Carrying water or coffee? Security will simply ask you to take a sip. Aerosol sunscreen sprays over 150 ml (5 fl oz) are not permitted.",
-            "每个地铁口都有 10 秒 X 光行李安检。带水或咖啡时，安检员会请你喝一口确认安全；超过 150 ml（5 盎司）的防晒喷雾不可携带。",
+            "Before entering ANY Chinese subway station, you MUST place ALL bags — suitcases, backpacks, tote bags, handbags, and even small purses — onto the X-ray conveyor belt for a 10-second scan. Carrying water, tea, or coffee? Security will ask you to take a sip (or put the bottle on a liquid scanner). Aerosol sunscreen sprays over 150 ml (5 fl oz) and pocket knives are not allowed.",
+            "进入中国任何地铁站前，都必须将您随身携带的所有行李——包括拉杆箱、双肩包、手提袋甚至小挎包——全部放到 X 光安检机传送带上接受约 10 秒钟的扫描检查。如携带水、茶或咖啡，安检员会请您当场喝一口（或将瓶子放进液体检测仪）；超过 150 ml（5 盎司）的防晒喷雾及刀具不可携带。",
           ),
           lang,
         )}
