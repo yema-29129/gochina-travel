@@ -8,6 +8,7 @@ import { IconBox } from "./IconBox";
 import { ShowPhrase } from "./ShowPhrase";
 import { AffiliateBox } from "./AffiliateBox";
 import { AdSlot } from "./AdSlot";
+import { Railway12306Tutorial, TrainSearchWidget } from "./tools/TrainInteractiveWidgets";
 
 const TONE = {
   info: { cls: "border-sky-200 bg-sky-50 text-sky-900", Icon: Info, ic: "text-sky-600" },
@@ -110,6 +111,8 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
         </Link>
       );
     }
+    case "widget":
+      return b.widget === "railway12306" ? <Railway12306Tutorial lang={lang} /> : <TrainSearchWidget lang={lang} />;
     case "affiliate":
       return <AffiliateBox id={b.id} lang={lang} />;
     case "ad":

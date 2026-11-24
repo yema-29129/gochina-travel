@@ -12,6 +12,7 @@ import { Faq } from "@/components/Faq";
 import { IconBox } from "@/components/IconBox";
 import { JsonLd } from "@/components/JsonLd";
 import { AdSlot } from "@/components/AdSlot";
+import { HelpContactCard } from "@/components/HelpContactCard";
 
 type P = { params: Promise<{ lang: string; slug: string }> };
 
@@ -105,6 +106,10 @@ export default async function GuidePage({ params }: P) {
               </div>
             </section>
           )}
+
+          <div className="mt-10">
+            <HelpContactCard lang={lang} context="general" />
+          </div>
         </article>
 
         <aside className="space-y-4 lg:sticky lg:top-32 lg:self-start">

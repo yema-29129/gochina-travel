@@ -38,6 +38,8 @@ export type Block =
   | { type: "show"; zh: string; pinyin?: string; meaning: L }
   /** Link card to an interactive tool. */
   | { type: "tool"; tool: ToolId }
+  /** Embedded interactive widget inside a guide. */
+  | { type: "widget"; widget: "railway12306" | "trainSearch" }
   /** Affiliate recommendation box (configured in src/lib/affiliates.ts). */
   | { type: "affiliate"; id: AffiliateId }
   /** AdSense in-article ad slot. */

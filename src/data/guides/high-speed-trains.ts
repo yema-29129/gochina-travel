@@ -67,10 +67,99 @@ const guide: Guide = {
           items: [
             t2("Tickets are released 15 days before departure. Popular trains sell out fast, so book as soon as you know your dates.", "车票在发车前 15 天放票。热门车次很快售罄，确定日期后尽早订票。"),
             t2("Enter your name EXACTLY as printed in your passport (same spelling and order). A mismatch means the gate will not let you in.", "姓名必须与护照上印的完全一致（拼写和顺序相同）。不一致会导致无法进站。"),
-            t2("Train types: G = high-speed (up to 350 km/h, fastest); D = bullet train (slightly slower); C = intercity; K, T and Z = older normal trains, slower and cheaper, some with overnight sleepers.", "车次类型：G = 高速动车（最高 350 km/h，最快）；D = 动车（略慢）；C = 城际列车；K、T、Z = 普通列车，更慢更便宜，部分有夜间卧铺。"),
           ],
         },
+        { type: "widget", widget: "railway12306" },
         { type: "affiliate", id: "tripTrains" },
+      ],
+    },
+    {
+      id: "train-types",
+      heading: t2("All China train letter codes explained (G / C / D / S / Z / T / K / Y / L)", "中国火车车次字母全解（G / C / D / S / Z / T / K / Y / L）"),
+      blocks: [
+        t2b("p",
+          "Every Chinese train number starts with a letter (or 4 digits) that tells you its top speed, comfort level, and how many stops it makes. Here is the complete list currently in service:",
+          "中国每一趟火车的车次都以特定字母（或纯 4 位数字）开头，直接代表了它的最高时速、车型档次与停站密度。以下是目前所有在运行的车次字母完整对照："
+        ),
+        {
+          type: "table",
+          head: [
+            t2("Code", "字母"),
+            t2("Train Type", "车型名称"),
+            t2("Top Speed", "最高时速"),
+            t2("What to expect & best for", "特点与适用场景"),
+          ],
+          rows: [
+            [
+              "G",
+              t2("High-Speed Bullet (高铁)", "高速动车组（高铁）"),
+              "300–350 km/h",
+              t2("Fastest & newest flagship trains on dedicated high-speed lines. First choice for almost all city-to-city travel.", "速度最快、设施最新，运行在高速铁路专线，跨城出行的绝对首选。"),
+            ],
+            [
+              "C",
+              t2("Intercity Bullet (城际)", "城际动车组（城际）"),
+              "160–350 km/h",
+              t2("Frequent short-haul shuttles linking neighboring cities (e.g. Beijing–Tianjin, Guangzhou–Shenzhen, Shanghai–Nanjing).", "往返相邻城市的高频短途动车（如京津、广深、沪宁），随到随走。"),
+            ],
+            [
+              "D",
+              t2("Bullet Train (动车)", "普通动车组（动车）"),
+              "160–250 km/h",
+              t2("Slightly slower and cheaper than G trains. Includes modern overnight high-speed sleeper trains (动卧) on long routes.", "比 G 字头略慢且票价更实惠；长途线路还包含舒适的夜间动车卧铺（动卧）。"),
+            ],
+            [
+              "S",
+              t2("Suburban / Commuter (市郊)", "市域 / 市郊列车"),
+              "80–160 km/h",
+              t2("Connects city centers to suburbs & scenic spots (e.g. Beijing S2 train to Badaling Great Wall). Often accepts transit cards.", "连接主城区与近郊或景区（如北京开往八达岭长城的 S2 线），部分支持直接刷交通卡。"),
+            ],
+            [
+              "Z",
+              t2("Direct Express (直达特快)", "直达特快列车（直特）"),
+              "160 km/h",
+              t2("Fastest conventional locomotive train with very few intermediate stops; mostly overnight sleepers — great budget choice.", "普速列车中最快的级别，中途几乎不停站，多为夕发朝至的卧铺车，高性价比长途选择。"),
+            ],
+            [
+              "T",
+              t2("Express Train (特快)", "特快列车（特快）"),
+              "140 km/h",
+              t2("Conventional train stopping mainly at provincial capitals and major hubs; offers hard/soft seats and sleepers.", "普速特快，主要停靠省会和大型枢纽城市，提供硬座、硬卧、软卧。"),
+            ],
+            [
+              "K",
+              t2("Fast Train (快速)", "快速列车（快速）"),
+              "120 km/h",
+              t2("Classic green-painted train stopping at many mid-sized cities. Very cheap, slower, reaches smaller towns without HSR.", "经典绿皮普速列车，停站较多、票价很低，可直达尚未通高铁的中小城市。"),
+            ],
+            [
+              "Y",
+              t2("Tourist Special (旅游列车)", "旅游专列（游字头）"),
+              "100–160 km/h",
+              t2("Dedicated sightseeing trains running on scenic routes or seasonal tourist itineraries.", "面向热门风景区的专线或季节性旅游观光专列。"),
+            ],
+            [
+              "L",
+              t2("Temporary / Extra (临时客车)", "临时旅客列车（临客）"),
+              "100–120 km/h",
+              t2("Extra trains added temporarily during peak holidays (Spring Festival, National Day) to handle crowds.", "春运、国庆等节假日高峰期临时加开的列车，用于缓解客流压力。"),
+            ],
+            [
+              t2("4 digits (e.g. 6001)", "4 位纯数字（如 6001）"),
+              t2("Local Slow Train (普快 / 普客)", "普通旅客快车 / 慢车"),
+              "60–100 km/h",
+              t2("Stops at almost every small county & rural station. Ultra-cheap nostalgic local experience, very slow.", "几乎站站停的公益/乡村慢车，票价极低但耗时很长，适合深度慢旅行体验。"),
+            ],
+          ],
+        },
+        {
+          type: "callout",
+          tone: "tip",
+          text: t2(
+            "Simple rule for tourists: book G, C or D for fast daytime travel (clean, quiet, 220V sockets). Only pick Z/T/K if you intentionally want a budget overnight sleeper or a town without high-speed rail.",
+            "游客选车口诀：白天跨城优先选 G / C / D（快、干净、带插座）；只有想省一晚住宿体验卧铺、或去没通高铁的小城时，再选 Z / T / K。"
+          ),
+        },
       ],
     },
     {
@@ -210,6 +299,7 @@ const guide: Guide = {
       id: "popular-routes",
       heading: t2("Popular routes: times and prices", "热门线路：时间与票价"),
       blocks: [
+        { type: "widget", widget: "trainSearch" },
         {
           type: "table",
           head: [t2("Route", "线路"), t2("Fastest time", "最快用时"), t2("Second Class (approx.)", "二等座（约）")],
