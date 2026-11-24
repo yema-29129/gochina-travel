@@ -24,9 +24,9 @@ export const TOOLS: ToolMeta[] = [
   {
     id: "payment-fee-calculator",
     icon: "pay",
-    title: { en: "Alipay / WeChat Pay Fee & DCC Calculator", zh: "支付宝 / 微信支付手续费与 DCC 计算器" },
-    seoTitle: { en: "Alipay 200 RMB 3% Fee Calculator — Foreign Card Fees, Split Bills & DCC", zh: "支付宝 200 元 3% 手续费计算器——外卡费用、拆单与 DCC" },
-    desc: { en: "See the real cost of a payment with the ¥200 rule, your bank's foreign transaction fee, and the safest way to pay.", zh: "根据 200 元规则和你银行的境外交易费，看清一笔付款的真实成本，以及最安全的付款方式。" },
+    title: { en: "China Payments Setup (Alipay, WeChat, TenPayGo, UnionPay) & Fee Calculator", zh: "中国支付绑卡图解（支付宝/微信/TenPayGo/银联你好中国）与手续费计算器" },
+    seoTitle: { en: "How to Pay in China (2026): Alipay, WeChat Pay, TenPayGo, UnionPay Nihao China Setup + ¥200 Fee Calculator", zh: "2026 外国人在中国支付教程：支付宝、微信支付、腾讯 TenPayGo、银联你好中国绑卡图解与 200 元手续费计算器" },
+    desc: { en: "Visual step-by-step binding tutorials for 4 official payment apps, how to tell the 3 QR scan scenarios apart (incl. personal QR cash trap), plus the ¥200 3% fee & DCC calculator.", zh: "4 大官方支付 App 下载与逐屏绑卡图解、现场 3 种扫码场景一眼区分法（含个人码备现金提醒），外加 200 元 3% 手续费与 DCC 计算器。" },
     related: ["alipay-wechat-pay", "atm-cash-dcc"],
   },
   {

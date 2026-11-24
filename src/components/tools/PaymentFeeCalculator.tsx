@@ -5,6 +5,7 @@ import { AlertTriangle, CheckCircle2, CreditCard, Maximize2, ShieldAlert } from 
 import { Lang, t2, tx } from "@/lib/i18n";
 import { AffiliateBox } from "@/components/AffiliateBox";
 import { ShowCard, useShowCard } from "@/components/ShowCard";
+import PaymentSetupTutorial from "./PaymentSetupTutorial";
 
 interface Currency {
   code: string;
@@ -108,7 +109,17 @@ export default function PaymentFeeCalculator({ lang }: { lang: Lang }) {
     <div className="space-y-6">
       <ShowCard content={showCard.content} close={showCard.close} />
 
-      {/* Inputs */}
+      {/* Part 1 & 2: Visual Download/Binding Tutorial (Alipay, WeChat Pay, TenPayGo, UnionPay Nihao China) + 3 QR Scenarios */}
+      <PaymentSetupTutorial lang={lang} />
+
+      {/* Part 3: Inputs */}
+      <div id="fee-calculator" className="scroll-mt-28 border-t border-slate-200 pt-8">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+          <CreditCard className="h-3.5 w-3.5" />
+          {tx(t2("PART 3 · ¥200 FEE & DCC CALCULATOR", "第三部分 · 200 元手续费、银行货转费与 DCC 计算器"), lang)}
+        </span>
+      </div>
+
       <div className="rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
         <h2 className="text-lg font-bold text-slate-900">
           {tx(t2("Bill Amount & Card Settings", "账单金额与银行卡费率设置"), lang)}

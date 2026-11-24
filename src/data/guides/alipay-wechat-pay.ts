@@ -92,6 +92,105 @@ const guide: Guide = {
             "有些小商户只提供其中一种收款码。支付宝和微信支付都准备好，你就不会被卡住。"
           ),
         },
+        { type: "tool", tool: "payment-fee-calculator" },
+      ],
+    },
+    {
+      id: "tenpaygo-nihao",
+      heading: t2("Dedicated Foreigner Apps: Tencent TenPayGo & China UnionPay Nihao China", "外国人专属官方工具：腾讯 TenPayGo 与中国银联「你好中国」"),
+      blocks: [
+        t2p(
+          "If you do not want to register a full WeChat account (or get stuck on WeChat friend verification), both Tencent and China UnionPay have launched dedicated English-first apps built specifically for inbound foreign travelers.",
+          "如果你不想注册完整版微信（或卡在微信好友辅助验证），腾讯和中国银联都推出了专门面向来华外国游客的独立英文 App。"
+        ),
+        {
+          type: "table",
+          head: [
+            t2("App", "应用名称"),
+            t2("Publisher", "官方出品"),
+            t2("How to Sign Up & Fund", "注册与绑卡方式"),
+            t2("Best For & Limits", "核心优势与限制"),
+          ],
+          rows: [
+            [
+              t2("TenPayGo", "TenPayGo（腾讯国际版）"),
+              t2("Tencent / TenPay Global", "腾讯 / TenPay Global"),
+              t2(
+                "Email address only (no WeChat account, no +86 phone). Supports Visa, Mastercard, Amex, JCB, Discover, Diners & Apple Pay.",
+                "仅需电子邮箱即可注册（无需微信、无需 +86 手机号）。支持 Visa、Mastercard、Amex、JCB、Discover、Diners 及 Apple Pay。"
+              ),
+              t2(
+                "Scans tens of millions of Weixin Pay merchant QR codes + AI menu translator. Limit: B2C merchant payments only (no P2P personal QR or WeChat Mini-Programs).",
+                "可扫全国数千万微信商家码，内置 AI 菜单翻译。限制：仅支持向商户付款，不支持个人码转账和微信小程序点餐。"
+              ),
+            ],
+            [
+              t2("Nihao China (你好中国)", "Nihao China（你好中国）"),
+              t2("China UnionPay Co., Ltd.", "中国银联官方"),
+              t2(
+                "Email, overseas phone, or Apple ID. Bind international Visa, Mastercard, or UnionPay cards, or top up prepaid Tour Balance.",
+                "支持邮箱、境外手机号或 Apple ID 注册。可绑国际 Visa/Mastercard/银联卡，或充值旅行通余额（Tour Balance）。"
+              ),
+              t2(
+                "3-in-1 QR scanner covers UnionPay, Alipay & WeChat merchant networks + unified metro QR for 43 cities + voice translator (EN/JA/KO/AR/RU) & tax refund tracking.",
+                "一码通扫银联、支付宝和微信商家网络 + 覆盖 43 城地铁统一交通码 + 多语种实时语音翻译与退税追踪。"
+              ),
+            ],
+          ],
+        },
+      ],
+    },
+    {
+      id: "qr-scenarios",
+      heading: t2("3 QR Payment Scenarios at the Counter (How to Tell Them Apart)", "现场扫码支付的 3 种情况与区分方法"),
+      blocks: [
+        t2p(
+          "At checkout in China, you will run into three distinct QR situations. Knowing which button to tap saves awkward moments at the register.",
+          "在中国结账时你会遇到三种不同的二维码情况。分清该点哪个按钮，结账才不会手忙脚乱。"
+        ),
+        {
+          type: "table",
+          head: [
+            t2("Scenario", "场景类型"),
+            t2("How to Spot It", "如何一眼区分"),
+            t2("What You Do", "正确操作方法"),
+          ],
+          rows: [
+            [
+              t2("1. You scan the merchant's QR", "1. 你主动扫商家码（主扫）"),
+              t2(
+                "A printed QR stand or sticker on the counter/table (blue Alipay, green WeChat, or multi-app stand) with NO scanner gun.",
+                "柜台或桌上立着印好的静态二维码牌（蓝/绿/聚合码），没有扫码枪。"
+              ),
+              t2(
+                "Tap 'Scan' → scan the stand → type the RMB amount yourself → show staff to confirm → pay.",
+                "点「扫一扫（Scan）」→ 扫牌子 → 自己输入人民币金额 → 给店员确认数字 → 付款。"
+              ),
+            ],
+            [
+              t2("2. Cashier scans your code", "2. 商家扫你的付款码（被扫）"),
+              t2(
+                "Cashier holds a barcode scanner gun or points to a small counter scanner box (7-Eleven, supermarkets, malls, pharmacies).",
+                "收银员拿手持扫码枪，或指着柜台上的小白/小黑扫码盒（便利店、超市、商场、药店）。"
+              ),
+              t2(
+                "Tap 'Pay/Receive' (Alipay) or 'Money' (WeChat) → show your barcode/QR to the scanner → beep, done (no typing amount).",
+                "点「收付款（Pay/Receive）」或微信「付款码（Money）」→ 亮出屏幕对准扫码枪/盒 → 滴一声自动扣款。"
+              ),
+            ],
+            [
+              t2("3. Personal QR code (Carry cash!)", "3. 个人收款码（务必备现金！）"),
+              t2(
+                "QR has a personal profile photo in the middle or shows an individual's nickname on a vendor/driver's own phone.",
+                "二维码中间是个人头像、显示私人昵称，常见于小摊主或包车司机自己手机上的收款码。"
+              ),
+              t2(
+                "Foreign cards CANNOT pay personal QR codes (blocked by regulation). Pay with ¥300–500 backup RMB cash, or pay from Alipay/WeChat Balance transferred by a friend/hotel.",
+                "外卡无法向个人码付款（系统报错不支持国际银行卡）。请直接付随身备好的 ¥300–500 现金，或用酒店/朋友转入的本地余额付款。"
+              ),
+            ],
+          ],
+        },
       ],
     },
     {
