@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LANGS, Lang, L, OG_LOCALE, tx } from "./i18n";
 import { SITE } from "./site";
+import { getKeywordsForPath } from "./keywords";
 
 /** Absolute URL for a language + path. path must start with "/" ("/" = home). */
 export function absUrl(lang: Lang, path: string) {
@@ -29,6 +30,7 @@ export function buildMetadata(opts: {
   return {
     title: t,
     description: d,
+    keywords: getKeywordsForPath(path, lang),
     alternates: { canonical: absUrl(lang, path), languages },
     openGraph: {
       type,
@@ -76,6 +78,7 @@ export function articleLd(lang: Lang, opts: { title: string; description: string
     "@type": "Article",
     headline: opts.title,
     description: opts.description,
+    keywords: getKeywordsForPath(opts.path, lang).join(", "),
     inLanguage: lang === "zh" ? "zh-CN" : "en",
     dateModified: opts.updated,
     datePublished: opts.updated,
