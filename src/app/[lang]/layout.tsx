@@ -20,7 +20,9 @@ export const viewport: Viewport = {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const verification: Metadata["verification"] = {};
+  const verification: Metadata["verification"] = {
+    yandex: "e0f2285214d03852",
+  };
   if (SITE.gscVerification) verification.google = SITE.gscVerification;
   if (SITE.bingVerification) verification.other = { "msvalidate.01": SITE.bingVerification };
   return {
