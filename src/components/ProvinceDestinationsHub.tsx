@@ -49,8 +49,13 @@ interface ProvinceEntry {
   cities: CitySpot[];
 }
 
-const klookUrl = (q: string) =>
-  `https://www.klook.com/search/result/?query=${encodeURIComponent(q)}`;
+const klookUrl = (q: string, lang: Lang) =>
+  lang === "en"
+    ? `https://www.klook.com/en-US/search/result/?query=${encodeURIComponent(q)}`
+    : `https://www.klook.com/search/result/?query=${encodeURIComponent(q)}`;
+
+const tripToursUrl = (q: string) =>
+  `https://www.trip.com/things-to-do/list?keyword=${encodeURIComponent(q)}`;
 
 const PROVINCES: ProvinceEntry[] = [
   /* ===================== NORTH CHINA ===================== */
@@ -748,7 +753,7 @@ export function ProvinceDestinationsHub({ lang }: { lang: Lang }) {
                           <span className="font-medium text-slate-800">{tx(s.name, lang)}</span>
                           {s.klookQuery ? (
                             <a
-                              href={klookUrl(s.klookQuery)}
+                              href={klookUrl(s.klookQuery, lang)}
                               target="_blank"
                               rel="sponsored nofollow noopener noreferrer"
                               className="inline-flex shrink-0 items-center gap-1 rounded-md bg-white px-2 py-0.5 text-[11px] font-bold text-red-600 shadow-2xs ring-1 ring-red-200 transition hover:bg-red-600 hover:text-white"
@@ -768,21 +773,32 @@ export function ProvinceDestinationsHub({ lang }: { lang: Lang }) {
                 ))}
               </div>
 
-              {/* Footer: Best Season + Province Tickets CTA */}
-              <div className="mt-4 flex items-center justify-between gap-2 border-t border-slate-100 pt-3">
-                <span className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-500">
+              {/* Footer: Best Season + Dual-Platform Compare Bar (Klook + Trip.com) */}
+              <div className="mt-4 space-y-2.5 border-t border-slate-100 pt-3">
+                <div className="flex items-center gap-1 text-[11px] font-medium text-slate-500">
                   <Calendar className="h-3.5 w-3.5 text-slate-400" />
-                  {tx(p.bestTime, lang)}
-                </span>
-                <a
-                  href={klookUrl(p.klookDestQuery)}
-                  target="_blank"
-                  rel="sponsored nofollow noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-slate-900 hover:text-red-600"
-                >
-                  {tx(t2("All Tours & Tickets", "查看全部门票/团"), lang)}
-                  <ExternalLink className="h-3 w-3" />
-                </a>
+                  <span>{tx(t2("Best season:", "最佳季节："), lang)} {tx(p.bestTime, lang)}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href={klookUrl(p.klookDestQuery, lang)}
+                    target="_blank"
+                    rel="sponsored nofollow noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1 rounded-lg bg-slate-900 px-2.5 py-1.5 text-[11px] font-bold text-white transition hover:bg-red-600"
+                  >
+                    <span>{tx(t2("Klook Tickets", "Klook 门票"), lang)}</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                  <a
+                    href={tripToursUrl(p.province.en)}
+                    target="_blank"
+                    rel="sponsored nofollow noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1 rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-[11px] font-bold text-slate-800 transition hover:border-slate-900 hover:bg-slate-50"
+                  >
+                    <span>{tx(t2("Trip.com Tours", "Trip.com 导览"), lang)}</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
