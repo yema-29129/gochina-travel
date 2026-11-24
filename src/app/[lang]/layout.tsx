@@ -74,10 +74,15 @@ gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_persona
         )}
         <script
           dangerouslySetInnerHTML={{
+            __html: `(function(){var h=location.hostname;if(h==="china.tmhzz.com"||h==="www.gochinadesk.com"){location.replace("https://gochinadesk.com"+location.pathname+location.search+location.hash);}})();`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
             __html: `var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?b14ac79b32413ac32dce50ed69eef8b8";
+  hm.src = "https://hm.baidu.com/hm.js?4becdacfbf2b7f4e6076134124f11006";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();`,
