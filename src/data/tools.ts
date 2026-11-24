@@ -46,6 +46,14 @@ export const TOOLS: ToolMeta[] = [
     related: ["internet-esim", "essential-apps"],
   },
   {
+    id: "china-metro-maps",
+    icon: "car",
+    title: { en: "All China Metro Maps (50+ Cities HD)", zh: "中国全部城市地铁线路图大全（中英高清）" },
+    seoTitle: { en: "China Metro & Subway Maps (2026 English HD): Beijing, Shanghai, Chengdu, Xi'an & 50+ Cities", zh: "2026 中国全部城市地铁线路图大全（中英高清）：北京、上海、广州、深圳、成都、西安等" },
+    desc: { en: "Browse zoomable English & Chinese subway maps for 50+ Chinese cities, foreign Visa/MC tap status, fares and key tourist lines in one place.", zh: "一站式查看中国全部地铁城市的高清中英文线路图、外卡拍闸支持状态、票价与游客必坐核心线路。" },
+    related: ["metro-didi-maps", "airports", "high-speed-trains"],
+  },
+  {
     id: "packing-checklist",
     icon: "check",
     title: { en: "72-Hour Pre-Flight Personalized Checklist", zh: "出发前 72 小时个性化清单" },

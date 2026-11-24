@@ -61,6 +61,7 @@ const guide: Guide = {
       heading: t2("Metro: two easy ways to ride", "地铁：两种最省心的乘车方式"),
       blocks: [
         { type: "widget", widget: "metroSplitCard" },
+        { type: "tool", tool: "china-metro-maps" },
       ],
     },
     {

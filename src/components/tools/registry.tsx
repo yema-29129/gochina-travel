@@ -14,6 +14,7 @@ export const TOOL_COMPONENTS: Record<ToolId, ComponentType<P>> = {
   "payment-fee-calculator": dynamic<P>(() => import("./PaymentFeeCalculator"), { loading }),
   "ticket-alarm": dynamic<P>(() => import("./TicketAlarm"), { loading }),
   "esim-calculator": dynamic<P>(() => import("./EsimCalculator"), { loading }),
+  "china-metro-maps": dynamic<P>(() => import("./ChinaMetroMaps"), { loading }),
   "packing-checklist": dynamic<P>(() => import("./PackingChecklist"), { loading }),
   "allergy-card": dynamic<P>(() => import("./AllergyCard"), { loading }),
   "rescue-cards": dynamic<P>(() => import("./RescueCards"), { loading }),

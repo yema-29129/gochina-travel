@@ -18,6 +18,7 @@ export type ToolId =
   | "payment-fee-calculator"
   | "ticket-alarm"
   | "esim-calculator"
+  | "china-metro-maps"
   | "packing-checklist"
   | "allergy-card"
   | "rescue-cards"
