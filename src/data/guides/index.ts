@@ -3,6 +3,7 @@ import type { Guide } from "@/data/types";
 // Visa & Entry
 import visaFreeCountries from "./visa-free-countries";
 import transit240 from "./240-hour-transit";
+import chinaTouristVisaL from "./china-tourist-visa-l";
 import specialVisaFree from "./special-visa-free";
 import onlineArrivalCard from "./online-arrival-card";
 import arrivalImmigration from "./arrival-immigration";
@@ -25,6 +26,7 @@ import foodDeliveryLuggage from "./food-delivery-luggage";
 import shoppingTaxRefund from "./shopping-tax-refund";
 // Practical
 import hotelsInChina from "./hotels-in-china";
+import medicationsCustomsLostPhone from "./medications-customs-lost-phone";
 import attractionTickets from "./attraction-tickets";
 import whenToGo from "./when-to-go";
 import safetyHealth from "./safety-health";
@@ -32,6 +34,7 @@ import safetyHealth from "./safety-health";
 export const GUIDES: Guide[] = [
   visaFreeCountries,
   transit240,
+  chinaTouristVisaL,
   specialVisaFree,
   onlineArrivalCard,
   arrivalImmigration,
@@ -50,6 +53,7 @@ export const GUIDES: Guide[] = [
   foodDeliveryLuggage,
   shoppingTaxRefund,
   hotelsInChina,
+  medicationsCustomsLostPhone,
   attractionTickets,
   whenToGo,
   safetyHealth,

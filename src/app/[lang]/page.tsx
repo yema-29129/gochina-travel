@@ -22,10 +22,10 @@ type P = { params: Promise<{ lang: string }> };
 const HERO_IMG = "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1600&q=80";
 
 const META_TITLE = t4(
-  "GoChinaDesk — China Travel Guide 2026: 240h Visa-Free, Alipay, eSIM & Trains",
-  "GoChinaDesk — 2026 外国人来华旅游指南：免签查询、支付宝绑卡、eSIM 与高铁工具",
-  "GoChinaDesk — 2026年 中国旅行完全ガイド｜30日ビザ免除・アリペイ・eSIM・新幹線",
-  "GoChinaDesk — 2026 중국 여행 완벽 가이드｜30일 무비자·알리페이·eSIM·고속철도"
+  "GoChina — China Travel Guide 2026: 240h Visa-Free, Alipay, eSIM & Trains",
+  "GoChina — 2026 外国人来华旅游指南：免签查询、支付宝绑卡、eSIM 与高铁工具",
+  "GoChina — 2026年 中国旅行完全ガイド｜30日ビザ免除・アリペイ・eSIM・新幹線",
+  "GoChina — 2026 중국 여행 완벽 가이드｜30일 무비자·알리페이·eSIM·고속철도"
 );
 const META_DESC = t4(
   "Plan China without friction: 240-hour visa-free & 30-day checker, Alipay/WeChat Pay foreign card setup, roaming eSIM calculator, 12306 bullet trains, 49-city HD metro maps & instant tax refund tools.",

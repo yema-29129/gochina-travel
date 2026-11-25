@@ -595,6 +595,51 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
       "중국 호텔 여권 임시숙박등록 24시간",
     ],
   },
+  "/guides/china-tourist-visa-l": {
+    en: [
+      "China tourist visa L application 2026 US citizens",
+      "China 10 year multiple entry L visa requirements",
+      "COVA China visa online form guide CVASC",
+      "do US citizens need hotel flight bookings China L visa 2026",
+    ],
+    zh: [
+      "2026 中国 L 字旅游签证申请攻略",
+      "美国公民中国 10 年多次旅游签证",
+      "COVA 中国签证网申填表指南",
+    ],
+    ja: [
+      "中国 観光ビザ Lビザ 申請 2026",
+      "中国ビザ COVA 入力 方法",
+    ],
+    ko: [
+      "중국 관광비자 L비자 신청 2026",
+      "중국 비자 COVA 작성법",
+    ],
+  },
+  "/guides/medications-customs-lost-phone": {
+    en: [
+      "can I bring Adderall Ritalin ADHD medication to China 2026",
+      "China CBD gummies THC vape drug laws tourists",
+      "lost or stolen phone in China without Alipay playbook",
+      "China drone CAAC registration no fly zones Beijing",
+    ],
+    zh: [
+      "2026 带处方药 ADHD 管制药入境中国规定",
+      "中国海关大麻 CBD 电子烟法律红线",
+      "外国人在中国丢手机怎么办",
+      "中国无人机 CAAC 实名登记禁飞区",
+    ],
+    ja: [
+      "中国 処方薬 持ち込み ADHD薬 規制 2026",
+      "中国 CBD 大麻 禁止 罰則",
+      "中国 スマホ 紛失 対処",
+    ],
+    ko: [
+      "중국 처방약 반입 ADHD 약 규정 2026",
+      "중국 CBD 대마 금지 처벌",
+      "중국 휴대폰 분실 대처법",
+    ],
+  },
   "/guides/safety-health": {
     en: ["is China safe for tourists 2026", "China emergency numbers 110 120 12367 pharmacy guide"],
     zh: ["2026 中国旅游安全与紧急电话药店就医指南"],

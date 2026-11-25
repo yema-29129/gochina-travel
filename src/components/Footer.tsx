@@ -55,13 +55,19 @@ export function Footer({ lang }: { lang: Lang }) {
             <p className="mt-3 text-sm leading-relaxed text-slate-400">{t.footerAbout}</p>
             <div className="mt-4 space-y-1.5 text-xs text-slate-400">
               <div>
+                WeChat: <span className="font-semibold text-white">{SITE.wechat}</span>{" "}
+                <span className="text-slate-500">({lang === "zh" ? "国内 Wi-Fi 100% 可用" : "works on China Wi-Fi"})</span>
+              </div>
+              <div>
+                Email:{" "}
+                <span className="select-all font-medium text-slate-200">{SITE.email}</span>
+              </div>
+              <div>
                 WhatsApp:{" "}
                 <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-emerald-400 hover:underline">
                   {SITE.whatsapp}
-                </a>
-              </div>
-              <div>
-                WeChat: <span className="font-medium text-slate-200">{SITE.wechat}</span>
+                </a>{" "}
+                <span className="text-slate-500">({lang === "zh" ? "需漫游流量" : "roaming data"})</span>
               </div>
             </div>
           </div>
