@@ -207,7 +207,46 @@ const guide: Guide = {
         },
       ],
     },
-    { id: "ad-break", heading: t2("Advertisement", "广告"), blocks: [{ type: "ad" }] },
+    {
+      id: "hainan-and-regional",
+      heading: t2("Bonus: Hainan Island 30-day visa-free (61 countries) & cruise/tour schemes", "补充福利：海南岛 61 国 30 天免签与邮轮/港澳团免签"),
+      blocks: [
+        {
+          type: "p",
+          text: t2(
+            "Even if your passport is NOT on the nationwide 30-day list (for example, the USA, Indonesia, Vietnam, the Philippines, Ukraine or Kazakhstan), you can still visit tropical Hainan Island (Sanya & Haikou) visa-free for up to 30 days under Hainan's dedicated 61-country policy—no tour group required!",
+            "即使你的护照不在全国 30 天免签名单上（例如美国、印度尼西亚、越南、菲律宾、乌克兰、哈萨克斯坦等），依然可以凭海南专属的 61 国免签政策，个人直接免签飞往海南岛（三亚/海口）停留最长 30 天——无需跟团！"
+          ),
+        },
+        {
+          type: "table",
+          head: [t2("Regional Scheme", "区域免签政策"), t2("Who qualifies & key limits", "适用范围与核心限制")],
+          rows: [
+            [
+              t2("Hainan 30-Day Visa-Free", "海南岛 30 天免签"),
+              t2(
+                "61 countries (including USA, UK, Canada, EU, Russia, Japan, Korea, Australia, Indonesia, Vietnam, Philippines, etc.). Must arrive at a Hainan port (Haikou HAK / Sanya SYX) and stay strictly within Hainan Province.",
+                "覆盖 61 国（含美、英、加、欧盟、俄、日、韩、澳、印尼、越南、菲律宾等）。须从海口/三亚等海南口岸入境，且活动范围严格限定在海南省内，不可直接飞往内地其他省份。"
+              ),
+            ],
+            [
+              t2("Cruise Ship 15-Day Visa-Free", "邮轮 15 天免签"),
+              t2(
+                "Foreign tour groups of 2+ arriving by cruise at 13 coastal ports (Shanghai, Tianjin, Shenzhen, Xiamen, Qingdao, Sanya, etc.) can visit coastal provinces and Beijing.",
+                "2 人及以上外国邮轮旅游团经上海、天津、深圳、厦门、青岛、三亚等 13 个邮轮口岸入境，可免签停留 15 天并随团游览沿海省市及北京。"
+              ),
+            ],
+            [
+              t2("HK/Macau 144-Hour Tour Group", "港澳外国团 144 小时免签"),
+              t2(
+                "Groups of 2+ organized by licensed Hong Kong/Macau agencies can enter 9 Guangdong Greater Bay Area cities + Shantou (or Guilin) for up to 144 hours.",
+                "由港澳合法旅行社组织的 2 人及以上外国旅游团，可 144 小时免签进入广东大湾区内地 9 市及汕头（或桂林）。"
+              ),
+            ],
+          ],
+        },
+      ],
+    },
     {
       id: "240-hour-transit",
       heading: t2("Tier 3: 240-hour (10-day) visa-free transit (57 countries)", "第三档：240 小时（10 天）过境免签（57 国）"),

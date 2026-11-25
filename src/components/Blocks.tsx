@@ -78,7 +78,18 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
             <thead className="bg-slate-50 text-slate-600">
               <tr>
                 {b.head.map((h, i) => (
-                  <th key={i} className="px-4 py-3 font-semibold">{tx(h, lang)}</th>
+                  <th
+                    key={i}
+                    className={`px-4 py-3 font-semibold ${
+                      i === 0
+                        ? b.head.length === 2
+                          ? "min-w-[150px] whitespace-nowrap sm:min-w-[185px]"
+                          : "min-w-[130px]"
+                        : ""
+                    }`}
+                  >
+                    {tx(h, lang)}
+                  </th>
                 ))}
               </tr>
             </thead>
@@ -86,7 +97,16 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
               {b.rows.map((row, r) => (
                 <tr key={r} className="align-top">
                   {row.map((cell, c) => (
-                    <td key={c} className={`whitespace-pre-line px-4 py-3 ${c === 0 ? "font-medium text-slate-900" : "text-slate-700"}`}>
+                    <td
+                      key={c}
+                      className={`whitespace-pre-line px-4 py-3 ${
+                        c === 0
+                          ? b.head.length === 2
+                            ? "min-w-[150px] font-medium text-slate-900 sm:min-w-[185px]"
+                            : "min-w-[130px] font-medium text-slate-900"
+                          : "text-slate-700"
+                      }`}
+                    >
                       {tx(cell, lang)}
                     </td>
                   ))}

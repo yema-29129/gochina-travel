@@ -193,7 +193,6 @@ const guide: Guide = {
         },
       ],
     },
-    { id: "ad-break", heading: t2("Advertisement", "广告"), blocks: [{ type: "ad" }] },
     {
       id: "cross-province",
       heading: t2("Crossing provinces is allowed", "允许跨省联游"),
