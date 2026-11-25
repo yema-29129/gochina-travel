@@ -33,10 +33,10 @@ const guide: Guide = {
       "중국 본토 직전(A)과 직후(C) 구간만 따지며 반드시 A ≠ C여야 합니다."
     ),
     t4(
-      "Hong Kong, Macau & Taiwan count as separate regions — BUT you can EXIT via Hong Kong West Kowloon High-Speed Rail / Shenzhen land borders, NOT ENTER Mainland China via land/rail on 240h transit!",
-      "香港/澳门/台湾算第三地——但注意：你可以坐高铁去香港西九龙或步行罗湖/福田“出境”，但绝不能从香港坐西九龙高铁或陆路口岸“入境”走 240h 过境免签！",
-      "香港・マカオ・台湾は第三地域扱い。ただし香港西九龍高速鉄道や深セン陸路は「出国OK・入国NG」の落とし穴に要注意！",
-      "홍콩·마카오·대만은 제3국 인정! 단, 홍콩 서구룡 고속철 및 선전 육로 국경은 '출국 가능·입국 불가' 함정에 주의하세요."
+      "Hong Kong, Macau & Taiwan count as separate regions — West Kowloon High-Speed Rail Station IS an eligible 240h entry port (since Nov 5, 2025), while ordinary Shenzhen/Zhuhai land borders (Luohu, Futian, Huanggang, Shenzhen Bay, Gongbei) are EXIT-only and NOT eligible for 240h entry!",
+      "香港/澳门/台湾算第三地——注意区分口岸：香港西九龙高铁站口岸自 2025 年 11 月 5 日起已纳入 240h 入境口岸；但罗湖、福田、皇岗、深圳湾、拱北等普通陆路口岸仅支持出境、不支持 240h 过境免签入境！",
+      "香港・マカオ・台湾は第三地域扱い。香港西九龍高速鉄道駅は2025年11月5日より240時間入国口岸に追加済みですが、羅湖・福田・深圳湾などの一般陸路国境は出国専用（入国NG）なので要注意。",
+      "홍콩·마카오·대만은 제3국 인정! 홍콩 서구룡 고속철역은 2025년 11월 5일부터 240시간 입국항에 포함되었으나, 뤄후·푸톈·선전만 등 일반 육로 국경은 출국 전용(입국 불가)입니다."
     ),
     t4(
       "The 240 hours start at 00:00 the day after you land, so you get the rest of your arrival day free.",
@@ -256,10 +256,10 @@ const guide: Guide = {
         {
           type: "callout",
           tone: "danger",
-          title: t2("Trap 1: Hong Kong West Kowloon Rail & Shenzhen land borders — EXIT OK, ENTRY DENIED!", "大坑 1：香港西九龙高铁与深圳陆路口岸——“能出不能进”！"),
+          title: t2("Trap 1: Shenzhen & Zhuhai land borders (Luohu/Futian/Shenzhen Bay) — EXIT OK, ENTRY DENIED!", "大坑 1：深圳/珠海普通陆路口岸（罗湖/福田/深圳湾/拱北）——“能出不能进”！"),
           text: t2(
-            "One of the #1 real-world rejections: flying into Beijing/Shanghai and EXITTING to Hong Kong by high-speed train (West Kowloon) or walking across Luohu/Futian is 100% ALLOWED. However, you CANNOT ENTER Mainland China from Hong Kong via West Kowloon High-Speed Rail, Luohu, Futian, Huanggang, or Shenzhen Bay on 240-hour transit! To enter Guangdong on 240h transit from Hong Kong, you must fly into Guangzhou/Shenzhen/Jieyang airports or take the ferry into Shekou Port (蛇口港) or Nansha Port (南沙港).",
-            "现实中拒签率最高的坑：飞进北京/上海后，坐高铁从深圳/广州去香港西九龙，或从罗湖/福田步行“出境”去香港完全合法；但反过来，绝不能从香港坐西九龙高铁或走罗湖、福田、皇岗、深圳湾陆路口岸“入境”深圳来申请 240 小时过境免签！从香港走 240h 入境广东，必须坐飞机进白云/宝安/揭阳机场，或坐渡轮到蛇口港/南沙港。"
+            "Do not mix up Hong Kong's rail port with ordinary land borders: West Kowloon High-Speed Rail Station (香港西九龙站口岸) WAS officially added as an eligible 240-hour ENTRY port on Nov 5, 2025 (along with Guangzhou/Shenzhen/Jieyang airports, Nansha/Shekou/Pazhou ferry ports, and HZMB Zhuhai port). However, ordinary walk-across land crossings — Luohu, Futian, Huanggang, Shenzhen Bay and Gongbei — are EXIT-only and CANNOT be used to enter Mainland China on 240-hour transit!",
+            "切勿混淆西九龙高铁口岸和普通陆路口岸：自 2025 年 11 月 5 日起，香港西九龙站口岸、港珠澳大桥珠海公路口岸、琶洲客运港等已正式纳入广东 240 小时过境免签“入境口岸”；但罗湖、福田、皇岗、深圳湾、拱北等普通步行陆路口岸仍仅支持出境，绝不能用来申请 240 小时过境免签入境！"
           ),
         },
         {
@@ -280,8 +280,8 @@ const guide: Guide = {
               "大坑 3 —— 境内经停暗雷：千万别买第一落地经停点不在 65 个口岸内的航班（例如欧洲 → 乌鲁木齐经停 → 成都）。哪怕不下飞机，只要乌鲁木齐不在过境口岸名单内，始发地就会直接拒登机。"
             ),
             t2(
-              "Trap 4 — 24-hour local police registration if NOT staying in a hotel: licensed hotels register your passport automatically, but if you stay at a friend's apartment or private Airbnb, you MUST register with the local police station (or city WeChat mini-program) within 24 hours of arrival, or risk a fine up to ¥2,000.",
-              "大坑 4 —— 住朋友家/私人 Airbnb 的 24 小时派出所登记：住正规酒店前台会自动上传，但住朋友家或非涉外民宿，必须在抵达后 24 小时内去当地派出所（或微信“公安微警务”小程序线上）办临时住宿登记，否则最高罚 2,000 元。"
+              "Trap 4 — 24-hour residence registration if NOT staying in a hotel: licensed hotels register your passport automatically, but if you stay at a friend's apartment or private short-term rental, you or your host MUST register within 24 hours via NIA's nationwide online registration service (rolled out nationwide Sept 21, 2026) or at the local police station.",
+              "大坑 4 —— 住朋友家/非旅馆民宿的 24 小时住宿登记：住正规酒店前台会自动申报；住亲友家或私人短租，须在入住后 24 小时内由本人或留宿人通过国家移民管理局全国推广的官方网上登记渠道（2026 年 9 月 21 日起全国推行）或前往当地派出所办理临时住宿登记。"
             ),
             t2(
               "Trap 5 — Passport condition & extra questions: ensure your passport has at least 2 blank pages and no torn cover/loose bio-page. Travelers with multiple past stays in countries like Turkey may receive a few extra itinerary questions at immigration—handing over printed hotel confirmations and your onward ticket clears it in 30 seconds.",
@@ -296,8 +296,8 @@ const guide: Guide = {
     {
       q: t2("Can I take the Hong Kong West Kowloon high-speed train into Shenzhen on 240-hour transit?", "可以坐香港西九龙高铁入境深圳使用 240 小时过境免签吗？"),
       a: t2(
-        "No for ENTRY, Yes for EXIT. West Kowloon High-Speed Rail and Shenzhen land crossings (Luohu, Futian, Shenzhen Bay) are NOT eligible entry ports for 240-hour transit. To enter from Hong Kong on 240h transit, take the ferry to Shekou Port or Nansha Port, or fly into Guangzhou/Shenzhen airport.",
-        "入境不行，出境可以。香港西九龙高铁站及罗湖、福田、深圳湾陆路口岸均不支持作为 240 小时过境免签的“入境口岸”。若从香港走 240h 入境广东，请乘船至蛇口港或南沙港，或乘飞机入境广州/深圳机场。"
+        "Yes! Effective Nov 5, 2025, Hong Kong West Kowloon Station Port was officially added as an eligible 240-hour transit ENTRY port—provided your full route satisfies A ≠ C (for example, Hong Kong → Mainland China → Japan/USA, with a confirmed onward ticket) and you stay within allowed regions. Note that ordinary Shenzhen walk-across land borders (Luohu, Futian, Huanggang, Shenzhen Bay) are still EXIT-only and NOT eligible for 240-hour entry.",
+        "可以！自 2025 年 11 月 5 日起，香港西九龙站口岸已正式纳入 240 小时过境免签入境口岸——前提是你的联程路线满足 A ≠ C（例如香港 → 中国内地 → 日本/美国，并持有已确定日期和座位的离境机票）。但注意罗湖、福田、皇岗、深圳湾等普通陆路口岸仍仅支持出境、不支持 240h 入境。"
       ),
     },
     {

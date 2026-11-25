@@ -135,8 +135,8 @@ const HOME_FAQ: FaqItem[] = [
   {
     q: t2("Do I need a visa to visit China in 2026?", "2026 年去中国旅游需要签证吗？"),
     a: t2(
-      "Passport holders from 50 countries enjoy 30-day unilateral visa-free entry. Travelers from 55 countries (including the US, UK and Canada) can use the 240-hour (10-day) visa-free transit rule when flying A → China → C (third country/region, including Hong Kong or Macau). Use our Visa-Free & 240-Hour Transit Checker to confirm your route.",
-      "50 个国家的护照持有人享有 30 天单方面免签入境。包括美国、英国、加拿大在内的 55 国旅客在满足 A → 中国 → C（第三国或港澳台地区）路线时，可使用 240 小时（10 天）过境免签。请用我们的免签检查器确认你的路线。"
+      "Passport holders from 50 countries enjoy 30-day unilateral visa-free entry. Travelers from 57 countries (including the US, UK and Canada) can use the 240-hour (10-day) visa-free transit rule when flying A → China → C (third country/region, including Hong Kong or Macau). Use our Visa-Free & 240-Hour Transit Checker to confirm your route.",
+      "50 个国家的护照持有人享有 30 天单方面免签入境。包括美国、英国、加拿大在内的 57 国旅客在满足 A → 中国 → C（第三国或港澳台地区）路线时，可使用 240 小时（10 天）过境免签。请用我们的免签检查器确认你的路线。"
     ),
   },
   {
@@ -240,6 +240,26 @@ export default async function HomePage({ params }: P) {
           </p>
           <div className="mx-auto mt-8 max-w-2xl text-left">
             <SearchBox lang={lang} />
+          </div>
+          <div className="mx-auto mt-5 flex flex-wrap items-center justify-center gap-2.5">
+            <Link
+              href={href(lang, "/tools/packing-checklist")}
+              className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur transition hover:bg-white hover:text-slate-900 sm:text-sm"
+            >
+              {tx(t4("Planning my trip →", "行前准备清单 →", "旅行準備チェック →", "여행 전 준비 →"), lang)}
+            </Link>
+            <Link
+              href={href(lang, "/guides/arrival-immigration")}
+              className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur transition hover:bg-white hover:text-slate-900 sm:text-sm"
+            >
+              {tx(t4("I've just landed →", "刚落地·通关进城 →", "到着直後ガイド →", "막 도착했어요 →"), lang)}
+            </Link>
+            <Link
+              href={href(lang, "/tools/rescue-cards")}
+              className="rounded-full bg-red-600 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-red-500 sm:text-sm"
+            >
+              {tx(t4("I need help now", "现场遇到麻烦·紧急求助", "今すぐ助けが必要", "긴급 도움이 필요해요"), lang)}
+            </Link>
           </div>
         </div>
       </section>

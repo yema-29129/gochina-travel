@@ -5,13 +5,13 @@
 > XML Sitemap (224 URLs across 4 languages): https://gochinadesk.com/sitemap.xml
 
 ## Core Interactive Tools
-- [Visa-Free & 240-Hour Transit Route Checker](https://gochinadesk.com/en/tools/visa-checker): Check 50-country 30-day visa-free eligibility and 55-country 240-hour (10-day) transit rules across 24 provinces and 65 ports.
+- [Visa-Free & 240-Hour Transit Route Checker](https://gochinadesk.com/en/tools/visa-checker): Check 50-country 30-day visa-free eligibility and 57-country 240-hour (10-day) transit rules across 24 provinces and 65 ports.
 - [China Payments Setup & ¥200 Fee Calculator](https://gochinadesk.com/en/tools/payment-fee-calculator): Visual binding tutorials for Alipay, WeChat Pay, Tencent TenPayGo, and UnionPay Nihao China, 3 QR scan scenarios (incl. personal QR cash trap), and ¥200 3% fee & DCC calculator.
 - [Internet Plan & eSIM Data Calculator](https://gochinadesk.com/en/tools/esim-calculator): Match 3GB–100GB fixed data tiers by phone hardware (US eSIM-only iPhone 14–17, unlocked eSIM, physical-SIM-only, carrier-locked), Singapore routing for TikTok/ChatGPT, and 1-click offline cabin activation PNG card.
 - [All China Metro Maps (49 Cities HD)](https://gochinadesk.com/en/tools/china-metro-maps): Zoomable English & Chinese subway maps for 49 Chinese cities, foreign Visa/Mastercard/Amex/JCB tap-to-ride city list (Beijing, Shanghai, Guangzhou, Shenzhen, Hong Kong), fares, and key tourist lines.
 - [Attraction Ticket Release Alarm](https://gochinadesk.com/en/tools/ticket-alarm): Convert Forbidden City (7 days ahead, 20:00 Beijing time) and museum ticket release times into local time zones.
 - [Power Bank CCC Checker & Airport Transfer Time](https://gochinadesk.com/en/tools/powerbank-airport): Instant Wh calculator, domestic flight CCC oval mark check, and dual-airport minimum layover calculator (PVG↔SHA, TFU↔CTU, PKX↔PEK).
-- [Chinese Food Allergy & Diet Card + Bubble Tea Card](https://gochinadesk.com/en/tools/allergy-card): Fullscreen chef-proof Mandarin cards for peanut, gluten, shellfish, vegan, halal, and bubble tea orders.
+- [Chinese Food Allergy & Diet Card + Bubble Tea Card](https://gochinadesk.com/en/tools/allergy-card): Fullscreen Chinese-English allergy communication cards for peanut, gluten, shellfish, vegan, halal, and bubble tea orders.
 - [Pharmacy Lookup & Emergency Show-Cards](https://gochinadesk.com/en/tools/rescue-cards): Symptom-to-Chinese-medicine lookup (Ibuprofen, Tylenol, Smecta, etc.) plus 5 fullscreen emergency show-cards.
 - [72-Hour Pre-Flight Personalized Checklist](https://gochinadesk.com/en/tools/packing-checklist): Tailored pre-departure checklist by OS, travel month, and companions.
 - [Tax Refund Calculator (Instant Refund)](https://gochinadesk.com/en/tools/tax-refund-calculator): Calculate net ~9% tourist VAT instant refund (¥200 minimum spend).

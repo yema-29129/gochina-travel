@@ -61,15 +61,15 @@ export function Header({ lang }: { lang: Lang }) {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
-            <div className="flex items-center rounded-lg border border-slate-200 p-0.5">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+            <div className="flex shrink-0 items-center rounded-lg border border-slate-200 p-0.5">
               <Globe className="ml-1.5 mr-0.5 hidden h-4 w-4 text-slate-500 sm:block" />
               {LANGS.map((l) => (
                 <Link
                   key={l}
                   href={switchTo(l)}
                   hrefLang={l === "zh" ? "zh-CN" : l}
-                  className={`rounded-md px-2 py-1 text-xs font-semibold sm:text-sm ${l === lang ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-100"}`}
+                  className={`whitespace-nowrap rounded-md px-1.5 py-1 text-[11px] font-semibold sm:px-2 sm:text-sm ${l === lang ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-100"}`}
                 >
                   {LANG_LABEL[l]}
                 </Link>
@@ -79,7 +79,7 @@ export function Header({ lang }: { lang: Lang }) {
               type="button"
               aria-label="Menu"
               onClick={() => setOpen(!open)}
-              className="rounded-lg border border-slate-200 p-2 lg:hidden"
+              className="shrink-0 rounded-lg border border-slate-200 p-2 lg:hidden"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -88,6 +88,22 @@ export function Header({ lang }: { lang: Lang }) {
 
         {open && (
           <nav className="border-t border-slate-200 bg-white px-4 py-3 lg:hidden">
+            <div className="mb-2 grid grid-cols-2 gap-2 border-b border-slate-100 pb-3">
+              <Link
+                href={href(lang, "/guides/arrival-immigration")}
+                onClick={() => setOpen(false)}
+                className="rounded-lg bg-slate-900 px-3 py-2 text-center text-xs font-semibold text-white"
+              >
+                {lang === "zh" ? "已落地·通关指引" : lang === "ja" ? "到着直後ガイド" : lang === "ko" ? "도착 직후 가이드" : "Just Landed"}
+              </Link>
+              <Link
+                href={href(lang, "/tools/rescue-cards")}
+                onClick={() => setOpen(false)}
+                className="rounded-lg bg-red-600 px-3 py-2 text-center text-xs font-semibold text-white"
+              >
+                {lang === "zh" ? "紧急求助卡" : lang === "ja" ? "緊急ヘルプカード" : lang === "ko" ? "긴급 도움 카드" : "Need Help Now"}
+              </Link>
+            </div>
             {links.map((l) => (
               <Link
                 key={l.path}

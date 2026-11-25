@@ -167,7 +167,7 @@ export const TOOLS: ToolMeta[] = [
       ko: "무료 중국어 음식 알레르기 카드 생성기 (땅콩·글루텐·갑각류·비건·할랄)",
     },
     desc: {
-      en: "Build a chef-proof Mandarin card that names the exact ingredients and oils to avoid. Show it full screen.",
+      en: "Build a clear Chinese-English allergy communication card naming exact ingredients and oils to avoid. Show it full screen.",
       zh: "生成厨师能看懂的中文卡片，写明需要避免的具体食材和油品。可全屏展示。",
       ja: "料理人にそのまま見せられる全画面中国語アレルギーカードを作成。使用NG食材や油を明記。",
       ko: "주방장에게 바로 보여줄 수 있는 전체화면 중국어 알레르기 카드를 만들어 보세요.",

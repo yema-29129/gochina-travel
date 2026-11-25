@@ -214,13 +214,22 @@ const WEEKDAY_NAMES: L[] = [
   t2("Saturday", "星期六"),
 ];
 
+function defaultFutureVisitDate(daysAhead = 14): string {
+  const dt = new Date(Date.now() + daysAhead * 86_400_000);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())}`;
+}
+
 export default function TicketAlarm({ lang }: { lang: Lang }) {
   const [attractionId, setAttractionId] = useState<string>("forbidden_city");
-  const [visitDate, setVisitDate] = useState<string>("2026-10-21");
+  const [visitDate, setVisitDate] = useState<string>("");
   const [userTz, setUserTz] = useState<string>("America/New_York");
   const [detectedTz, setDetectedTz] = useState<string | null>(null);
+  const [nowMs, setNowMs] = useState<number>(0);
 
   useEffect(() => {
+    setVisitDate((prev) => prev || defaultFutureVisitDate(14));
+    setNowMs(Date.now());
     try {
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
       if (tz) {
@@ -476,14 +485,36 @@ export default function TicketAlarm({ lang }: { lang: Lang }) {
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-3">
-            <button
-              type="button"
-              onClick={downloadIcs}
-              className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700"
-            >
-              <CalendarPlus className="h-4 w-4" />
-              {tx(t2("Add 5-Min Early Alarm to Apple / Google Calendar (.ics)", "导出 5 分钟提前抢票提醒到手机日历 (.ics)"), lang)}
-            </button>
+            {nowMs > 0 && Date.UTC(...(visitDate.split("-").map((v, i) => (i === 1 ? Number(v) - 1 : Number(v))) as [number, number, number])) + 86_400_000 < nowMs ? (
+              <div className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2.5 text-sm font-medium text-amber-950">
+                {tx(
+                  t2(
+                    "Selected visit date has already passed. Choose a future date above to create a calendar alarm.",
+                    "所选游览日期已过去，请在上方选择未来日期以生成抢票日历提醒。",
+                  ),
+                  lang,
+                )}
+              </div>
+            ) : nowMs > 0 && calc.releaseUtc.getTime() <= nowMs ? (
+              <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm font-medium text-emerald-950">
+                {tx(
+                  t2(
+                    "Release window already open (tickets are currently on sale). Check official availability directly—inventory is live and not guaranteed.",
+                    "该日期的放票时间已过（当前已开售），无需再设提前闹钟。请直接前往官方预约通道查询实时余票（余票以官网实时显示为准）。",
+                  ),
+                  lang,
+                )}
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={downloadIcs}
+                className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700"
+              >
+                <CalendarPlus className="h-4 w-4" />
+                {tx(t2("Add 5-Min Early Alarm to Apple / Google Calendar (.ics)", "导出 5 分钟提前抢票提醒到手机日历 (.ics)"), lang)}
+              </button>
+            )}
           </div>
         </div>
       )}

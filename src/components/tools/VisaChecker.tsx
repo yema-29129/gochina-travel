@@ -49,20 +49,45 @@ function fmtDate(parts: { y: number; m: number; d: number }, lang: Lang): string
     : `${parts.y}-${pad(parts.m)}-${pad(parts.d)}`;
 }
 
+function futureDateStr(daysAhead: number): string {
+  const dt = new Date(Date.now() + daysAhead * 86_400_000);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())}`;
+}
+
 export default function VisaChecker({ lang }: { lang: Lang }) {
   const [passport, setPassport] = useState("US");
   const [passportQuery, setPassportQuery] = useState("");
   const [validity, setValidity] = useState<Validity>("gt6");
   const [regionA, setRegionA] = useState("US");
   const [entryPort, setEntryPort] = useState("PVG");
-  const [arrDate, setArrDate] = useState("2026-10-15");
+  const [arrDate, setArrDate] = useState("");
   const [arrTime, setArrTime] = useState("14:30");
   const [selectedSpots, setSelectedSpots] = useState<string[]>(["shanghai", "beijing"]);
   const [spotQuery, setSpotQuery] = useState("");
   const [exitPort, setExitPort] = useState("PEK");
   const [regionC, setRegionC] = useState("HK");
-  const [depDate, setDepDate] = useState("2026-10-25");
+  const [depDate, setDepDate] = useState("");
   const [depTime, setDepTime] = useState("22:15");
+  const [isExample, setIsExample] = useState(false);
+
+  const loadExample = () => {
+    setPassport("US");
+    setValidity("gt6");
+    setRegionA("US");
+    setEntryPort("PVG");
+    setArrDate(futureDateStr(14));
+    setArrTime("14:30");
+    setSelectedSpots(["shanghai", "beijing"]);
+    setExitPort("PEK");
+    setRegionC("HK");
+    setDepDate(futureDateStr(24));
+    setDepTime("22:15");
+    setIsExample(true);
+  };
+
+  const hasDates = Boolean(arrDate && depDate);
+  const isPastArrival = Boolean(arrDate && arrDate < futureDateStr(0));
 
   const filteredCountries = useMemo(() => {
     const q = passportQuery.trim().toLowerCase();
@@ -219,18 +244,29 @@ export default function VisaChecker({ lang }: { lang: Lang }) {
     <div className="space-y-6">
       {/* Input Form */}
       <div className="rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
-        <h2 className="text-lg font-bold text-slate-900">
-          {tx(t2("Enter Your Trip Details (9 Inputs)", "填写您的行程信息（9 项输入）"), lang)}
-        </h2>
-        <p className="mt-1 text-sm text-slate-500">
-          {tx(
-            t2(
-              "All calculations run locally in your browser. Checks 30-day visa-free, mutual exemption, and 240-hour transit rules.",
-              "所有校验均在您的浏览器本地即时完成，自动匹配 30 天单方面免签、双边互免与 240 小时过境免签政策。",
-            ),
-            lang,
-          )}
-        </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-bold text-slate-900">
+              {tx(t2("Enter Your Trip Details (9 Inputs)", "填写您的行程信息（9 项输入）"), lang)}
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">
+              {tx(
+                t2(
+                  "All calculations run locally in your browser. Checks 30-day visa-free, mutual exemption, and 57-country 240-hour transit rules (verified 2026-11-25).",
+                  "所有校验均在您的浏览器本地即时完成，自动匹配 30 天单方面免签、双边互免与 57 国 240 小时过境免签政策（规则复核日：2026-11-25）。",
+                ),
+                lang,
+              )}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={loadExample}
+            className="shrink-0 rounded-lg border border-slate-300 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-800 transition hover:border-slate-900 hover:bg-slate-900 hover:text-white"
+          >
+            {tx(t2("Try an example (US → PVG/PEK → HK)", "载入示例行程（美→沪/京→港）"), lang)}
+          </button>
+        </div>
 
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           {/* Input 1: Passport Country */}
@@ -549,10 +585,58 @@ export default function VisaChecker({ lang }: { lang: Lang }) {
         </div>
       </div>
 
+      {/* Pending Dates Prompt or Past-Date Warning */}
+      {!hasDates ? (
+        <div className="rounded-xl border border-slate-200 bg-slate-50 p-6 text-center">
+          <Clock className="mx-auto h-7 w-7 text-slate-400" />
+          <h3 className="mt-2 text-base font-bold text-slate-900">
+            {tx(t2("Enter your arrival & departure dates to see your verdict", "请先填写您的入境与离境日期以获取准确判定"), lang)}
+          </h3>
+          <p className="mx-auto mt-1 max-w-lg text-sm text-slate-600">
+            {tx(
+              t2(
+                "We will not display a green Eligible status until your actual dates, ports and regions are entered — or load a sample future route to preview how it works.",
+                "在您填写实际出行日期、口岸与航段前，系统不会默认亮绿灯；您也可以点击下方按钮载入一条未来示例行程预览校验效果。",
+              ),
+              lang,
+            )}
+          </p>
+          <button
+            type="button"
+            onClick={loadExample}
+            className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-600"
+          >
+            {tx(t2("Try an example route", "载入示例行程体验"), lang)}
+          </button>
+        </div>
+      ) : (
+        <>
+          {isExample && (
+            <div className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-2.5 text-xs font-medium text-sky-900">
+              {tx(
+                t2(
+                  "Example mode: showing a sample US → Shanghai/Beijing → Hong Kong future trip. Replace with your real passport, ports and dates above.",
+                  "当前为示例行程（美国护照 → 上海进/北京出 → 香港）。请在上方替换为您本人的真实护照、口岸与出行日期。",
+                ),
+                lang,
+              )}
+            </div>
+          )}
+          {isPastArrival && (
+            <div className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2.5 text-xs font-semibold text-amber-950">
+              {tx(
+                t2(
+                  "⚠️ Your selected arrival date is in the past. Please update it to your actual future travel date before relying on this result.",
+                  "⚠️ 您选择的入境日期已过去，请更改为未来的实际出行日期后再参考校验结果。",
+                ),
+                lang,
+              )}
+            </div>
+          )}
       {/* Overall Verdict Banner */}
       <div
         className={`rounded-xl border p-5 ${
-          result.overallPass
+          result.overallPass && !isPastArrival
             ? "border-emerald-300 bg-emerald-50 text-emerald-950"
             : "border-red-300 bg-red-50 text-red-950"
         }`}
@@ -939,6 +1023,8 @@ export default function VisaChecker({ lang }: { lang: Lang }) {
           </div>
         </div>
       </div>
+        </>
+      )}
 
       {/* Restricted Provinces Quick Reference */}
       <details className="rounded-xl border border-slate-200 bg-white p-4">

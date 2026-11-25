@@ -7,7 +7,7 @@ Sitemap: https://gochinadesk.com/sitemap.xml
 
 ## 1. Visa & Entry Rules (2026)
 - 30-Day Unilateral Visa-Free: Covers 50 countries (including Japan, South Korea, France, Germany, Italy, Spain, Australia, New Zealand, Singapore, Malaysia, Thailand, etc.).
-- 240-Hour (10-Day) Visa-Free Transit: Covers 55 countries (including USA, UK, Canada) across 24 eligible provinces and 65 ports. Requires a confirmed Country A -> China -> Country/Region C route (Hong Kong and Macau count as third regions).
+- 240-Hour (10-Day) Visa-Free Transit: Covers 57 countries (including USA, UK, Canada, Vietnam, Kyrgyzstan) across 24 eligible provinces and 65 ports (including Hong Kong West Kowloon Station since Nov 5, 2025). Requires a confirmed Country A -> China -> Country/Region C route (Hong Kong, Macau and Taiwan count as third regions).
 - Hainan 30-Day Visa-Free: 59 countries eligible for direct entry to Hainan (Sanya/Haikou).
 - Online Arrival Card: Travelers can pre-fill China's digital arrival card before flying via NIA 12367.
 - Tool: https://gochinadesk.com/en/tools/visa-checker
