@@ -55,7 +55,8 @@ export type Block =
         | "budgetVsFullServiceCards"
         | "airportBentoHub"
         | "arrivalTransferCard"
-        | "dualAirportTimeBars";
+        | "dualAirportTimeBars"
+        | "timaticRescueCard";
     }
   /** Affiliate recommendation box (configured in src/lib/affiliates.ts). */
   | { type: "affiliate"; id: AffiliateId }

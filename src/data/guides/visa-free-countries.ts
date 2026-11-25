@@ -1,41 +1,60 @@
 import type { Guide } from "@/data/types";
-import { t2 } from "@/lib/i18n";
+import { t2, t4 } from "@/lib/i18n";
 
 const guide: Guide = {
   slug: "visa-free-countries",
   category: "visa",
   icon: "visa",
-  title: t2("China Visa-Free Countries: The Complete 2026 List", "中国免签国家：2026 年完整名单"),
-  seoTitle: t2(
-    "China Visa-Free Countries List 2026: 30-Day, Mutual & 240-Hour Transit",
-    "2026 中国免签国家名单：30 天免签、互免签证与 240 小时过境免签"
+  title: t4(
+    "China Visa-Free Countries (2026): Complete 50-Country List & Hidden Rules",
+    "中国免签国家（2026）：50 国完整名单、旧护照 10 年签与隐藏避坑规则",
+    "中国ビザ免除対象国一覧（2026年最新）：日本人30日免除条件・注意点・空港提示カード",
+    "중국 무비자 입국 가능 국가 (2026): 한국인 30일 무비자 조건·주의사항·체크인 카드"
   ),
-  summary: t2(
-    "Every country that can enter China without a visa in 2026: 50 with 30-day visa-free entry, 29 with mutual exemption, 57 with 240-hour transit, plus the rules.",
-    "2026 年所有可免签入境中国的国家：50 国 30 天免签、29 国互免签证、57 国 240 小时过境免签，以及相关规则。"
+  seoTitle: t4(
+    "China Visa-Free Countries List 2026: 30-Day (50 Countries), Mutual & 240-Hour Transit",
+    "2026 中国免签国家名单：50 国 30 天免签、29 国互免与 240 小时过境免签全解",
+    "中国ビザ免除 30日間（2026年最新）：日本・韓国含む50カ国一覧とビザラン・警察登録の注意点",
+    "중국 무비자 30일 국가 목록 (2026): 한국 포함 50개국 조건·비자런 주의·체크인 카드"
   ),
-  updated: "2026-11-24",
-  readMin: 9,
+  summary: t4(
+    "Every country that can enter China without a visa in 2026: 50 with 30-day visa-free entry (incl. Japan, Korea, UK, Canada), 29 mutual, 57 with 240-hour transit—plus old 10-year visa rules, visa-run risks & 24h police registration.",
+    "2026 年所有可免签入境中国的国家：50 国 30 天单方面免签、29 国互免、57 国 240 小时过境免签，附旧护照 10 年签证用法、刷香港 Visa Run 风险与 24 小时住宿登记避坑。",
+    "2026年にビザなしで中国入国できる全対象国（日本・韓国・英・加など50カ国30日免除、相互免除29カ国、240時間トランジット57カ国）と、ビザラン注意点・24時間宿泊登録・空港提示カードを解説。",
+    "2026년 중국 무비자 입국 전체 정리: 한국·일본·영국·캐나다 등 50개국 30일 무비자, 29개국 상호면제, 57개국 240시간 경유 + 구여권 10년 비자·비자런·24시간 거주 등록 주의사항."
+  ),
+  updated: "2026-11-25",
+  readMin: 10,
   keyPoints: [
-    t2(
-      "50 countries get 30-day unilateral visa-free entry, including the UK and Canada since 17 February 2026.",
-      "50 国享受 30 天单方面免签，其中英国和加拿大自 2026 年 2 月 17 日起纳入。"
+    t4(
+      "50 countries get 30-day unilateral visa-free entry, including Japan, South Korea, Australia, EU/Schengen, plus the UK and Canada since 17 February 2026.",
+      "50 国享受 30 天单方面免签，包括日本、韩国、澳大利亚及欧洲多国，其中英国和加拿大自 2026 年 2 月 17 日起纳入。",
+      "日本・韓国・豪州・欧州・英加を含む50カ国が30日間の片務ビザ免除対象（観光・商用・親族訪問・乗継）。",
+      "한국·일본·호주·유럽·영국·캐나다 등 50개국 국민은 30일 단방향 무비자 입국 가능 (관광·비즈니스·방문·경유)."
     ),
-    t2(
+    t4(
       "29 countries have mutual visa exemption — but many cap you at 90 days in any 180 days.",
-      "29 国与中国互免签证——但很多国家规定每 180 天内累计停留不得超过 90 天。"
+      "29 国与中国互免签证——但很多国家规定每 180 天内累计停留不得超过 90 天。",
+      "29カ国は相互ビザ免除（シンガポール・タイ等は180日あたり通算90日上限あり）。",
+      "29개국은 상호 비자 면제 협정 대상 (싱가포르·태국 등은 180일 중 누적 90일 제한)."
     ),
-    t2(
+    t4(
       "57 countries can use 240-hour (10-day) visa-free transit; for 8 of them (incl. the USA and Mexico) it is the main visa-free option.",
-      "57 国可使用 240 小时（10 天）过境免签；其中 8 国（含美国、墨西哥）主要依靠这一政策免签入境。"
+      "57 国可使用 240 小时（10 天）过境免签；其中 8 国（含美国、墨西哥）主要依靠这一政策免签入境。",
+      "57カ国が240時間（10日間）トランジット免除対象（米国・メキシコ等は主にこの制度を利用）。",
+      "57개국은 240시간(10일) 경유 무비자 대상 (미국·멕시코 등은 주로 이 제도를 이용)."
     ),
-    t2(
+    t4(
       "Your stay is counted from 00:00 on the day after you arrive, not from the moment you land.",
-      "停留时间从入境次日 00:00 起算，而不是从飞机落地那一刻起算。"
+      "停留时间从入境次日 00:00 起算，而不是从飞机落地那一刻起算。",
+      "滞在30日間は入国翌日の00:00からカウント開始（到着当日はカウント外）。",
+      "체류 기간은 입국 다음 날 00:00부터 계산됩니다 (도착 당일은 제외)."
     ),
-    t2(
-      "Visa-free entry never covers work, study or journalism — and never Tibet without a special permit.",
-      "免签入境绝不包括工作、留学或常驻采访——没有特别许可也绝不能去西藏。"
+    t4(
+      "Valid 10-year China visa inside an expired passport? Still valid if you carry BOTH passports and your personal details match!",
+      "旧护照过期了但上面还有有效 10 年中国签证？只要新旧护照个人信息一致，两本一起带着就能直接入境！",
+      "期限切れの旧パスポートに有効な10年ビザが残っている場合、氏名が一致していれば新旧2冊持参でそのまま入国可能。",
+      "만료된 구여권에 유효한 10년 중국 비자가 남아 있다면, 인적사항이 동일할 경우 신·구 여권 2권을 함께 지참해 입국 가능."
     ),
   ],
   sections: [
@@ -271,8 +290,54 @@ const guide: Guide = {
         },
       ],
     },
+    {
+      id: "hidden-rules-nobody-tells-you",
+      heading: t2("5 hidden entry rules other China travel sites forget to mention", "别人网站没写、但极容易踩坑的 5 条真实入境规则"),
+      blocks: [
+        {
+          type: "list",
+          items: [
+            t2(
+              "Expired passport with a valid 10-year Chinese visa: you do NOT need to apply for a new visa! As long as your name, sex, date of birth and nationality are identical on both passports, carry BOTH the old and new passports together and immigration will admit you smoothly.",
+              "旧护照过期但上面的 10 年中国签证还在有效期内：不用重办！只要新旧护照上的姓名、性别、出生日期、国籍完全一致，把新旧两本护照一起带着就能直接入境。"
+            ),
+            t2(
+              "Back-to-back 30-day 'Visa Runs' to Hong Kong or Macau: although the unilateral 30-day policy has no written annual cap (unlike the 90-in-180-day mutual rule), hopping across to Hong Kong and returning the same day 3+ times in a row triggers secondary questioning for suspected illegal work or unauthorized residence—and can result in entry refusal.",
+              "30 天免签去香港/澳门“刷天数（Visa Run）”风险：虽然单方面 30 天免签未写死年度总天数上限，但连续 2–3 次当天出境去香港再回深圳刷新 30 天，极易被边检请进问询室怀疑非法打工或变相常住，甚至当场拒入境。"
+            ),
+            t2(
+              "24-hour police registration when staying at friends' homes or private Airbnbs: hotels register foreigners automatically, but if you stay at a friend's/relative's home or unlicensed guesthouse, you MUST register with the local police station (or city WeChat police mini-program) within 24 hours—failure risks fines up to ¥2,000.",
+              "住朋友家/私人 Airbnb 必须 24 小时内派出所登记：住正规酒店前台会自动申报；但住亲友家或非涉外民宿，必须在抵达后 24 小时内去当地派出所（或当地微信公安小程序线上）办理《临时住宿登记表》，否则最高罚 2,000 元且留不良记录。"
+            ),
+            t2(
+              "Former Chinese nationals & dual-heritage travelers: on your first entry with a newly acquired foreign passport, carry your cancelled old Chinese passport or official renunciation proof to avoid delays at border control.",
+              "原中国籍/华裔首次持新外籍护照入境：建议随身携带已剪角作废的原中国护照或退籍证明，避免边检核验身份时耽误时间。"
+            ),
+            t2(
+              "Already hold a valid Chinese visa AND a 30-day visa-free passport? Border officers normally admit you using your existing visa unless you explicitly request visa-free entry (handy if you want to save a single-entry visa).",
+              "同时持有有效中国签证且属于 30 天免签国：边检默认优先核销你护照上的有效签证；如果你不想用掉单次签，请在递护照时明确告知边检官要走 30 天免签。"
+            ),
+          ],
+        },
+        { type: "widget", widget: "timaticRescueCard" },
+      ],
+    },
   ],
   faq: [
+    {
+      q: t2("My old passport expired, but my 10-year Chinese visa inside is still valid. Can I still use it?", "我的旧护照过期了，但里面的 10 年中国签证还有效，还能直接用吗？"),
+      a: t2(
+        "Yes! Carry both your expired passport (containing the valid visa) and your new valid passport together. As long as your name, date of birth, sex and nationality have not changed, Chinese immigration accepts it with no transfer fee.",
+        "可以！同时携带贴有有效签证的旧护照和新护照即可。只要新旧护照上的姓名、出生日期、性别和国籍均未变更，中国边检完全认可，无需重办或转移签证。"
+      ),
+    },
+    {
+      q: t2("Can I do a same-day 'visa run' to Hong Kong to reset my 30-day visa-free stay?", "可以当天去一趟香港再回深圳，无限刷新 30 天免签吗？"),
+      a: t2(
+        "Occasional separate trips are fine, but repeated back-to-back border hops to live or work remotely in China will trigger secondary inspection and possible refusal of entry. If you plan to stay more than 30 days continuously, apply for a proper visa.",
+        "正常的多次短期旅行没问题，但连续多次当天去香港再回深圳“刷天数”会被边检怀疑非法打工或变相常住，可能被问询甚至拒入。如需连续停留超 30 天，请提前办理相应签证。"
+      ),
+    },
     {
       q: t2("Do US citizens need a visa for China in 2026?", "2026 年美国公民去中国需要签证吗？"),
       a: t2(

@@ -1,41 +1,60 @@
 import type { Guide } from "@/data/types";
-import { t2 } from "@/lib/i18n";
+import { t2, t4 } from "@/lib/i18n";
 
 const guide: Guide = {
   slug: "240-hour-transit",
   category: "visa",
   icon: "visa",
-  title: t2("China 240-Hour Visa-Free Transit: Rules, 65 Ports & Allowed Areas", "中国 240 小时过境免签：规则、65 个口岸与允许活动区域"),
-  seoTitle: t2(
-    "China 240 Hour Visa Free Transit Rules for US Citizens (2026 Port List)",
-    "美国公民中国 240 小时过境免签规则（2026 口岸名单）"
+  title: t4(
+    "China 240-Hour Visa-Free Transit (2026): Rules, 65 Ports, HK Rail Trap & TIMATIC Card",
+    "中国 240 小时过境免签（2026）：65 口岸、香港西九龙大坑与航司 TIMATIC 救命卡",
+    "中国240時間トランジットビザ免除（2026）：全65口岸・香港高速鉄道の罠・空港TIMATIC提示カード",
+    "중국 240시간 경유 무비자 완벽 가이드 (2026): 65개 입국항·홍콩 고속철 주의·TIMATIC 카드"
   ),
-  summary: t2(
-    "China's 240-hour visa-free transit explained: the A→China→C rule, how the 10 days are counted, all 65 ports in 24 provinces, and the spots you must not visit.",
-    "中国 240 小时过境免签详解：A→中国→C 规则、10 天如何计算、24 个省份的全部 65 个口岸，以及绝不能去的地方。"
+  seoTitle: t4(
+    "China 240-Hour Visa-Free Transit Rules (2026): US Citizens, 65 Ports, HK Rail & TIMATIC Card",
+    "2026 中国 240 小时过境免签规则：65 口岸全表、香港西九龙能出不能进与值机救命卡",
+    "中国240時間ビザ免除トランジット完全解説（2026）：A→中国→Cルール・全65口岸・空港提示カード",
+    "중국 240시간 무비자 경유 규정 (2026): A→중국→C 조건·65개 입국항·공항 체크인 카드"
   ),
-  updated: "2026-11-24",
-  readMin: 12,
+  summary: t4(
+    "China's 240-hour visa-free transit explained: A→China→C rule, all 65 ports, interactive Airline Check-In TIMATIC Rescue Card, Hong Kong West Kowloon entry vs exit trap, and Urumqi technical-stop ban.",
+    "中国 240 小时过境免签终极实操：A→中国→C 规则、65 个口岸全表、一键全屏航司值机 TIMATIC 救命卡、香港西九龙能出不能进暗雷与国内经停禁区。",
+    "中国240時間（10日間）トランジットビザ免除の完全ガイド。A→中国→Cルール、全65口岸、空港チェックイン拒否を防ぐTIMATIC提示カード、香港西九龍駅の入出国ルールまで網羅。",
+    "중국 240시간(10일) 경유 무비자 실전 가이드: A→중국→C 규정, 65개 입국항, 공항 체크인 거부 방지 TIMATIC 카드, 홍콩 서구룡역 출입국 함정까지 완벽 정리."
+  ),
+  updated: "2026-11-25",
+  readMin: 13,
   keyPoints: [
-    t2(
+    t4(
       "Only the leg immediately before and after Mainland China counts: A → Mainland China → C, and A must not equal C.",
-      "只看紧邻中国内地的前后航段：A → 中国内地 → C，且 A 不能等于 C。"
+      "只看紧邻中国内地的前后航段：A → 中国内地 → C，且 A 不能等于 C。",
+      "中国本土の直前（A）と直後（C）の区間のみ判定され、A≠Cである必要があります。",
+      "중국 본토 직전(A)과 직후(C) 구간만 따지며 반드시 A ≠ C여야 합니다."
     ),
-    t2(
-      "Hong Kong, Macau and Taiwan count as separate regions — a great way to fix a round-trip itinerary.",
-      "中国香港、澳门、台湾均算作独立地区——这是修正往返行程的好办法。"
+    t4(
+      "Hong Kong, Macau & Taiwan count as separate regions — BUT you can EXIT via Hong Kong West Kowloon High-Speed Rail / Shenzhen land borders, NOT ENTER Mainland China via land/rail on 240h transit!",
+      "香港/澳门/台湾算第三地——但注意：你可以坐高铁去香港西九龙或步行罗湖/福田“出境”，但绝不能从香港坐西九龙高铁或陆路口岸“入境”走 240h 过境免签！",
+      "香港・マカオ・台湾は第三地域扱い。ただし香港西九龍高速鉄道や深セン陸路は「出国OK・入国NG」の落とし穴に要注意！",
+      "홍콩·마카오·대만은 제3국 인정! 단, 홍콩 서구룡 고속철 및 선전 육로 국경은 '출국 가능·입국 불가' 함정에 주의하세요."
     ),
-    t2(
+    t4(
       "The 240 hours start at 00:00 the day after you land, so you get the rest of your arrival day free.",
-      "240 小时从落地次日 00:00 开始计算，所以落地当天剩余时间是白送的。"
+      "240 小时从落地次日 00:00 开始计算，所以落地当天剩余时间是白送的。",
+      "240時間は入国翌日の00:00からカウント開始（到着当日は実質無料）。",
+      "240시간은 입국 다음 날 00:00부터 계산되어 도착 당일 남은 시간은 보너스입니다."
     ),
-    t2(
-      "You must enter through one of 65 ports in 24 provinces; 19 allow travel province-wide, but Sichuan, Yunnan, Guangxi, Shanxi, Jiangxi and Heilongjiang only allow certain cities.",
-      "必须从 24 个省份的 65 个口岸之一入境；其中 19 个允许全省活动，但四川、云南、广西、山西、江西和黑龙江只允许去指定城市。"
+    t4(
+      "Beware domestic technical stops (e.g. Europe → Urumqi → Chengdu): if the first stop in China is NOT one of the 65 ports, airlines will deny boarding.",
+      "警惕国内经停暗雷（如欧洲→乌鲁木齐→成都）：只要第一落地经停点不在 65 个口岸内，始发地直接拒登机！",
+      "中国国内の経由便（例：欧州→ウルムチ→成都）に注意。最初の到着地が65口岸外だと搭乗拒否されます。",
+      "중국 내 경유 항공편 주의(예: 유럽→우루무치→청두): 첫 경유지가 65개 입국항에 없으면 탑승 거부됩니다."
     ),
-    t2(
-      "Jiuzhaigou, Shangri-La, Pingyao, China Snow Town, Tibet and Xinjiang are all off-limits on 240-hour transit.",
-      "九寨沟、香格里拉、平遥、中国雪乡、西藏和新疆都不允许通过 240 小时过境免签前往。"
+    t4(
+      "Carry our fullscreen Airline Check-In TIMATIC Rescue Card below + printed onward ticket & hotel confirmations in case departure airport staff don't know the 2026 rule.",
+      "出发前存好下方的“航司值机 TIMATIC 救命卡”并打印英文联程票与酒店单，防止海外小机场地勤因不熟新政误拒登机。",
+      "海外空港の係員が最新ルールを知らない場合に備え、下の「TIMATIC提示カード」と印刷済みの第三国行き航空券・ホテル予約票を必ず持参。",
+      "해외 공항 체크인 직원이 최신 규정을 모를 때를 대비해 아래 'TIMATIC 안내 카드'와 영문 출국 항공권·호텔 예약서를 출력해 지참하세요."
     ),
   ],
   sections: [
@@ -231,8 +250,64 @@ const guide: Guide = {
         { type: "affiliate", id: "tripFlights" },
       ],
     },
+    {
+      id: "hidden-traps-nobody-mentions",
+      heading: t2("5 hidden 240-hour traps most travel blogs never mention", "99% 攻略没提过的 5 个 240 小时隐形大坑"),
+      blocks: [
+        {
+          type: "callout",
+          tone: "danger",
+          title: t2("Trap 1: Hong Kong West Kowloon Rail & Shenzhen land borders — EXIT OK, ENTRY DENIED!", "大坑 1：香港西九龙高铁与深圳陆路口岸——“能出不能进”！"),
+          text: t2(
+            "One of the #1 real-world rejections: flying into Beijing/Shanghai and EXITTING to Hong Kong by high-speed train (West Kowloon) or walking across Luohu/Futian is 100% ALLOWED. However, you CANNOT ENTER Mainland China from Hong Kong via West Kowloon High-Speed Rail, Luohu, Futian, Huanggang, or Shenzhen Bay on 240-hour transit! To enter Guangdong on 240h transit from Hong Kong, you must fly into Guangzhou/Shenzhen/Jieyang airports or take the ferry into Shekou Port (蛇口港) or Nansha Port (南沙港).",
+            "现实中拒签率最高的坑：飞进北京/上海后，坐高铁从深圳/广州去香港西九龙，或从罗湖/福田步行“出境”去香港完全合法；但反过来，绝不能从香港坐西九龙高铁或走罗湖、福田、皇岗、深圳湾陆路口岸“入境”深圳来申请 240 小时过境免签！从香港走 240h 入境广东，必须坐飞机进白云/宝安/揭阳机场，或坐渡轮到蛇口港/南沙港。"
+          ),
+        },
+        {
+          type: "callout",
+          tone: "warn",
+          title: t2("Trap 2: Airline check-in agents are often stricter than Chinese immigration", "大坑 2：海外航司值机地勤往往比中国边检更严（误拒登机）"),
+          text: t2(
+            "Check-in agents at smaller US or European airports frequently don't know China expanded transit to 240 hours with cross-province travel, and may demand a visa on the spot. Always arrive 30 minutes earlier, bring printed English onward flight + hotel bookings, and show our TIMATIC Rescue Card below so the agent checks the live TIMATIC database (or calls +86-12367).",
+            "欧美二三线机场的航司地勤经常不了解中国已升级为 240 小时跨省过境免签，会直接要求看签证。务必提前 30 分钟到机场，打印英文联程机票和酒店单，直接把下面这张 TIMATIC 救命卡全屏递给地勤核对系统（或致电 +86-12367）。"
+          ),
+        },
+        { type: "widget", widget: "timaticRescueCard" },
+        {
+          type: "list",
+          items: [
+            t2(
+              "Trap 3 — Domestic technical-stop trap: never book a flight whose first landing inside China is outside the 65 listed ports (for example, Europe → Urumqi technical stop → Chengdu). Even if you stay on the plane, Urumqi is not a 240h port and check-in will deny boarding.",
+              "大坑 3 —— 境内经停暗雷：千万别买第一落地经停点不在 65 个口岸内的航班（例如欧洲 → 乌鲁木齐经停 → 成都）。哪怕不下飞机，只要乌鲁木齐不在过境口岸名单内，始发地就会直接拒登机。"
+            ),
+            t2(
+              "Trap 4 — 24-hour local police registration if NOT staying in a hotel: licensed hotels register your passport automatically, but if you stay at a friend's apartment or private Airbnb, you MUST register with the local police station (or city WeChat mini-program) within 24 hours of arrival, or risk a fine up to ¥2,000.",
+              "大坑 4 —— 住朋友家/私人 Airbnb 的 24 小时派出所登记：住正规酒店前台会自动上传，但住朋友家或非涉外民宿，必须在抵达后 24 小时内去当地派出所（或微信“公安微警务”小程序线上）办临时住宿登记，否则最高罚 2,000 元。"
+            ),
+            t2(
+              "Trap 5 — Passport condition & extra questions: ensure your passport has at least 2 blank pages and no torn cover/loose bio-page. Travelers with multiple past stays in countries like Turkey may receive a few extra itinerary questions at immigration—handing over printed hotel confirmations and your onward ticket clears it in 30 seconds.",
+              "大坑 5 —— 护照品相与边检附加问询：确保护照至少留 2 页空白页且无封面撕裂/芯片损坏。如果护照上有多次土耳其等国长期停留章，边检可能会多问几句行程，直接递上打印好的全程酒店单和离境机票确认单即可 30 秒顺利放行。"
+            ),
+          ],
+        },
+      ],
+    },
   ],
   faq: [
+    {
+      q: t2("Can I take the Hong Kong West Kowloon high-speed train into Shenzhen on 240-hour transit?", "可以坐香港西九龙高铁入境深圳使用 240 小时过境免签吗？"),
+      a: t2(
+        "No for ENTRY, Yes for EXIT. West Kowloon High-Speed Rail and Shenzhen land crossings (Luohu, Futian, Shenzhen Bay) are NOT eligible entry ports for 240-hour transit. To enter from Hong Kong on 240h transit, take the ferry to Shekou Port or Nansha Port, or fly into Guangzhou/Shenzhen airport.",
+        "入境不行，出境可以。香港西九龙高铁站及罗湖、福田、深圳湾陆路口岸均不支持作为 240 小时过境免签的“入境口岸”。若从香港走 240h 入境广东，请乘船至蛇口港或南沙港，或乘飞机入境广州/深圳机场。"
+      ),
+    },
+    {
+      q: t2("What if my airline check-in agent refuses boarding without a Chinese visa?", "如果出发地航司地勤不认 240 小时过境免签、不给打登机牌怎么办？"),
+      a: t2(
+        "Stay calm, ask for a supervisor, and show our Airline Check-In TIMATIC Rescue Card above. Ask them to run a live TIMATIC query for China 240-Hour Transit Without Visa (TWOV) with your exact passport and A → China → C route, or call China's 24/7 NIA English hotline at +86-12367.",
+        "保持冷静，请主管到场，并全屏展示上方的航司 TIMATIC 救命卡。请对方按你的护照国籍与 A→中国→C 航段实时查询 TIMATIC 中的 China 240-Hour TWOV 规则，或直接拨打中国移民局 24 小时英文官方热线 +86-12367 核实。"
+      ),
+    },
     {
       q: t2("Does Hong Kong count as a third country for China's 240-hour transit visa?", "香港算 240 小时过境免签的第三地吗？"),
       a: t2(

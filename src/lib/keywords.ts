@@ -68,16 +68,28 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     en: [
       "China visa free countries 2026",
       "do I need a visa for China",
-      "China 30 day visa free list",
-      "China 240 hour visa free transit rules",
+      "China 30 day visa free list UK Canada",
+      "China 240 hour visa free transit rules TIMATIC",
       "China online arrival card",
     ],
     zh: [
       "2026 中国免签国家名单",
       "去中国需要签证吗",
       "中国 30 天单方面免签",
-      "240 小时过境免签规则",
+      "240 小时过境免签规则 TIMATIC",
       "外国人网上入境卡",
+    ],
+    ja: [
+      "中国 ビザ免除 30日 日本人 2026",
+      "中国 240時間 トランジット ビザ免除",
+      "中国 入国 ビザ 不要 条件",
+      "中国 オンライン入国カード",
+    ],
+    ko: [
+      "중국 무비자 30일 한국인 2026",
+      "중국 240시간 경유 무비자 조건",
+      "중국 입국 비자 면제 규정",
+      "중국 온라인 입국카드 작성법",
     ],
   },
   "/money": {
@@ -281,14 +293,25 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     en: [
       "China 240 hour visa free transit rules for US citizens 2026 port list",
       "65 ports China 240 hour visa free transit",
-      "Does Hong Kong count as a third country for China 240 hour transit visa",
+      "Hong Kong West Kowloon train 240 hour transit entry exit",
+      "China 240 hour transit airline check in TIMATIC denied boarding",
       "Can you visit Jiuzhaigou or Pingyao on China 240 hour visa free transit",
     ],
     zh: [
       "2026 中国 240 小时过境免签 65 口岸全表",
-      "24 省过境免签活动区域限制",
-      "过境免签香港算第三地区吗",
+      "香港西九龙高铁 240 小时过境免签能出不能进",
+      "航司值机 TIMATIC 240 小时过境免签拒登机",
       "过境免签禁止前往九寨沟平遥雪乡",
+    ],
+    ja: [
+      "中国 240時間 トランジット ビザ免除 65口岸 2026",
+      "香港 西九龍 高速鉄道 240時間 トランジット",
+      "中国 240時間 乗継 ビザなし チェックイン TIMATIC",
+    ],
+    ko: [
+      "중국 240시간 경유 무비자 65개 입국항 2026",
+      "홍콩 서구룡 고속철 240시간 경유 입국 불가",
+      "중국 240시간 무비자 항공사 체크인 TIMATIC",
     ],
   },
   "/guides/online-arrival-card": {
@@ -441,8 +464,28 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     zh: ["2026 中国自由行行程规划器", "7天10天14天中国高铁路线生成器"],
   },
   "/guides/visa-free-countries": {
-    en: ["China 30 day visa free countries list 2026", "who can enter China visa free 2026", "China unilateral visa free policy"],
-    zh: ["2026 中国 30 天单方面免签国家名单", "哪些国家可以免签来中国"],
+    en: [
+      "China 30 day visa free countries list 2026",
+      "valid 10 year China visa in expired passport",
+      "China 30 day visa free Hong Kong visa run",
+      "China 24 hour police registration Airbnb friends home",
+    ],
+    zh: [
+      "2026 中国 30 天单方面免签国家名单",
+      "旧护照过期 10 年中国签证还能用吗",
+      "中国 30 天免签去香港刷天数 Visa Run",
+      "外国人住朋友家 24 小时派出所住宿登记",
+    ],
+    ja: [
+      "中国 ビザ免除 30日 対象国 一覧 2026",
+      "中国 ビザ免除 日本人 ビザラン 香港 注意",
+      "中国 24時間 派出所 臨時宿泊登録",
+    ],
+    ko: [
+      "중국 30일 무비자 국가 목록 2026",
+      "중국 무비자 홍콩 비자런 주의사항",
+      "중국 24시간 파출소 임시숙박등록",
+    ],
   },
   "/guides/special-visa-free": {
     en: ["Hainan 30 day visa free 59 countries", "China cruise 15 day visa free", "Guangdong 144 hour Hong Kong tour visa free"],

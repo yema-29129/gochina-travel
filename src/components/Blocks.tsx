@@ -24,6 +24,7 @@ import {
   ArrivalTransferCard,
   DualAirportTimeBars,
 } from "./tools/AirportBentoWidgets";
+import { TimaticRescueCard } from "./tools/TimaticRescueCard";
 
 const TONE = {
   info: { cls: "border-slate-200 border-l-4 border-l-sky-500 bg-white text-slate-700", Icon: Info, ic: "text-sky-600" },
@@ -156,6 +157,8 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
           return <ArrivalTransferCard lang={lang} />;
         case "dualAirportTimeBars":
           return <DualAirportTimeBars lang={lang} />;
+        case "timaticRescueCard":
+          return <TimaticRescueCard lang={lang} />;
         default:
           return null;
       }

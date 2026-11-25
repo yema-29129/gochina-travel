@@ -67,7 +67,21 @@ export default async function GuidePage({ params }: P) {
               href: "#taxis",
               external: false,
             }
-          : slug === "shopping-tax-refund"
+          : slug === "240-hour-transit" || slug === "visa-free-countries"
+            ? {
+                badge: t4("10-Second Check", "10 秒自查", "10秒ビザ判定", "10초 무비자 확인"),
+                title: t4("Verify Your Passport & 240h Route", "立刻测算你的护照与 240h 路线", "パスポート＆240時間ルートを即判定", "여권 및 240시간 경유 노선 즉시 확인"),
+                desc: t4(
+                  "Check 30-day visa-free, A→China→C legality, exact exit deadline & restricted spots.",
+                  "一键核对 30 天免签、A→中国→C 路线合规性、精确离境截止时间与禁去景点。",
+                  "30日免除・A→中国→Cルート・正確な出国期限・立入制限エリアを一発チェック。",
+                  "30일 무비자, A→중국→C 규정, 정확한 출국 마감 시각과 금지 구역을 바로 확인."
+                ),
+                cta: t4("Open Visa & Transit Checker", "打开签证与过境检测器", "ビザチェッカーを開く", "무비자 확인기 열기"),
+                href: href(lang, "/tools/visa-checker"),
+                external: false,
+              }
+            : slug === "shopping-tax-refund"
             ? {
                 badge: t4("Instant Calculator", "实时算账", "免税計算ツール", "환급 계산기"),
                 title: t4("Calculate Your 9% Net Tax Refund", "秒算你能拿回多少退税款", "手取り約9%の免税額を今すぐ計算", "내 9% 실수령 택스리펀 바로 계산"),
