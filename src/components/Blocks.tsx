@@ -71,21 +71,28 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
           ))}
         </ol>
       );
-    case "table":
+    case "table": {
+      const hasIndexCol =
+        b.head.length >= 4 &&
+        ["#", "no.", "no", "序号"].includes(tx(b.head[0], lang).trim().toLowerCase());
       return (
         <div className="my-4 overflow-x-auto rounded-xl border border-slate-200 bg-white">
-          <table className="w-full min-w-[560px] text-left text-sm">
+          <table className="w-full min-w-[600px] text-left text-sm">
             <thead className="bg-slate-50 text-slate-600">
               <tr>
                 {b.head.map((h, i) => (
                   <th
                     key={i}
                     className={`px-4 py-3 font-semibold ${
-                      i === 0
-                        ? b.head.length === 2
-                          ? "min-w-[150px] whitespace-nowrap sm:min-w-[185px]"
-                          : "min-w-[130px]"
-                        : ""
+                      hasIndexCol && i === 0
+                        ? "w-14 whitespace-nowrap text-center"
+                        : hasIndexCol && i === 1
+                          ? "min-w-[120px] whitespace-nowrap"
+                          : i === 0
+                            ? b.head.length === 2
+                              ? "min-w-[150px] whitespace-nowrap sm:min-w-[185px]"
+                              : "min-w-[130px] whitespace-nowrap"
+                            : ""
                     }`}
                   >
                     {tx(h, lang)}
@@ -100,11 +107,15 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
                     <td
                       key={c}
                       className={`whitespace-pre-line px-4 py-3 ${
-                        c === 0
-                          ? b.head.length === 2
-                            ? "min-w-[150px] font-medium text-slate-900 sm:min-w-[185px]"
-                            : "min-w-[130px] font-medium text-slate-900"
-                          : "text-slate-700"
+                        hasIndexCol && c === 0
+                          ? "w-14 whitespace-nowrap text-center font-medium text-slate-500"
+                          : hasIndexCol && c === 1
+                            ? "min-w-[120px] whitespace-nowrap font-semibold text-slate-900"
+                            : c === 0
+                              ? b.head.length === 2
+                                ? "min-w-[150px] font-medium text-slate-900 sm:min-w-[185px]"
+                                : "min-w-[130px] font-medium text-slate-900"
+                              : "text-slate-700"
                       }`}
                     >
                       {tx(cell, lang)}
@@ -116,6 +127,7 @@ function BlockView({ b, lang }: { b: Block; lang: Lang }) {
           </table>
         </div>
       );
+    }
     case "callout": {
       const t = TONE[b.tone];
       return (

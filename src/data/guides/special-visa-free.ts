@@ -91,9 +91,40 @@ const guide: Guide = {
         {
           type: "p",
           text: t2(
-            "Ordinary passport holders from 61 countries — including the United States, United Kingdom, France, Russia, Indonesia and Vietnam — can fly directly or connect via Hong Kong into Haikou Meilan (HAK) or Sanya Phoenix (SYX) and stay in Hainan Province for up to 30 days without a visa.",
-            "包括美国、英国、法国、俄罗斯、印度尼西亚、越南等在内的 61 国普通护照持有人，可直飞或经香港转机飞抵海口美兰（HAK）或三亚凤凰（SYX）机场，免签在海南省内停留最长 30 天。"
+            "Ordinary passport holders from 61 countries — including the United States, United Kingdom, France, Russia, Indonesia and Vietnam — can fly directly or connect via Hong Kong into Haikou Meilan (HAK) or Sanya Phoenix (SYX) and stay in Hainan Province for up to 30 days without a visa (for tourism, business, visiting family, medical care, exhibitions or sports — no tour group required).",
+            "包括美国、英国、法国、俄罗斯、印度尼西亚、越南等在内的 61 国普通护照持有人，可直飞或经香港/澳门/第三国转机飞抵海口美兰（HAK）或三亚凤凰（SYX）机场，免签在海南省内停留最长 30 天（涵盖旅游、商贸、访问、探亲、医疗、会展、体育竞技，个人即可免签，无需跟团）。"
           ),
+        },
+        {
+          type: "table",
+          head: [t2("Region", "地区"), t2("All 61 Eligible Countries for Hainan 30-Day Visa-Free", "海南 30 天免签全部 61 国完整名单")],
+          rows: [
+            [
+              t2("Europe (40)", "欧洲（40 国）"),
+              t2(
+                "Albania, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Romania, Russia, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine, United Kingdom",
+                "阿尔巴尼亚、奥地利、白俄罗斯、比利时、波黑、保加利亚、克罗地亚、塞浦路斯、捷克、丹麦、爱沙尼亚、芬兰、法国、德国、希腊、匈牙利、冰岛、爱尔兰、意大利、拉脱维亚、立陶宛、卢森堡、马耳他、摩纳哥、黑山、荷兰、北马其顿、挪威、波兰、葡萄牙、罗马尼亚、俄罗斯、塞尔维亚、斯洛伐克、斯洛文尼亚、西班牙、瑞典、瑞士、乌克兰、英国"
+              ),
+            ],
+            [
+              t2("Asia (13)", "亚洲（13 国）"),
+              t2(
+                "Brunei, Indonesia, Japan, Kazakhstan, Kyrgyzstan, Malaysia, Philippines, Qatar, Singapore, South Korea, Thailand, United Arab Emirates, Vietnam",
+                "文莱、印度尼西亚、日本、哈萨克斯坦、吉尔吉斯斯坦、马来西亚、菲律宾、卡塔尔、新加坡、韩国、泰国、阿联酋、越南"
+              ),
+            ],
+            [
+              t2("Americas (6)", "美洲（6 国）"),
+              t2(
+                "Argentina, Brazil, Canada, Chile, Mexico, United States",
+                "阿根廷、巴西、加拿大、智利、墨西哥、美国"
+              ),
+            ],
+            [
+              t2("Oceania (2)", "大洋洲（2 国）"),
+              t2("Australia, New Zealand", "澳大利亚、新西兰"),
+            ],
+          ],
         },
         {
           type: "callout",
