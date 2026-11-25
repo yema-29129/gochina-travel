@@ -328,16 +328,30 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/alipay-wechat-pay": {
     en: [
-      "How to set up Alipay and WeChat Pay with US UK credit card",
-      "Why Alipay declined my Visa card in China security risk fix",
-      "How to pay personal WeChat QR codes in China as a foreigner",
-      "Alipay 200 RMB 3% fee rule",
+      "Alipay for foreigners 2026",
+      "how to set up Alipay and WeChat Pay with US UK credit card",
+      "Alipay declined my Visa card in China fix",
+      "Alipay 200 RMB 3% fee rule explained",
+      "Alipay TourCard vs direct foreign credit card",
+      "how to pay personal WeChat QR codes in China as a foreigner",
     ],
     zh: [
-      "支付宝微信绑定外国信用卡教程",
-      "支付宝外卡风控拦截解决办法",
-      "外国人无法扫个人收款码怎么办",
+      "2026 支付宝微信绑定外国信用卡教程",
+      "支付宝 Alipay 外国人实名认证",
+      "支付宝外卡风控拒付解决办法",
       "支付宝 200 元 3% 手续费规则",
+    ],
+    ja: [
+      "アリペイ クレジットカード 登録 中国 2026",
+      "Alipay 使い方 日本人 旅行",
+      "アリペイ 200元 手数料 3%",
+      "アリペイ 決済できない 対処法",
+    ],
+    ko: [
+      "알리페이 해외카드 등록 중국 2026",
+      "Alipay 사용법 한국인 중국여행",
+      "알리페이 200위안 수수료 3%",
+      "알리페이 결제 실패 해결",
     ],
   },
   "/guides/atm-cash-dcc": {

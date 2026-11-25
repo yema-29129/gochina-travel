@@ -67,7 +67,21 @@ export default async function GuidePage({ params }: P) {
               href: "#taxis",
               external: false,
             }
-          : slug === "240-hour-transit" || slug === "visa-free-countries"
+          : slug === "alipay-wechat-pay"
+            ? {
+                badge: t4("Alipay & WeChat Tool", "支付神器", "アリペイ計算ツール", "알리페이 계산기"),
+                title: t4("¥200 Fee Calculator & Card Setup Guide", "支付宝 200 元手续费计算器与绑卡图解", "200元3%手数料計算＆クレカ登録ガイド", "알리페이 200위안 3% 수수료 계산기"),
+                desc: t4(
+                  "Calculate exact 3% fees + bank FX costs, and see the 3 QR scan scenarios.",
+                  "精准计算 3% 平台费与银行货转费，对照 3 种扫码场景防踩坑。",
+                  "3%手数料と為替コストを即計算。個人QR・店舗QRの違いも図解。",
+                  "3% 수수료와 환전 비용을 즉시 계산하고 3가지 QR 결제 상황을 확인하세요."
+                ),
+                cta: t4("Open Payment Calculator", "打开支付计算器", "決済計算ツールを開く", "결제 계산기 열기"),
+                href: href(lang, "/tools/payment-fee-calculator"),
+                external: false,
+              }
+            : slug === "240-hour-transit" || slug === "visa-free-countries"
             ? {
                 badge: t4("10-Second Check", "10 秒自查", "10秒ビザ判定", "10초 무비자 확인"),
                 title: t4("Verify Your Passport & 240h Route", "立刻测算你的护照与 240h 路线", "パスポート＆240時間ルートを即判定", "여권 및 240시간 경유 노선 즉시 확인"),

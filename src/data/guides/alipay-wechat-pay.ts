@@ -1,44 +1,60 @@
 import type { Guide } from "@/data/types";
-import { t2 } from "@/lib/i18n";
+import { t2, t4 } from "@/lib/i18n";
 
 const guide: Guide = {
   slug: "alipay-wechat-pay",
   category: "money",
   icon: "pay",
-  title: t2(
-    "Alipay & WeChat Pay for Foreigners: Setup, Fees & Fixes",
-    "外国人使用支付宝和微信支付：绑卡设置、手续费与报错解决"
+  title: t4(
+    "Alipay & WeChat Pay for Foreigners (2026): Setup, ¥200 Fee & Fixes",
+    "外国人使用支付宝和微信支付（2026）：外卡绑定、200 元手续费与拒付解决",
+    "中国アリペイ・WeChatPay完全ガイド（2026）：クレカ登録・200元3%手数料・決済エラー対処",
+    "중국 알리페이·위챗페이 완벽 가이드 (2026): 해외카드 등록·200위안 수수료·결제 오류 해결"
   ),
-  seoTitle: t2(
-    "How to Set Up Alipay and WeChat Pay with a Foreign Credit Card (2026) – 200 RMB 3% Fee Explained",
-    "如何用外国信用卡开通支付宝和微信支付（2026）——200 元 3% 手续费详解"
+  seoTitle: t4(
+    "Alipay for Foreigners (2026): Link Visa/Mastercard, ¥200 3% Fee & Declined Card Fixes",
+    "2026 支付宝与微信支付绑外卡教程：200 元 3% 手续费、刷卡拒付与扫码报错解决",
+    "アリペイ（Alipay）クレジットカード登録方法（2026）：200元超3%手数料と使えない時の対処",
+    "알리페이(Alipay) 해외카드 등록 방법 (2026): 200위안 3% 수수료·결제 실패 해결법"
   ),
-  summary: t2(
-    "Set up Alipay and WeChat Pay with a foreign card, understand the ¥200 / 3% fee rule, avoid card blocks and fix the 6 most common payment errors in China.",
-    "用外国银行卡开通支付宝和微信支付，看懂 ¥200 / 3% 手续费规则，避免锁卡，并解决在中国最常见的 6 个支付报错。"
+  summary: t4(
+    "How foreigners use Alipay & WeChat Pay in China in 2026: step-by-step Visa/Mastercard setup, ¥200 3% fee rule, TourPass vs direct card binding, and 30-second fixes when Alipay declines at checkout.",
+    "2026 外国人开通支付宝（Alipay）与微信支付实操：Visa/Mastercard 绑卡步骤、200 元 3% 手续费规则、个人码避坑与结账拒付 30 秒排错方案。",
+    "日本人旅行者向け中国アリペイ・WeChatPay登録手順。Visa/Mastercard/JCB紐付け、200元以下無料・200元超3%手数料の仕組み、レジで決済失敗した時の30秒対処法を解説。",
+    "한국인 중국 여행 알리페이·위챗페이 완벽 정리: Visa/Mastercard 해외카드 등록, 200위안 이하 수수료 면제·초과 시 3% 규정, 현장 결제 오류 30초 해결법."
   ),
-  updated: "2026-11-24",
+  updated: "2026-11-26",
   readMin: 12,
   keyPoints: [
-    t2(
-      "China runs on QR-code payments. Set up Alipay and WeChat Pay at home, link a Visa/Mastercard and verify your passport before you fly.",
-      "中国靠扫码支付运转。请在出发前在家开通支付宝和微信支付，绑定 Visa/Mastercard 并完成护照实名认证。"
+    t4(
+      "Alipay & WeChat Pay both support foreign Visa, Mastercard, JCB, Diners Club and Discover cards — register with your home phone number (+1/+44/+81/+82) and verify your passport before flying.",
+      "支付宝和微信支付均支持绑定境外 Visa、Mastercard、JCB、Diners Club 和 Discover 卡——用本国手机号即可注册，出发前完成护照认证。",
+      "アリペイ・WeChatPayともに日本の電話番号とVisa/Mastercard/JCBカードで登録可能。出国前にパスポート認証まで済ませましょう。",
+      "알리페이·위챗페이 모두 한국 휴대폰 번호와 해외 Visa/Mastercard로 등록 가능합니다. 출국 전 여권 인증까지 완료하세요."
     ),
-    t2(
-      "Payments of ¥200 or less have no platform fee. Above ¥200, a 3% fee applies to the WHOLE amount, not just the part over ¥200.",
-      "单笔 ¥200 及以下免平台手续费。超过 ¥200 时，按整笔金额收取 3%，而不是只对超出部分收费。"
+    t4(
+      "Payments of ¥200 or less have 0% platform fee. Above ¥200, a 3% fee applies to the WHOLE amount — not just the part over ¥200.",
+      "单笔 ¥200 及以下免平台手续费。超过 ¥200 时，按整笔金额收取 3%，而不是只对超出部分收费。",
+      "1回200元以下は手数料無料。200元を超えると「全額に対して」3%のプラットフォーム手数料がかかります。",
+      "1회 200위안 이하는 플랫폼 수수료 무료! 200위안을 초과하면 '전체 금액'에 3% 수수료가 부과됩니다."
     ),
-    t2(
+    t4(
       "Your own bank may add a ~3% foreign transaction fee on top. A zero-FX card (Wise, Revolut) removes that second fee.",
-      "你自己的银行可能还会再收约 3% 的货币转换费。免货转费的卡（Wise、Revolut）可以去掉这第二笔费用。"
+      "你自己的银行可能还会再收约 3% 的货币转换费。免货转费的卡（Wise、Revolut）可以去掉这第二笔费用。",
+      "さらに日本のカード会社の海外事務手数料（約2〜3.8%）が上乗せされます。Wiseカード等の低為替手数料カードが有利です。",
+      "여기에 본인 카드사의 해외 결제 수수료가 추가될 수 있어 트래블월렛·트래블로그·Wise 같은 해외수수료 무료 카드 연동이 유리합니다."
     ),
-    t2(
-      "Foreign-card accounts can only pay registered merchant codes — not personal QR codes, transfers or red packets. Carry ¥300–500 in cash.",
-      "绑外卡的账户只能向注册商户收款码付款——不能扫个人收款码、转账或发红包。请随身带 ¥300–500 现金。"
+    t4(
+      "Foreign-card accounts can only pay registered merchant QR codes — NOT personal QR codes, peer transfers or red packets. Carry ¥300–500 in backup cash.",
+      "绑外卡的账户只能向注册商户收款码付款——不能扫个人收款码、转账或发红包。请随身带 ¥300–500 现金兜底。",
+      "海外カード紐付けでは「店舗用QR」のみ決済可能で、個人QR送金は不可。露店対策に現金300〜500元を必ず携行。",
+      "해외카드 연동 시 '가맹점 QR'만 결제 가능하며 개인 송금 QR은 불가합니다. 노점상 대비 현금 300~500위안을 챙기세요."
     ),
-    t2(
-      "Never split a big bill into 4 or more back-to-back payments: it can trigger fraud locks. Pay big amounts on Trip.com or by card at the POS in CNY.",
-      "千万不要把大额账单连续拆成 4 笔或更多扫码：可能触发风控锁卡。大额请在 Trip.com 线上付，或在 POS 机刷卡并选人民币结算。"
+    t4(
+      "Payment failed at checkout? Switch between Alipay & WeChat Pay, check if it's a personal QR code, keep your home SIM on for 3D Secure SMS, or pay with backup cash/physical card.",
+      "现场结账报错？立刻切换支付宝/微信另一通道、确认是否扫到了个人收款码、保持本国卡开机收 3D Secure 短信，或用备用现金/实体卡兜底。",
+      "レジで決済エラーが出たら：①アリペイ⇔WeChatPay切替 ②個人QRでないか確認 ③日本のSIMでSMS認証確認 ④現金・物理カードで支払い。",
+      "현장 결제 실패 시: ① 알리페이↔위챗페이 전환 ② 개인 QR 여부 확인 ③ 한국 유심 3D Secure 문자 확인 ④ 비상 현금/실물카드 결제."
     ),
   ],
   sections: [
@@ -46,6 +62,15 @@ const guide: Guide = {
       id: "setup",
       heading: t2("How to set up Alipay and WeChat Pay with a foreign card", "如何用外国银行卡开通支付宝和微信支付"),
       blocks: [
+        {
+          type: "callout",
+          tone: "warn",
+          title: t2("Payment failed at checkout? 30-second rescue order", "现场结账付不了？30 秒应急排错顺序"),
+          text: t2(
+            "1) Check if it's a personal QR code (street stalls/older taxis)—foreign cards cannot pay personal codes; ask for a merchant code or pay cash. 2) Switch to the other app (Alipay ↔ WeChat Pay) or let the cashier scan YOUR payment QR code instead. 3) Keep your home SIM switched on (Data Roaming OFF) so bank 3D Secure SMS codes arrive. 4) Check your app transaction history before tapping Pay again to avoid duplicate charges.",
+            "1）确认是否扫到了个人收款码（街边摊/老式出租车）——外卡不能付个人码，请换商户码或付现金。2）立刻切换另一款 App（支付宝 ↔ 微信），或改为打开“付款码”让收银员扫你。3）确保本国手机卡保持开机（关数据漫游）以接收银行 3D Secure 验证短信。4）重试前先看账单记录，避免重复扣款。"
+          ),
+        },
         t2p(
           "Almost every shop, taxi, metro gate, street stall and restaurant in China accepts Alipay and WeChat Pay. Both apps let foreigners link a Visa, Mastercard, JCB, Diners Club or Discover card. Do the setup at home with good internet, because you may need to receive SMS codes from your bank.",
           "在中国，几乎所有商店、出租车、地铁闸机、街边摊和餐厅都接受支付宝和微信支付。两个 App 都允许外国人绑定 Visa、Mastercard、JCB、Diners Club 或 Discover 卡。请在家里网络良好时完成设置，因为你可能需要接收银行发来的短信验证码。"
