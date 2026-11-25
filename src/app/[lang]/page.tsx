@@ -22,16 +22,16 @@ type P = { params: Promise<{ lang: string }> };
 const HERO_IMG = "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1600&q=80";
 
 const META_TITLE = t4(
-  "GoChina — Practical China Travel Guide, Visa Checker & Tools (2026)",
-  "GoChina — 2026 外国人赴华实用旅行指南、免签查询与计算工具",
-  "GoChina — 2026年 中国旅行実用ガイド・ビザ免除チェッカー・便利ツール",
-  "GoChina — 2026 중국 자유여행 실전 가이드 · 무비자 확인 · 여행 도구"
+  "GoChinaDesk — China Travel Guide 2026: 240h Visa-Free, Alipay, eSIM & Trains",
+  "GoChinaDesk — 2026 外国人来华旅游指南：免签查询、支付宝绑卡、eSIM 与高铁工具",
+  "GoChinaDesk — 2026年 中国旅行完全ガイド｜30日ビザ免除・アリペイ・eSIM・新幹線",
+  "GoChinaDesk — 2026 중국 여행 완벽 가이드｜30일 무비자·알리페이·eSIM·고속철도"
 );
 const META_DESC = t4(
-  "Everything international travelers need for China: 30-day visa-free & 240-hour transit checker, Alipay/WeChat Pay fees, roaming eSIMs, bullet trains, 49-city metro maps and show-cards.",
-  "外国游客赴华所需的一切：30 天免签与 240 小时过境检查器、支付宝/微信手续费、漫游 eSIM、高铁、全国 49 城地铁图与全屏中文求助卡。",
-  "中国旅行に必要なすべてを網羅：30日間ビザ免除チェッカー、アリペイ決済、国際ローミングeSIM、中国新幹線、全国49都市地下鉄路線図、中国語提示カード。",
-  "중국 여행 필수 올인원: 30일 무비자·240시간 경유 확인기, 알리페이/위챗페이 카드 등록, 로밍 eSIM, 고속철도, 중국 49개 도시 지하철 노선도 및 중국어 카드."
+  "Plan China without friction: 240-hour visa-free & 30-day checker, Alipay/WeChat Pay foreign card setup, roaming eSIM calculator, 12306 bullet trains, 49-city HD metro maps & instant tax refund tools.",
+  "外国人赴华一站式实操指南：30 天免签与 240 小时过境自查、支付宝微信绑外卡、漫游 eSIM 流量计算、12306 高铁、全国 49 城双语地铁图与 200 元即买即退计算器。",
+  "初めての中国旅行も安心。日本人30日間ビザ免除チェック、アリペイ・WeChatPay設定、中国eSIM容量計算、新幹線12306予約、全国49都市地下鉄路線図、200元即時免税ガイドまで完全網羅。",
+  "한국인 중국 자유여행 올인원: 30일 무비자·240시간 경유 확인, 알리페이·위챗페이 해외카드 등록, 중국 eSIM 계산기, 12306 고속철도, 전국 49개 도시 지하철 노선도, 200위안 즉시 택스리펀까지."
 );
 
 const U = {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CheckCircle2, Clock, ArrowRight } from "lucide-react";
-import { href, isLang, LANGS, tx } from "@/lib/i18n";
+import { href, isLang, LANGS, t4, tx } from "@/lib/i18n";
 import { buildMetadata, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { GUIDES, getGuide } from "@/data/guides";
 import { UI } from "@/data/ui";
@@ -67,14 +67,61 @@ export default async function GuidePage({ params }: P) {
               href: "#taxis",
               external: false,
             }
-          : {
-              badge: { en: "Interactive Tool", zh: "实用工具" },
-              title: { en: "China eSIM & Data Calculator", zh: "中国上网与 eSIM 流量计算器" },
-              desc: { en: "Match the exact GB tier for your phone & trip length.", zh: "按机型与天数精准匹配流量档位。" },
-              cta: { en: "Open Calculator", zh: "打开计算器" },
-              href: href(lang, "/tools/esim-calculator"),
-              external: false,
-            };
+          : slug === "shopping-tax-refund"
+            ? {
+                badge: t4("Instant Calculator", "实时算账", "免税計算ツール", "환급 계산기"),
+                title: t4("Calculate Your 9% Net Tax Refund", "秒算你能拿回多少退税款", "手取り約9%の免税額を今すぐ計算", "내 9% 실수령 택스리펀 바로 계산"),
+                desc: t4(
+                  "Enter your RMB purchase amount to see exact 11% gross, 2% agency fee & net payout.",
+                  "输入购物人民币金额，立刻算出毛退税、代理费与实际到手退税额。",
+                  "購入額（元）を入力するだけで、11%還付額・手数料・手取り金額を一瞬で計算。",
+                  "구매 금액(위안)만 입력하면 11% 환급액, 수수료, 실수령액을 바로 확인합니다."
+                ),
+                cta: t4("Open Tax Refund Calculator", "打开退税计算器", "免税計算ツールを開く", "택스리펀 계산기 열기"),
+                href: href(lang, "/tools/tax-refund-calculator"),
+                external: false,
+              }
+            : slug === "when-to-go"
+              ? {
+                  badge: t4("Trip Builder", "行程规划", "旅程プランナー", "일정 플래너"),
+                  title: t4("Build Your 7–14 Day China Route", "一键生成 7–14 天中国高铁路线", "7〜14日間の中国モデルコース作成", "7~14일 중국 고속철도 일정 만들기"),
+                  desc: t4(
+                    "Pick your trip length & interests to get a realistic bullet-train itinerary.",
+                    "按出行天数与偏好，自动生成不走回头路的中国高铁经典行程。",
+                    "日数とテーマを選ぶだけで、新幹線で巡る無理のない中国モデルコースを作成。",
+                    "여행 일수와 취향만 고르면 최적의 중국 고속철도 추천 일정을 만들어 드립니다."
+                  ),
+                  cta: t4("Open Trip Planner", "打开行程规划器", "旅程プランナーを開く", "일정 플래너 열기"),
+                  href: href(lang, "/planner"),
+                  external: false,
+                }
+              : slug === "shared-bikes"
+                ? {
+                    badge: t4("City Transit", "城市交通", "都市交通マップ", "도시 교통"),
+                    title: t4("All 49 China City Metro Maps (HD)", "全国 49 城中英双语高清地铁图", "中国全49都市 英語・中国語 地下鉄路線図", "중국 49개 도시 고화질 지하철 노선도"),
+                    desc: t4(
+                      "Zoomable English & Chinese subway maps + Visa/Mastercard tap-to-ride cities.",
+                      "支持放大与全屏查看的中英文地铁图，附支持拍境外外卡进站城市清单。",
+                      "拡大表示できる英語・中国語路線図と、Visaタッチ決済対応都市一覧。",
+                      "확대 가능한 영문·중문 지하철 노선도와 해외카드 태그 가능 도시 목록."
+                    ),
+                    cta: t4("Open 49-City Metro Maps", "查看全国地铁图", "地下鉄路線図を見る", "지하철 노선도 보기"),
+                    href: href(lang, "/tools/china-metro-maps"),
+                    external: false,
+                  }
+                : {
+                    badge: t4("Interactive Tool", "实用工具", "便利ツール", "필수 도구"),
+                    title: t4("China eSIM & Data Calculator", "中国上网与 eSIM 流量计算器", "中国eSIM容量計算＆オフラインカード", "중국 eSIM 용량 계산기"),
+                    desc: t4(
+                      "Match the exact GB tier for your phone & trip length.",
+                      "按机型与天数精准匹配流量档位。",
+                      "機種と滞在日数から最適なGBプランと設定手順を一発判定。",
+                      "기종과 여행 일수에 맞는 정확한 eSIM 데이터 용량을 추천합니다."
+                    ),
+                    cta: t4("Open Calculator", "打开计算器", "計算ツールを開く", "계산기 열기"),
+                    href: href(lang, "/tools/esim-calculator"),
+                    external: false,
+                  };
 
   return (
     <>

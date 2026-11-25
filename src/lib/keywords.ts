@@ -369,14 +369,33 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/shopping-tax-refund": {
     en: [
-      "China 200 RMB instant tax refund guide for tourists buying DJI electronics",
+      "China 200 RMB instant tax refund guide 2026",
+      "China departure tax refund calculator 11% 9%",
+      "buy DJI in China tax refund airport customs",
       "buying prescription glasses in China 30 minutes",
-      "bargaining rules in China markets",
+      "bargaining rules in China markets Shanghai Beijing",
     ],
     zh: [
       "2026 中国 200 元即买即退离境退税指南",
+      "中国离境退税计算器 11% 实拿 9%",
+      "来中国买大疆离境退税",
       "来中国配眼镜 30 分钟立等可取",
       "中国购物砍价指南",
+    ],
+    ja: [
+      "中国 免税 200元 2026",
+      "中国 即時免税 やり方 アリペイ",
+      "上海 北京 免税 ショッピング 手続き",
+      "DJI 中国 免税 価格 安い",
+      "中国 空港 税関 免税 預け荷物前",
+      "中国 メガネ 30分 値段",
+    ],
+    ko: [
+      "중국 택스리펀 200위안 2026",
+      "중국 즉시 환급 알리페이 방법",
+      "상하이 베이징 쇼핑 면세 환급률 9%",
+      "중국 DJI 구매 택스리펀",
+      "중국 공항 세관 택스리펀 수하물",
     ],
   },
   "/guides/attraction-tickets": {
@@ -446,8 +465,27 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     zh: ["2026 中国 12 大国际机场进城交通", "浦东转虹桥最短时间", "首都大兴天府机场快轨拍外卡"],
   },
   "/guides/shared-bikes": {
-    en: ["how foreigners ride shared bikes in China Alipay HelloBike Meituan"],
-    zh: ["外国人在中国扫共享单车支付宝哈啰教程"],
+    en: [
+      "how foreigners ride shared bikes in China 2026",
+      "HelloRide Meituan Qingju bike Alipay WeChat foreigner",
+      "China shared bike parking fine 15 30 RMB",
+      "shared e-bikes Beijing Shanghai rules",
+    ],
+    zh: [
+      "外国人在中国扫共享单车支付宝哈啰教程 2026",
+      "中国共享单车哈啰美团青桔免押金",
+      "共享单车白色P区还车防扣调度费申诉",
+      "港澳台及境外手机号骑共享单车",
+    ],
+    ja: [
+      "中国 シェアサイクル 乗り方 アリペイ 2026",
+      "中国 自転車 レンタル HelloRide 美団",
+      "上海 北京 シェアサイクル 駐輪 罰金",
+    ],
+    ko: [
+      "중국 공유자전거 타는법 알리페이 위챗 2026",
+      "중국 헬로바이크 메이퇀 자전거 반납 구역",
+    ],
   },
   "/guides/food-ordering-allergies": {
     en: ["ordering food in China QR code menu foreigners", "Chinese food allergy dining guide"],
@@ -466,8 +504,28 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     zh: ["2026 来中国旅游必装 App 清单"],
   },
   "/guides/when-to-go": {
-    en: ["best time to visit China 2026", "China public holidays Golden Week Spring Festival avoid crowds"],
-    zh: ["2026 中国最佳旅游季节与避雷节假日日历"],
+    en: [
+      "best time to visit China 2026 2027",
+      "China public holidays Golden Week Labor Day dates 2026",
+      "China weather month by month travel guide",
+      "avoid crowds in China National Day Chinese New Year",
+      "South China winter no central heating packing",
+    ],
+    zh: [
+      "2026 2027 中国最佳旅游季节与避雷节假日日历",
+      "什么时候去中国旅游最好 避开国庆五一暑假",
+      "中国全年 1-12 月天气与最佳城市推荐",
+    ],
+    ja: [
+      "中国旅行 ベストシーズン 2026 2027",
+      "中国 祝日 国慶節 労働節 春節 混雑回避",
+      "上海 北京 季節 天気 服装 おすすめ時期",
+    ],
+    ko: [
+      "중국 여행 추천 시기 2026 2027",
+      "중국 국경절 노동절 춘절 연휴 피하기",
+      "상하이 베이징 월별 날씨 옷차림",
+    ],
   },
   "/guides/safety-health": {
     en: ["is China safe for tourists 2026", "China emergency numbers 110 120 12367 pharmacy guide"],

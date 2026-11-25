@@ -1,37 +1,54 @@
 import type { Guide } from "@/data/types";
-import { t2 } from "@/lib/i18n";
+import { t2, t4 } from "@/lib/i18n";
 
 const guide: Guide = {
   slug: "shared-bikes",
   category: "transport",
   icon: "map",
-  title: t2("How to Rent Shared Bikes in China (HelloRide, Meituan & Qingju)", "中国共享单车攻略：哈啰、美团、青桔扫码骑行与防罚款规则"),
-  seoTitle: t2(
+  title: t4(
+    "How to Rent Shared Bikes in China (HelloRide, Meituan & Qingju)",
+    "中国共享单车攻略（2026）：哈啰、美团、青桔扫码骑行、免押金与防扣调度费",
+    "中国シェアサイクル完全ガイド（2026）：アリペイで借り方・料金・駐輪罰金回避",
+    "중국 공유자전거 완벽 가이드 (2026): 알리페이·위챗 대여법, 요금 및 반납 벌금 방지"
+  ),
+  seoTitle: t4(
     "How Foreigners Use Shared Bikes in China (2026): Alipay, Pricing & Parking Fines",
-    "外国人怎么骑中国共享单车（2026）：支付宝解锁、价格与防扣 15–30 元调度费"
+    "外国人怎么骑中国共享单车（2026）：支付宝微信免押金解锁、价格与防扣调度费申诉",
+    "中国シェアサイクルの乗り方（2026）：HelloRide・美団をアリペイで借りる手順と罰金対策",
+    "중국 공유자전거 타는 법 (2026): 헬로바이크·메이퇀 알리페이 대여·요금·주차 구역"
   ),
-  summary: t2(
-    "Unlock blue HelloRide, yellow Meituan and green DiDi Qingju bikes in China for ¥1.5–2 per 30 min using Alipay or WeChat—plus parking box rules and best rides.",
-    "教外国人用支付宝/微信解锁蓝色哈啰、黄色美团、青绿色滴滴青桔共享单车，半小时仅 1.5–2 元，附白色 P 区还车防罚款规则与绝佳骑行路线。"
+  summary: t4(
+    "Unlock blue HelloRide, yellow Meituan and green DiDi Qingju bikes in China for ¥1.5–2 per 30 min using Alipay or WeChat—plus white 'P' parking box rules, fine appeals and best rides.",
+    "外国人/港澳台游客用支付宝或微信免押金解锁蓝色哈啰、黄色美团、青绿色滴滴青桔共享单车，半小时仅 1.5–2 元，附白色 P 区还车、误扣调度费申诉退钱与最美骑行路线。",
+    "中国の青（HelloRide）・黄（美団）・緑（青桔）シェアサイクルをアリペイ・WeChatでデポジット無し・30分1.5〜2元で借りる方法と、15〜30元の駐輪罰金を防ぐルールを解説。",
+    "파란 헬로바이크, 노란 메이퇀, 초록 칭쥐 공유자전거를 보증금 없이 알리페이·위챗으로 30분 1.5~2위안에 이용하는 법과 주차 구역 벌금 방지 팁을 정리했습니다."
   ),
-  updated: "2026-11-24",
-  readMin: 5,
+  updated: "2026-11-25",
+  readMin: 6,
   keyPoints: [
-    t2(
+    t4(
       "Three colors on every street: Blue = HelloRide (哈啰), Yellow = Meituan (美团), Green = DiDi Qingju (滴滴青桔). No separate Chinese bike app is needed.",
-      "街头三种颜色：蓝色是哈啰（HelloRide）、黄色是美团单车（Meituan）、青绿色是滴滴青桔（Qingju），无需单独下载中文单车 App。"
+      "街头三种颜色：蓝色是哈啰（HelloRide）、黄色是美团单车（Meituan）、青绿色是滴滴青桔（Qingju），无需单独下载中文单车 App。",
+      "街の3色：青＝HelloRide（哈啰）、黄＝美団（Meituan）、緑＝DiDi青桔（Qingju）。専用アプリ不要でアリペイ・WeChatだけで乗れます。",
+      "거리의 3가지 색상: 파랑=헬로바이크(哈啰), 노랑=메이퇀(美团), 초록=디디 칭쥐(青桔). 별도 앱 없이 알리페이·위챗으로 바로 이용 가능."
     ),
-    t2(
+    t4(
       "Scan the handlebar QR code with Alipay (or WeChat for yellow Meituan bikes), authorize your foreign phone number, and ride for ¥1.5–2 per 30 minutes (~US$0.25).",
-      "直接用支付宝扫车把二维码（美团黄车用微信扫），授权境外手机号即可开锁，骑半小时仅 1.5–2 元人民币（约 0.25 美元）。"
+      "直接用支付宝扫车把二维码（美团黄车用微信扫），授权境外手机号即可免押金开锁，骑半小时仅 1.5–2 元人民币（约 0.25 美元）。",
+      "ハンドルのQRをアリペイ（黄色の美団はWeChat）で読み取り、日本の電話番号を認証すればデポジット不要で30分1.5〜2元（約35円）から乗車可能。",
+      "핸들 QR을 알리페이(노란 메이퇀은 위챗)로 스캔하고 해외 번호 인증만 하면 보증금 없이 30분 1.5~2위안에 탈 수 있습니다."
     ),
-    t2(
+    t4(
       "Always park inside painted white 'P' bike boxes (and face the same direction in Bluetooth-fenced scenic zones), then tap Lock in the app to avoid ¥15–30 relocation fines.",
-      "还车必须停进地面白色“P”非机动车停放框内（蓝牙电子围栏区须车头朝向一致），并在小程序点“还车”听到落锁声，否则可能扣 15–30 元调度费。"
+      "还车必须停进地面白色“P”非机动车停放框内（蓝牙电子围栏区须车头朝向一致），并在小程序点“还车”听到落锁声，否则可能扣 15–30 元调度费。",
+      "返却は必ず道路の白い「P」枠内へ（Bluetoothエリアは車体向きも揃える）。アプリで「還車」を押し施錠音を確認しないと15〜30元の移動罰金が発生します。",
+      "반납은 반드시 흰색 'P' 주차 구역 안에 세우고(블루투스 구역은 방향 일치) 앱에서 반납 버튼을 눌러 잠금 소리를 확인해야 15~30위안 벌금을 피합니다."
     ),
-    t2(
+    t4(
       "Shared e-bikes require a helmet and are not available in central Beijing or central Shanghai.",
-      "共享电单车必须佩戴头盔，且北京和上海主城区没有共享电单车。"
+      "共享电单车必须佩戴头盔，且北京和上海主城区没有共享电单车。",
+      "電動シェアバイクはヘルメット着用が必須で、北京・上海の中心部には設置されていません。",
+      "공유 전기자전거는 헬멧 착용이 필수이며 베이징·상하이 도심에는 운영되지 않습니다."
     ),
   ],
   sections: [
@@ -121,6 +138,15 @@ const guide: Guide = {
               "在手机小程序里点击“Lock / 还车”（若有手动锁扣则拉下），务必听到落锁提示音并看到订单结算页再离开。"
             ),
           ],
+        },
+        {
+          type: "callout",
+          tone: "info",
+          title: t2("2026 Pro Tip: Charged a ¥15–30 fine by mistake? Appeal in 30 seconds", "2026 实测省钱与申诉技巧：误扣调度费可 30 秒退回"),
+          text: t2(
+            "GPS drift near tall buildings sometimes flags a legally parked bike. Take a quick photo of your bike inside the white 'P' box, tap Customer Service (客服) → 'Parking Fee Appeal / 调度费申诉' in the HelloRide/Meituan mini-program, and upload the photo—first-time appeals are usually refunded automatically within minutes. Riding 4+ times in a week? Buy a 7-day ride pass (¥8–12) right inside the mini-program to save 50%.",
+            "高楼密集区偶尔会出现 GPS 漂移导致正常停在白框内仍被扣调度费。顺手拍一张单车停在白色“P”框内的照片，在哈啰/美团小程序里点“客服 → 调度费申诉”上传照片，首次申诉通常几分钟内自动全额退还。如果一周内计划骑 4 次以上，可以直接在小程序买 7 天次卡/周卡（约 8–12 元），比单次扣费省一半。"
+          ),
         },
       ],
     },
