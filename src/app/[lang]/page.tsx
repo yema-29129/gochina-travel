@@ -128,7 +128,10 @@ const FEATURED_SLUGS = [
   "alipay-wechat-pay",
   "internet-esim",
   "high-speed-trains",
+  "hotels-in-china",
   "attraction-tickets",
+  "shopping-tax-refund",
+  "airports",
 ];
 
 const HOME_FAQ: FaqItem[] = [

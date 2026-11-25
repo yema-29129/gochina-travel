@@ -570,6 +570,31 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
       "상하이 베이징 월별 날씨 옷차림",
     ],
   },
+  "/guides/hotels-in-china": {
+    en: [
+      "China hotels for foreigners 2026",
+      "hotel refused foreign guest China foreign guest license",
+      "Trip.com vs Booking.com China hotels",
+      "China hotel 24 hour police passport registration",
+      "Atour Ji Hotel China foreigners check in",
+    ],
+    zh: [
+      "2026 外国人在中国订酒店指南",
+      "中国酒店外宾资质筛选可接待外宾",
+      "外国人住酒店 24 小时护照住宿登记",
+      "Trip.com 和 Booking 订中国酒店对比",
+    ],
+    ja: [
+      "中国 ホテル 外国人 宿泊 2026",
+      "中国 ホテル 予約 Trip.com Booking 違い",
+      "中国 ホテル パスポート 登録 24時間",
+    ],
+    ko: [
+      "중국 호텔 외국인 투숙 가능 2026",
+      "중국 호텔 예약 트립닷컴 부킹닷컴 비교",
+      "중국 호텔 여권 임시숙박등록 24시간",
+    ],
+  },
   "/guides/safety-health": {
     en: ["is China safe for tourists 2026", "China emergency numbers 110 120 12367 pharmacy guide"],
     zh: ["2026 中国旅游安全与紧急电话药店就医指南"],

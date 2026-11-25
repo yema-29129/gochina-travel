@@ -24,6 +24,7 @@ import bubbleTeaCoffee from "./bubble-tea-coffee";
 import foodDeliveryLuggage from "./food-delivery-luggage";
 import shoppingTaxRefund from "./shopping-tax-refund";
 // Practical
+import hotelsInChina from "./hotels-in-china";
 import attractionTickets from "./attraction-tickets";
 import whenToGo from "./when-to-go";
 import safetyHealth from "./safety-health";
@@ -48,6 +49,7 @@ export const GUIDES: Guide[] = [
   bubbleTeaCoffee,
   foodDeliveryLuggage,
   shoppingTaxRefund,
+  hotelsInChina,
   attractionTickets,
   whenToGo,
   safetyHealth,
