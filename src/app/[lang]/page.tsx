@@ -252,12 +252,6 @@ export default async function HomePage({ params }: P) {
               {tx(t4("Planning my trip →", "行前准备清单 →", "旅行準備チェック →", "여행 전 준비 →"), lang)}
             </Link>
             <Link
-              href={href(lang, "/guides/hotels-in-china")}
-              className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur transition hover:bg-white hover:text-slate-900 sm:text-sm"
-            >
-              {tx(t4("Hotels for Foreigners →", "酒店住宿·外宾避坑 →", "外国人可ホテル →", "외국인 호텔 예약 →"), lang)}
-            </Link>
-            <Link
               href={href(lang, "/guides/arrival-immigration")}
               className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur transition hover:bg-white hover:text-slate-900 sm:text-sm"
             >

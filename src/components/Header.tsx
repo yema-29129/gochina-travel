@@ -16,10 +16,6 @@ export function Header({ lang }: { lang: Lang }) {
     { path: "/visa", label: t.nav.visa },
     { path: "/money", label: t.nav.money },
     { path: "/transport", label: t.nav.transport },
-    {
-      path: "/guides/hotels-in-china",
-      label: lang === "zh" ? "酒店住宿" : lang === "ja" ? "ホテル" : lang === "ko" ? "호텔" : "Hotels",
-    },
     { path: "/cities", label: t.nav.cities },
     { path: "/tools", label: t.nav.tools },
     { path: "/planner", label: t.nav.planner },
