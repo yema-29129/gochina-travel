@@ -62,9 +62,10 @@ const guide: Guide = {
         {
           type: "callout",
           tone: "info",
+          title: t2("When to use eSIM vs Hotel Wi-Fi — AND keep your home SIM for bank SMS!", "什么时候用 eSIM、什么时候切 Wi-Fi？务必保留原卡收银行验证码！"),
           text: t2(
-            "A roaming eSIM sends your data through Hong Kong or Singapore, so these apps work like at home. Hotel Wi-Fi is a Chinese network: blocked apps won't work on it, so keep using mobile data from your eSIM for them.",
-            "漫游 eSIM 会让你的数据经过香港或新加坡，所以这些 App 能像在家一样使用。酒店 Wi-Fi 属于中国网络：被屏蔽的 App 在上面无法使用，所以用这些 App 时请继续使用 eSIM 的移动数据。"
+            "1) Using Google, WhatsApp, Instagram or Gmail? Turn OFF hotel Wi-Fi and use your international roaming eSIM data—hotel Wi-Fi uses local routing so overseas apps won't load. 2) Keep your home physical SIM card turned ON (with Data Roaming OFF on the home SIM) so you still receive free 2FA bank SMS codes when linking Visa/Mastercard to Alipay or booking flights.",
+            "1）要刷 Google、WhatsApp、Instagram 或 Gmail 时：请关掉酒店 Wi-Fi，使用国际漫游 eSIM 移动数据（酒店 Wi-Fi 走本地网络，海外 App 打不开）。2）千万别把本国实体 SIM 卡拔掉或关机——只需关掉本国卡的“数据漫游”，保留开机即可免费接收银行 3D Secure 短信验证码（绑支付宝外卡或买机票验证时救命用）。"
           ),
         },
       ],
@@ -85,7 +86,7 @@ const guide: Guide = {
           rows: [
             [
               t2("Roaming eSIM (HK/Singapore route)", "漫游 eSIM（香港/新加坡路由）"),
-              t2("Works, no VPN", "能用，无需 VPN"),
+              t2("Works seamlessly (roaming data)", "漫游数据无缝直连"),
               t2("No", "没有"),
               t2("Low; buy online before you fly", "低；出发前线上购买"),
               t2("About 85% of tourists", "约 85% 的游客"),

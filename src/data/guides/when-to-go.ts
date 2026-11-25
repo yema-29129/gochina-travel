@@ -233,6 +233,15 @@ const guide: Guide = {
             "7–8 月（37–41°C）出行建议随身带手持小风扇和晴雨两用防晒伞。但请注意：超过 150 ml 的气雾防晒喷雾无法通过中国高铁和地铁安检，会被当场拦截！请改带挤压管装防晒霜或乳液。"
           ),
         },
+        {
+          type: "callout",
+          tone: "info",
+          title: t2("Northern China winter air quality (Nov–Feb)", "北方冬季空气质量（11–2 月）提醒"),
+          text: t2(
+            "Air quality in Beijing and northern China has improved dramatically over the last decade, with many crisp blue-sky winter days. However, occasional winter haze/smog episodes (high AQI) can still occur between November and February. Travelers with asthma, young children, or respiratory sensitivities should check daily AQI in Apple Weather / AMap and pack a couple of KN95 masks just in case.",
+            "近十年北京及北方城市的空气质量已大幅改善，冬季蓝天很多，但 11 月至次年 2 月仍偶有阶段性雾霾（AQI 偏高）。携带儿童、老人或有呼吸道敏感的游客可关注实时 AQI，随身备两只 KN95 口罩更稳妥。"
+          ),
+        },
       ],
     },
   ],

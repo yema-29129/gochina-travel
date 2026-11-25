@@ -106,6 +106,16 @@ gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_persona
         />
       </head>
       <body className="min-h-screen bg-slate-50 text-slate-900 antialiased">
+        {lang === "zh" && (
+          <div className="no-print border-b border-slate-200 bg-slate-900 px-4 py-1.5 text-center text-xs text-slate-200">
+            <span>Visiting China? Switch language: </span>
+            <a href="/en" className="font-semibold text-white underline decoration-red-400 underline-offset-2 hover:text-red-300">English</a>
+            <span className="mx-1.5 text-slate-500">·</span>
+            <a href="/ja" className="font-semibold text-white underline decoration-red-400 underline-offset-2 hover:text-red-300">日本語</a>
+            <span className="mx-1.5 text-slate-500">·</span>
+            <a href="/ko" className="font-semibold text-white underline decoration-red-400 underline-offset-2 hover:text-red-300">한국어</a>
+          </div>
+        )}
         <Header lang={lang} />
         <main className="min-h-[60vh]">{children}</main>
         <Footer lang={lang} />

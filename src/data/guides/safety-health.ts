@@ -101,6 +101,31 @@ const guide: Guide = {
       ],
     },
     {
+      id: "hotel-foreign-guest",
+      heading: t2("Hotel foreign-guest eligibility & front-desk passport check", "酒店“外宾资质”避坑与前台扫护照说明"),
+      blocks: [
+        {
+          type: "callout",
+          tone: "danger",
+          title: t2("Critical check before booking budget hotels or guesthouses", "订经济型酒店/民宿前必查：是否可接待外宾"),
+          text: t2(
+            "In China, hotels must hold a foreign-guest registration license to legally host non-Chinese passport holders. While 4–5 star hotels and international chains always accept foreigners, some budget domestic hotels and private apartments do NOT—and international booking sites (Booking/Agoda) do not always filter them out, leading to painful late-night check-in refusals. Always book on Trip.com (which filters foreign-eligible hotels automatically) or confirm “Foreign guests accepted / 可接待外宾” before paying.",
+            "中国法律规定只有具备涉外接待资质的酒店才能合法接待持外国护照的旅客。四五星级及国际连锁酒店一般都没问题，但部分国内经济型酒店和民宿并不具备该资质，且 Booking/Agoda 等国际平台未必全部过滤，容易出现深夜到店被拒入住。建议优先在 Trip.com 预订（自动筛选可接待外宾酒店），或下单前务必确认标注“可接待外宾”。"
+          ),
+        },
+        {
+          type: "callout",
+          tone: "info",
+          title: t2("Why the hotel front desk scans/photocopies your passport", "为什么酒店前台要扫/复印你的护照？"),
+          text: t2(
+            "Don't be alarmed! Under Chinese law, hotels must register foreign guests with the local police system within 24 hours of check-in. Letting the receptionist scan your passport and entry stamp is 100% standard, legal, and protects you—you do NOT need to visit a police station yourself if you stay at a licensed hotel.",
+            "请完全放心！按中国法律，酒店必须在外国人入住 24 小时内向公安系统报送住宿登记。前台扫描你的护照和入境章是 100% 正常的法定流程，而且住正规酒店后你就不用自己跑派出所登记了。"
+          ),
+        },
+        { type: "affiliate", id: "tripHotels" },
+      ],
+    },
+    {
       id: "common-scams",
       heading: t2("Common tourist scams to recognize instantly", "四大经典涉外旅游骗局识别"),
       blocks: [
@@ -127,8 +152,8 @@ const guide: Guide = {
               "机场/火车站黑车：在到达大厅内主动拉客的司机往往一口价宰客 3–5 倍。请永远走官方出租车排队区打表，或用支付宝叫滴滴。"
             ),
             t2(
-              "Overpriced tourist rickshaws / tuk-tuks: Near hutongs or scenic gates, drivers may agree on “30” and then demand “300” (or claim it was per person / per minute). Confirm the total price in writing on your phone or stick to metro, bikes and DiDi.",
-              "高价观光三轮车：胡同口或景区门口的三轮车有时口头谈好“30”，下车却改口要“300”（或称按人头/按分钟算）。上车前务必在手机上写明总价，或直接选地铁、共享单车和滴滴。"
+              "Overpriced tourist rickshaws / unlicensed electric tuk-tuks (“laotouche”): Near hutongs or scenic gates, drivers may quote “30” and demand “300”, and solo female travelers have reported uncomfortable encounters in unlicensed enclosed scooters. Always stick to metro, shared bikes, official taxis, or DiDi inside Alipay (and call 12345 if pressured into forced shopping).",
+              "高价观光三轮车与无证“老头乐”低速电动车：胡同口或景区门口的非正规三轮/低速电动车不仅常乱要价，还偶有针对独行女性游客的不适骚扰案例。请始终选择地铁、共享单车、正规出租车或支付宝滴滴（遇强制购物立刻拨打 12345）。"
             ),
           ],
         },
@@ -238,6 +263,15 @@ const guide: Guide = {
             ["12345", t2("Mayor's Citizen & Tourist Hotline", "政务服务便民热线"), t2("24/7 multilingual help for tourist complaints & local info", "24 小时多语种服务，处理旅游纠纷与本地咨询")],
             ["12367", t2("National Immigration Administration (NIA)", "国家移民管理局热线"), t2("24/7 multilingual support for visa, transit & hotel registration", "24 小时多语种服务，解答签证、过境与住宿登记问题")],
           ],
+        },
+        {
+          type: "callout",
+          tone: "info",
+          title: t2("What actually happens when you call 120 (China Ambulance / ER)", "真正拨打 120 急救电话后会发生什么？"),
+          text: t2(
+            "1) Operators mostly speak Mandarin—hand the phone to hotel staff or a local passerby, or clearly state your saved Chinese hotel address. 2) The ambulance takes you to the nearest public hospital ER (bring your physical passport). 3) Public ERs triage urgent cases first, then ask you to register and pay a modest upfront deposit (usually ¥100–500 via Alipay/WeChat/card). 4) Ask for stamped official receipts (发票) and medical records so your travel insurance reimburses you.",
+            "1）120 接线员主要说普通话——直接把手机递给酒店前台或身边路人，或报出提前存好的中文酒店地址。2）救护车会送往最近公立医院急诊科（务必带上护照原件）。3）急诊先分诊抢救，再凭护照挂号并先交少量押金（通常 100–500 元，支持支付宝/微信/刷卡）。4）离院时务必保留医院盖章的正式发票和病历，方便回国找旅行险全额理赔。"
+          ),
         },
         {
           type: "p",
