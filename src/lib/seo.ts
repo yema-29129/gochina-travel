@@ -9,7 +9,32 @@ export function absUrl(lang: Lang, path: string) {
 }
 
 /**
- * Build page metadata with canonical URL, hreflang alternates (en / zh / x-default)
+ * Determine whether a (lang, path) page should be indexed by search engines.
+ * - English (`en`) and Chinese (`zh`) are 100% translated across all pages.
+ * - Japanese (`ja`) and Korean (`ko`) currently localize the homepage, hub pages,
+ *   interactive tools, and planner; deep guide/city/legal pages still fall back to
+ *   English body copy (`t2`), so we mark those `noindex, follow` to prevent Google
+ *   from classifying them as duplicate English pages ("Crawled - currently not indexed").
+ */
+export function isPathIndexableForLang(lang: Lang, path: string): boolean {
+  if (lang === "en" || lang === "zh") return true;
+  if (
+    path.startsWith("/guides/") ||
+    path === "/cities" ||
+    path.startsWith("/cities/") ||
+    path === "/about" ||
+    path === "/contact" ||
+    path === "/privacy" ||
+    path === "/terms" ||
+    path === "/disclaimer"
+  ) {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Build page metadata with canonical URL, hreflang alternates
  * and Open Graph / Twitter tags. Use in every page's generateMetadata().
  */
 export function buildMetadata(opts: {
@@ -21,9 +46,14 @@ export function buildMetadata(opts: {
   type?: "website" | "article";
   noindex?: boolean;
 }): Metadata {
-  const { lang, path, title, description, image, type = "website", noindex } = opts;
+  const { lang, path, title, description, image, type = "website" } = opts;
+  const shouldNoindex = opts.noindex ?? !isPathIndexableForLang(lang, path);
   const languages: Record<string, string> = {};
-  for (const l of LANGS) languages[l === "zh" ? "zh-CN" : l] = absUrl(l, path);
+  for (const l of LANGS) {
+    if (isPathIndexableForLang(l, path)) {
+      languages[l === "zh" ? "zh-CN" : l] = absUrl(l, path);
+    }
+  }
   languages["x-default"] = absUrl("en", path);
   const t = tx(title, lang);
   const d = tx(description, lang);
@@ -42,7 +72,7 @@ export function buildMetadata(opts: {
       images: image ? [{ url: image }] : undefined,
     },
     twitter: { card: image ? "summary_large_image" : "summary", title: t, description: d, images: image ? [image] : undefined },
-    robots: noindex ? { index: false, follow: true } : { index: true, follow: true },
+    robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
   };
 }
 
@@ -79,7 +109,7 @@ export function articleLd(lang: Lang, opts: { title: string; description: string
     headline: opts.title,
     description: opts.description,
     keywords: getKeywordsForPath(opts.path, lang).join(", "),
-    inLanguage: lang === "zh" ? "zh-CN" : "en",
+    inLanguage: lang === "zh" ? "zh-CN" : lang,
     dateModified: opts.updated,
     datePublished: opts.updated,
     mainEntityOfPage: absUrl(lang, opts.path),

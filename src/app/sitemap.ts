@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { LANGS } from "@/lib/i18n";
 import { SITE, LAST_UPDATED } from "@/lib/site";
+import { isPathIndexableForLang } from "@/lib/seo";
 import { GUIDES } from "@/data/guides";
 import { TOOLS } from "@/data/tools";
 import { CITIES } from "@/data/cities";
@@ -19,9 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/planner", priority: 0.8, freq: "monthly" },
     { path: "/about", priority: 0.4, freq: "yearly" },
     { path: "/contact", priority: 0.4, freq: "yearly" },
-    { path: "/privacy", priority: 0.3, freq: "yearly" },
-    { path: "/terms", priority: 0.3, freq: "yearly" },
-    { path: "/disclaimer", priority: 0.3, freq: "yearly" },
   ];
 
   const dynamicPaths = [
@@ -34,13 +32,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const item of allPaths) {
+    const normalizedPath = item.path === "" ? "/" : item.path;
+    const indexableLangs = LANGS.filter((l) => isPathIndexableForLang(l, normalizedPath));
     const languages: Record<string, string> = {};
-    for (const l of LANGS) {
+    for (const l of indexableLangs) {
       languages[l === "zh" ? "zh-CN" : l] = `${SITE.url}/${l}${item.path}`;
     }
     languages["x-default"] = `${SITE.url}/en${item.path}`;
 
-    for (const lang of LANGS) {
+    for (const lang of indexableLangs) {
       entries.push({
         url: `${SITE.url}/${lang}${item.path}`,
         lastModified: LAST_UPDATED,
