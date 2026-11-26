@@ -424,6 +424,20 @@ const guide: Guide = {
   ],
   faq: [
     {
+      q: t4(
+        "Can I set up Alipay outside China and use WeChat Pay International before flying?",
+        "可以在出发前（中国境外）注册支付宝并开通国际版微信支付吗？",
+        "中国へ出発前に海外でアリペイとWeChat Pay国際版を設定できますか？",
+        "중국 출발 전에 해외에서 알리페이와 위챗페이 국제판을 미리 설정할 수 있나요?"
+      ),
+      a: t4(
+        "Yes — you should set up both China payment apps outside China at least 2–3 days before flying. Download Alipay and WeChat on your home phone number, verify your passport in-app, and link a foreign Visa, Mastercard, JCB, or Discover card. Note that foreign cards linked to Alipay or WeChat Pay International only work at merchants inside mainland China (and a few mainland online mini-programs), so you cannot test them at a local cafe back home; your first real scan will be at the airport in China.",
+        "可以，而且强烈建议在起飞前 2–3 天就在中国境外把这两款中国支付 App 装好。用本国手机号注册支付宝和微信，在 App 内完成护照实名认证并绑定外国 Visa、Mastercard、JCB 或 Discover 卡。注意：绑定的外卡仅限在中国大陆境内商户（以及部分大陆线上小程序）使用，因此在海外本地商店无法试刷，落地中国机场后再进行第一笔小额消费即可。",
+        "はい、出発2〜3日前に海外で両方の中国決済アプリを設定しておくべきです。自国の電話番号で登録し、アプリ内でパスポート認証と海外クレジットカード（Visa/Mastercard/JCB/Discover）の紐付けを済ませましょう。なお、紐付けた海外カードは中国本土の加盟店のみ対応するため、海外の店舗ではテスト決済できません。中国到着後に空港で少額決済をして確認します。",
+        "네, 출발 2~3일 전에 해외에서 두 중국 결제 앱을 미리 설정해 두어야 합니다. 본인 국가 전화번호로 가입하고 앱에서 여권 인증 및 해외 카드(Visa/Mastercard/JCB/Discover)를 연결하세요. 연결된 해외 카드는 중국 본토 가맹점에서만 결제되므로 출발 전 해외 매장에서 테스트할 수 없으며, 중국 공항 도착 후 소액 결제로 첫 사용을 확인하면 됩니다."
+      ),
+    },
+    {
       q: t2("Do I need a Chinese phone number to use Alipay or WeChat Pay?", "使用支付宝或微信支付需要中国手机号吗？"),
       a: t2(
         "No. You can register with your home phone number and link a foreign Visa or Mastercard. Make sure your number can receive international SMS.",

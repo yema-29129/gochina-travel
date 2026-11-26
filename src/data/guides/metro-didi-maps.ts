@@ -7,14 +7,14 @@ const guide: Guide = {
   icon: "map",
   title: t2("Getting Around Chinese Cities: Maps, Subways & DiDi Without Speaking Mandarin", "中国城市出行：地图、地铁、滴滴与出租车"),
   seoTitle: t2(
-    "Getting Around China (2026): Apple Maps, AMap Global, Metro Cards & DiDi in Alipay",
-    "2026 中国城市出行攻略：苹果地图、高德英文版、地铁拍外卡与支付宝叫滴滴"
+    "Getting Around China (2026): Apple Maps, AMap Global, Metro Cards & DiDi Foreign Card Setup",
+    "2026 中国城市出行攻略：苹果地图、高德英文版、地铁拍外卡与滴滴绑外卡教程"
   ),
   summary: t2(
-    "Skip Google Maps and street-hailing headaches. Navigate accurately in English, tap Visa/Mastercard on subways, and hail DiDi inside Alipay with no +86 number.",
-    "告别谷歌地图偏移与路边拦车烦恼：用苹果地图或高德英文版精准导航、拍外卡或支付宝坐地铁，并在支付宝内免 +86 号码叫滴滴。"
+    "Skip Google Maps and street-hailing headaches. Navigate accurately in English, tap Visa/Mastercard on subways, and pay DiDi with a foreign credit card inside Alipay (no +86 number needed).",
+    "告别谷歌地图偏移与路边拦车烦恼：用苹果地图或高德英文版精准导航、拍外卡或支付宝坐地铁，并在支付宝内绑外卡叫滴滴（无需 +86 号码）。"
   ),
-  updated: "2026-11-24",
+  updated: "2026-11-26",
   readMin: 6,
   keyPoints: [
     t2(

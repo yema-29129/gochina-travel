@@ -1,20 +1,29 @@
 import type { Guide } from "@/data/types";
-import { t2 } from "@/lib/i18n";
+import { t2, t4 } from "@/lib/i18n";
 
 const guide: Guide = {
   slug: "airports",
   category: "transport",
   icon: "plane",
-  title: t2("Landing in China: Top 12 International Airports & Layover Trap Guide", "中国 12 大入境国际机场攻略：进城交通、服务台与跨场转机陷阱"),
-  seoTitle: t2(
-    "China Top 12 International Airports Guide (2026): Downtown Transfers, USD Prices & Dual-Airport Traps",
-    "中国 12 大国际机场进城交通、外卡拍闸与同城双机场转机时间（2026）"
+  title: t4(
+    "Where to Land in China: Top 12 International Airports & Layover Trap Guide",
+    "去中国飞哪个机场？中国 12 大入境国际机场进城交通与跨场转机陷阱",
+    "中国旅行どの空港に着くべき？主要12国際空港アクセス＆乗継ガイド（2026）",
+    "중국 어느 공항으로 입국할까? 12대 국제공항 시내 이동 & 환승 가이드 (2026)"
   ),
-  summary: t2(
-    "Exact downtown transit prices in CNY & USD, 24/7 foreigner SIM/Alipay help desks, and minimum safe layover times for China's 12 major arrival airports (PVG, PEK, PKX, TFU, CAN & more).",
-    "中国 12 大入境国际机场（PVG、PEK、PKX、TFU、CAN 等）进城交通（含人民币与美元价）、24 小时外籍一站式服务台及同城双机场最短转机时间。"
+  seoTitle: t4(
+    "Where to Land in China (2026): Top 12 International Airports, Downtown Transfers & Layover Traps",
+    "去中国飞哪个机场最好（2026）：12 大国际机场进城交通、外卡拍闸与双机场转机时间",
+    "中国12大国際空港ガイド（2026）：上海浦東・北京・成都の市内アクセスと乗継時間",
+    "중국 12대 국제공항 가이드 (2026): 상하이·베이징·청두 시내 이동 및 환승 시간"
   ),
-  updated: "2026-11-24",
+  summary: t4(
+    "Deciding where to land in China? Compare China's 12 main arrival airports (Shanghai PVG, Beijing PEK/PKX, Guangzhou CAN, Chengdu TFU, Hong Kong HKG): exact CNY/USD downtown transit, 24/7 foreigner desks & dual-airport layover minimums.",
+    "去中国旅游飞哪个机场最方便？全面对比上海浦东 PVG、北京 PEK/PKX、广州 CAN、成都 TFU、香港 HKG 等 12 大入境机场：进城交通票价、24 小时外籍服务台与同城双机场最短转机时间。",
+    "初めての中国旅行でどの空港を選ぶべきか徹底比較。上海浦東(PVG)・北京(PEK/PKX)・広州(CAN)・成都(TFU)・香港(HKG)の市内移動料金と24時間案内カウンターを網羅。",
+    "중국 여행 입국 공항 선택 가이드: 상하이 푸동(PVG)·베이징(PEK/PKX)·광저우(CAN)·청두(TFU)·홍콩(HKG) 시내 교통비, 외국인 서비스 데스크, 공항 간 최소 환승 시간 총정리."
+  ),
+  updated: "2026-11-26",
   readMin: 7,
   keyPoints: [
     t2(

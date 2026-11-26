@@ -199,6 +199,8 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
       "China subway tap foreign Visa Mastercard cities list",
     ],
     zh: [
+      "地铁线路图",
+      "中国地铁线路图高清全图 2026",
       "2026 中国全部城市地铁线路图高清",
       "北京上海广州深圳地铁英文图",
       "成都西安重庆杭州地铁全图",
@@ -291,11 +293,11 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/240-hour-transit": {
     en: [
+      "transit through Mainland China 240 hour visa free",
       "China 240 hour visa free transit rules for US citizens 2026 port list",
-      "65 ports China 240 hour visa free transit",
+      "65 ports China 240 hour visa free transit Mohan Yunnan",
       "Hong Kong West Kowloon train 240 hour transit entry exit",
       "China 240 hour transit airline check in TIMATIC denied boarding",
-      "Can you visit Jiuzhaigou or Pingyao on China 240 hour visa free transit",
     ],
     zh: [
       "2026 中国 240 小时过境免签 65 口岸全表",
@@ -329,11 +331,13 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   "/guides/alipay-wechat-pay": {
     en: [
       "Alipay for foreigners 2026",
+      "China payment app for tourists",
+      "WeChat Pay international foreign credit card",
+      "can I set up Alipay outside China before travel",
       "how to set up Alipay and WeChat Pay with US UK credit card",
       "Alipay declined my Visa card in China fix",
       "Alipay 200 RMB 3% fee rule explained",
       "Alipay TourCard vs direct foreign credit card",
-      "how to pay personal WeChat QR codes in China as a foreigner",
     ],
     zh: [
       "2026 支付宝微信绑定外国信用卡教程",
@@ -479,7 +483,11 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/visa-free-countries": {
     en: [
+      "visa free China 2026",
       "China 30 day visa free countries list 2026",
+      "China visa free extension 2026",
+      "China visa Australia 30 day visa free",
+      "China entry documents required tourists",
       "valid 10 year China visa in expired passport",
       "China 30 day visa free Hong Kong visa run",
       "China 24 hour police registration Airbnb friends home",
@@ -514,12 +522,23 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     zh: ["2026 中国国际漫游 eSIM 上网指南", "外国人在中国怎么用 Google WhatsApp"],
   },
   "/guides/metro-didi-maps": {
-    en: ["getting around Chinese cities foreigners 2026", "Apple Maps AMap Global English China", "DiDi in Alipay without +86 number", "China subway tap foreign Visa Mastercard"],
+    en: [
+      "getting around Chinese cities foreigners 2026",
+      "DiDi foreign credit card Alipay China",
+      "Apple Maps AMap Global English China",
+      "DiDi in Alipay without +86 number",
+      "China subway tap foreign Visa Mastercard",
+    ],
     zh: ["2026 中国城市出行攻略", "高德地图英文版设置", "支付宝内免+86叫滴滴", "中国地铁拍境外外卡城市"],
   },
   "/guides/airports": {
-    en: ["China top 12 international airports transfer guide 2026", "Shanghai PVG to SHA transfer time", "Beijing PEK PKX Chengdu TFU airport express tap Visa"],
-    zh: ["2026 中国 12 大国际机场进城交通", "浦东转虹桥最短时间", "首都大兴天府机场快轨拍外卡"],
+    en: [
+      "where to land in China first time",
+      "China top 12 international airports transfer guide 2026",
+      "Shanghai PVG to SHA transfer time",
+      "Beijing PEK PKX Chengdu TFU airport express tap Visa",
+    ],
+    zh: ["去中国飞哪个机场", "2026 中国 12 大国际机场进城交通", "浦东转虹桥最短时间", "首都大兴天府机场快轨拍外卡"],
   },
   "/guides/shared-bikes": {
     en: [

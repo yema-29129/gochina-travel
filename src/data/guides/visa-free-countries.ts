@@ -364,6 +364,27 @@ const guide: Guide = {
   ],
   faq: [
     {
+      q: t2("Do Australian citizens need a visa for China in 2026?", "2026 年澳大利亚公民去中国需要签证吗？"),
+      a: t2(
+        "No. Australian ordinary passport holders enjoy 30-day unilateral visa-free entry to China for tourism, business, family visits, exchanges and transit. Just carry your valid passport (6+ months recommended), return/onward ticket, and hotel booking.",
+        "不需要。澳大利亚普通护照持有人享受中国 30 天单方面免签入境（适用于旅游、经商、探亲访友、交流访问与过境），持有效护照、返程机票和酒店订单即可。"
+      ),
+    },
+    {
+      q: t2("Can I get a China visa-free extension — and how long is the policy extended?", "中国 30 天免签可以延期吗？免签政策延续到什么时候？"),
+      a: t2(
+        "Two meanings: (1) China's unilateral 30-day visa-free policy has been extended through at least Dec 31, 2026 for most listed countries (check MFA cs.mfa.gov.cn for your exact country's validity). (2) Once inside China on 30-day visa-free entry, stays are normally NOT extendable except for genuine emergencies or humanitarian reasons at the local Exit-Entry Administration Bureau; for trips over 30 days, apply for an L visa in advance.",
+        "分两层意思：（1）政策有效期方面，中国对多数单方面免签国的 30 天免签政策已延续至 2026 年 12 月 31 日（各国具体期限以外交部领事司公告为准）。（2）入境后停留期通常不可直接延期（除非确有紧急/人道事由向当地出入境管理局申请）；若计划连续停留超 30 天，请提前办理 L 字旅游签证。"
+      ),
+    },
+    {
+      q: t2("What documents do I need to enter China visa-free?", "免签入境中国需要准备哪些文件（China documents）？"),
+      a: t2(
+        "Bring 4 documents: (1) Ordinary passport valid beyond exit date (6+ months & 2+ blank pages recommended), (2) Completed China Online Arrival Card QR code (free at s.nia.gov.cn, or paper card on arrival), (3) Printed English return/onward flight ticket, and (4) Printed English hotel booking confirmation(s) or host invitation.",
+        "建议备齐 4 份文件：（1）有效期超过离境日且建议留足 6 个月/2 页空白页的普通护照；（2）中国在线入境卡回执二维码（或落地纸质卡）；（3）英文返程/联程机票订单；（4）英文酒店预订单或亲友邀请函。"
+      ),
+    },
+    {
       q: t2("My old passport expired, but my 10-year Chinese visa inside is still valid. Can I still use it?", "我的旧护照过期了，但里面的 10 年中国签证还有效，还能直接用吗？"),
       a: t2(
         "Yes! Carry both your expired passport (containing the valid visa) and your new valid passport together. As long as your name, date of birth, sex and nationality have not changed, Chinese immigration accepts it with no transfer fee.",
