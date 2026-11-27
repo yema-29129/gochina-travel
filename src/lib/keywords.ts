@@ -208,8 +208,10 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     ],
   },
   "/tools/currency-converter": {
-    en: ["CNY to USD converter China travel", "Chinese Yuan exchange rate calculator", "RMB to EUR GBP AUD"],
-    zh: ["人民币美元汇率换算器", "中国旅游人民币换算"],
+    en: ["USD to Yuan converter", "CNY to USD converter China travel", "Chinese Yuan exchange rate calculator", "RMB to EUR GBP AUD JPY KRW"],
+    zh: ["人民币美元汇率换算器", "中国旅游人民币换算", "外币兑换点汇率参考"],
+    ja: ["中国元 日本円 換算", "人民元 両替 レート"],
+    ko: ["중국 화폐 환율", "위안화 원화 환율 계산기"],
   },
   "/tools/taxi-card": {
     en: ["Chinese taxi address card generator", "show hotel address to taxi driver in China", "Beijing Shanghai taxi Mandarin card"],
@@ -279,6 +281,9 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/tools/tax-refund-calculator": {
     en: [
+      "China tax refund calculator 2026",
+      "how much is the tax refund in China",
+      "China tax refund minimum spend 200 RMB",
       "China 200 RMB instant tax refund calculator 2026",
       "China tourist VAT tax refund 11% 9% net",
       "buy DJI in China tax refund",
@@ -286,6 +291,7 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     ],
     zh: [
       "2026 中国 200 元离境退税计算器",
+      "中国离境退税最低消费 200 元",
       "中国即买即退 11% 退税实拿 9%",
       "中国买大疆离境退税",
       "2026 无纸化离境退税新政",
@@ -318,18 +324,23 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/online-arrival-card": {
     en: [
+      "China arrival card 2026",
+      "Chinese arrival card online form",
       "How to fill out China Online Arrival Card before flight",
       "China NIA 12367 online arrival card",
       "China digital arrival card QR code 2026",
     ],
     zh: [
       "中国外国人网上入境卡填报教程",
+      "入境前几天填中国入境卡",
       "移民局 12367 在线填报入境卡",
       "入境卡电子回执二维码",
     ],
   },
   "/guides/alipay-wechat-pay": {
     en: [
+      "Alipay with US credit card 2026",
+      "WeChat credit card foreign Visa Mastercard",
       "Alipay for foreigners 2026",
       "China payment app for tourists",
       "WeChat Pay international foreign credit card",
@@ -341,6 +352,7 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     ],
     zh: [
       "2026 支付宝微信绑定外国信用卡教程",
+      "旅行中国 支付宝 微信支付",
       "支付宝 Alipay 外国人实名认证",
       "支付宝外卡风控拒付解决办法",
       "支付宝 200 元 3% 手续费规则",
@@ -398,6 +410,7 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/driving-in-china": {
     en: [
+      "driving license of the People's Republic of China foreigners",
       "How foreigners can get a temporary Chinese driver license at Shanghai Pudong Airport",
       "Is International Driving Permit IDP valid in China",
       "rent a car in China as a foreigner eHi Zuche",
@@ -410,6 +423,8 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/shopping-tax-refund": {
     en: [
+      "how much is the tax refund in China",
+      "China tax refund minimum spend 200 RMB",
       "China 200 RMB instant tax refund guide 2026",
       "China departure tax refund calculator 11% 9%",
       "buy DJI in China tax refund airport customs",
@@ -418,7 +433,7 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     ],
     zh: [
       "2026 中国 200 元即买即退离境退税指南",
-      "中国离境退税计算器 11% 实拿 9%",
+      "中国离境退税率 11% 实拿 9%",
       "来中国买大疆离境退税",
       "来中国配眼镜 30 分钟立等可取",
       "中国购物砍价指南",
@@ -441,12 +456,15 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/attraction-tickets": {
     en: [
+      "Forbidden City opening hours and 7 day ticket booking",
       "How to book Forbidden City and Tiananmen Square tickets for foreigners 7 day rule",
       "Mutianyu vs Badaling Great Wall for foreigners",
       "Chengdu Panda Base morning ticket tips",
       "Shaanxi History Museum Qin Han branch",
     ],
     zh: [
+      "天安门广场预约入口外国人",
+      "故宫官网提前几天放票 7 天",
       "外国人提前 7 天预约故宫天安门门票",
       "慕田峪长城还是八达岭长城",
       "成都大熊猫基地上午场攻略",
@@ -523,16 +541,22 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
   },
   "/guides/metro-didi-maps": {
     en: [
+      "Gaode in English AMap Global China",
+      "does Alipay have maps DiDi maps China",
+      "China metro map English",
+      "Shanghai Pass tourist transit card",
       "getting around Chinese cities foreigners 2026",
       "DiDi foreign credit card Alipay China",
       "Apple Maps AMap Global English China",
       "DiDi in Alipay without +86 number",
       "China subway tap foreign Visa Mastercard",
     ],
-    zh: ["2026 中国城市出行攻略", "高德地图英文版设置", "支付宝内免+86叫滴滴", "中国地铁拍境外外卡城市"],
+    zh: ["2026 中国城市出行攻略", "高德地图英文版设置", "上海交通卡 Shanghai Pass", "支付宝内免+86叫滴滴", "中国地铁拍境外外卡城市"],
   },
   "/guides/airports": {
     en: [
+      "best airport in China to fly into",
+      "best airport China international arrival",
       "where to land in China first time",
       "China top 12 international airports transfer guide 2026",
       "Shanghai PVG to SHA transfer time",
@@ -576,8 +600,8 @@ const ROUTE_KEYWORDS: Record<string, Partial<Record<Lang, string[]>>> = {
     zh: ["外国人在中国点外卖与高铁站行李寄存"],
   },
   "/guides/essential-apps": {
-    en: ["essential apps for China travel 2026 foreigners", "best apps to download before going to China"],
-    zh: ["2026 来中国旅游必装 App 清单"],
+    en: ["messaging app in China WeChat foreigners", "essential apps for China travel 2026 foreigners", "best apps to download before going to China"],
+    zh: ["2026 来中国旅游必装 App 清单", "中国常用聊天软件微信"],
   },
   "/guides/when-to-go": {
     en: [

@@ -88,6 +88,20 @@ const guide: Guide = {
   ],
   faq: [
     {
+      q: t2("How do I use Gaode (Amap) in English, and does Alipay have built-in maps?", "高德地图（Gaode / Amap）怎么调成英文？支付宝里自带地图吗？"),
+      a: t2(
+        "Download AMap Global (Gaode Maps) from the App Store or Google Play — it supports English search, walking navigation, and subway exits out of the box. Alipay does not have a standalone full navigation map, though its built-in DiDi mini-program shows live pickup pins and routes in English.",
+        "在 App Store 或 Google Play 下载高德地图国际版（AMap Global），开箱即支持英文地名搜索、步行导航和地铁出口指引。支付宝本身没有独立的全功能地图，但内置的滴滴出行小程序提供全英文上车定位与路线地图。"
+      ),
+    },
+    {
+      q: t2("What is the Shanghai Pass tourist card — should I buy one?", "上海交通卡 Shanghai Pass 是什么？值得买吗？"),
+      a: t2(
+        "Shanghai Pass is a reloadable multi-purpose tourist transit card sold at Pudong (PVG) & Hongqiao (SHA) airports for metro, buses, taxis, ferries, and convenience stores (usable across 330+ Chinese cities via China T-Union). It is great if you want a physical card without scanning QR codes, though tapping a contactless Visa/Mastercard or using Alipay Transport QR is free and faster.",
+        "Shanghai Pass 是浦东（PVG）/虹桥（SHA）机场发售的游客专用实体交通卡，可刷地铁、公交、出租车、轮渡和便利店（带交通联合标志，全国 330+ 城市通用）。不想每次扫二维码的游客很适合买一张；如果已有外卡或支付宝乘车码，直接刷更省事且无购卡费。"
+      ),
+    },
+    {
       q: t2("Does Google Maps work in China?", "谷歌地图在中国能用吗？"),
       a: t2(
         "Not reliably. Even on international roaming data, Google's China map is outdated and shifted by up to 500 m (0.3 miles). Use Apple Maps on iPhone or AMap Global (English UI) on Android.",

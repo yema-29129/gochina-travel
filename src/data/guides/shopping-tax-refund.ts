@@ -286,6 +286,20 @@ const guide: Guide = {
     },
     {
       q: t4(
+        "How much is the tax refund in China and what is the minimum spend?",
+        "中国离境退税比例是多少？最低消费门槛是多少钱？",
+        "中国の免税還付率は何％で、最低購入金額はいくらですか？",
+        "중국 택스리펀 환급률은 몇 %이며 최소 구매 금액은 얼마인가요?"
+      ),
+      a: t4(
+        "China's tourist VAT refund rate is 11% on most goods (8% on a few 9%-VAT items), minus a ~2% agency fee — so you receive roughly 9% net back. The minimum spend was lowered to just ¥200 RMB (~$28 USD) at the same Tax Free store on the same day.",
+        "中国大部分商品的离境退税率为 11%（少数 9% 税率商品为 8%），扣除约 2% 代理机构手续费后，游客实际到手约 9%。最低起退门槛已下调至同一天在同一家退税商店消费满 ¥200 人民币（约 28 美元）。",
+        "中国の一般商品の免税還付率は11%（一部8%）で、代理手数料約2%を差し引いた手取りは実質約9%です。最低購入金額は同一日の同一免税店舗で200元（約4,200円）以上に引き下げられました。",
+        "중국 일반 상품의 부가세 환급률은 11%(일부 8%)이며 대행 수수료 약 2%를 제외하면 실수령 약 9%입니다. 최소 구매 금액은 같은 날 동일 택스리펀 매장에서 200위안(약 4만원) 이상으로 낮아졌습니다."
+      ),
+    },
+    {
+      q: t4(
         "Do I need to carry my physical passport when shopping for tax-free goods?",
         "去买退税商品时必须随身带护照原件吗？",
         "免税で買い物するときはパスポート原本が必要ですか？",

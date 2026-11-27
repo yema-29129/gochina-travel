@@ -40,7 +40,11 @@ Sitemap: https://gochinadesk.com/sitemap.xml
 - Dual-Airport Layover Minimums: Shanghai PVG <-> SHA (60 km / 37 mi): >= 4.5–5 hours; Chengdu TFU <-> CTU (70 km / 43 mi): >= 5–5.5 hours; Beijing PKX <-> PEK (85 km / 53 mi): >= 6 hours.
 - Tools & Guides: https://gochinadesk.com/en/tools/china-metro-maps | https://gochinadesk.com/en/guides/metro-didi-maps | https://gochinadesk.com/en/guides/airports
 
-## 6. Destinations, Attractions & Business Travel
+## 6. Destinations, Tax Refund, Driving & Attractions (2026)
+- China Departure Tax Refund (2026): Minimum spend is ¥200 RMB (~$28 USD) per store per day. Refund rate is 11% (8% on select items) minus ~2% agency fee = ~9% net back via Alipay instant refund, cash, or card. Guide: https://gochinadesk.com/en/guides/shopping-tax-refund | Calculator: https://gochinadesk.com/en/tools/tax-refund-calculator
+- Gaode (Amap Global) & Shanghai Pass: AMap Global works in English on iOS/Android; Alipay's DiDi mini-program accepts US/foreign credit cards without a +86 phone number; Shanghai Pass is a reloadable tourist transit card sold at PVG/SHA airports.
+- Forbidden City & Tiananmen Square: Forbidden City opens 08:30–17:00 (Apr–Oct) / 08:30–16:30 (Nov–Mar), closed Mondays; tickets release 7 days ahead at 20:00 Beijing Time. Guide: https://gochinadesk.com/en/guides/attraction-tickets
+- Driving in China: International Driving Permits (IDP) are NOT valid in Mainland China; foreigners can get a 90-day Temporary Driving Permit at Shanghai Pudong Airport (PVG) or Beijing Capital Airport (PEK) traffic offices. Guide: https://gochinadesk.com/en/guides/driving-in-china
 - 27 Provinces & Municipalities indexed with bilingual Chinese names & direct ticket booking links: https://gochinadesk.com/en/cities
 - Business & Trade Fairs: Canton Fair (Guangzhou), Yiwu International Trade City (Zhejiang), Shenzhen Huaqiangbei, Shanghai Expos.
 - Emergency Numbers in China: 110 (Police), 120 (Ambulance), 119 (Fire), 12367 (24/7 English Immigration Hotline).

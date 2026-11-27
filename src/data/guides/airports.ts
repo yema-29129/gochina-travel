@@ -12,7 +12,7 @@ const guide: Guide = {
     "중국 어느 공항으로 입국할까? 12대 국제공항 시내 이동 & 환승 가이드 (2026)"
   ),
   seoTitle: t4(
-    "Where to Land in China (2026): Top 12 International Airports, Downtown Transfers & Layover Traps",
+    "Best Airport in China to Fly Into (2026): Where to Land, Downtown Transfers & Layover Traps",
     "去中国飞哪个机场最好（2026）：12 大国际机场进城交通、外卡拍闸与双机场转机时间",
     "中国12大国際空港ガイド（2026）：上海浦東・北京・成都の市内アクセスと乗継時間",
     "중국 12대 국제공항 가이드 (2026): 상하이·베이징·청두 시내 이동 및 환승 시간"

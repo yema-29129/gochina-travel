@@ -17,8 +17,16 @@ export default function robots(): MetadataRoute.Robots {
     "Applebot",
     "Applebot-Extended",
     "Bingbot",
+    "DuckDuckBot",
+    "Slurp",
     "Yandex",
+    "Yeti",
+    "SeznamBot",
     "Baiduspider",
+    "Sogou web spider",
+    "Bytespider",
+    "YouBot",
+    "CCBot",
     "*",
   ];
 
